@@ -1,0 +1,59 @@
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  width: 100%;
+  /* Touch-Target deutlich > 44px (Fitts' Law) */
+  min-height: 104px;
+  padding: var(--space-sm) var(--space-xs);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.cell:active {
+  background: var(--bg-surface-hover);
+}
+
+.cell[data-disabled="true"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.name {
+  font-size: var(--caption-size);
+  line-height: var(--caption-lh);
+  color: var(--text-primary);
+  text-align: center;
+  /* lange Namen abschneiden */
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  justify-content: center;
+}
+
+.empty {
+  margin: var(--space-xl) 0;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: var(--body-default-size);
+}

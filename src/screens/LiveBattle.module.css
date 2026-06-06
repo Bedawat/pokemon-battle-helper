@@ -1,0 +1,219 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--heading-section-size);
+  font-weight: var(--heading-section-weight);
+  line-height: var(--heading-section-lh);
+  letter-spacing: var(--heading-section-ls);
+}
+
+.exit {
+  background: var(--matchup-bad-bg);
+  color: var(--matchup-bad);
+  border: 1px solid var(--matchup-bad);
+  border-radius: var(--radius-full);
+  /* Touch-Target ≥ 44px (Fitts' Law, Phase 7) */
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 6px 16px;
+  font-size: var(--caption-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sectionTitle {
+  margin: 0 0 var(--space-sm);
+  font-size: var(--body-large-size);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.subtle {
+  font-weight: 400;
+  font-size: var(--caption-size);
+  color: var(--text-secondary);
+}
+
+/* --- Auf dem Feld --- */
+/* Einspaltig gestapelt: auf 393px ist die Breite knapp, nicht die Höhe.
+   So bleiben beide Feld-Gegner inkl. Attacken voll lesbar (Phase 7). */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.fieldCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-align: left;
+}
+
+.fieldCard[data-selected="true"] {
+  border-color: var(--border-active);
+  background: var(--bg-surface-hover);
+}
+
+.fieldHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.fieldInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.moves {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* --- Bank --- */
+.bank {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.benchMon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 64px;
+  padding: var(--space-xs);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.benchMon:active {
+  background: var(--bg-surface-hover);
+}
+
+.benchName {
+  font-size: 11px;
+  color: var(--text-secondary);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- Deine Pokémon --- */
+.ownList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.ownRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+}
+
+.ownMain {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.name {
+  font-size: var(--body-default-size);
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.types {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.leadPill {
+  padding: 1px 8px;
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.ampelGroup {
+  display: flex;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.ampelChip {
+  position: relative;
+  display: inline-flex;
+  border-radius: var(--radius-full);
+  padding: 2px;
+}
+
+.ampelChip[data-ampel="good"] {
+  background: var(--matchup-good-bg);
+}
+.ampelChip[data-ampel="neutral"] {
+  background: var(--matchup-neutral-bg);
+}
+.ampelChip[data-ampel="bad"] {
+  background: var(--matchup-bad-bg);
+}
+
+.ampelDot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--bg-surface);
+}
+.ampelDot[data-ampel="good"] {
+  background: var(--matchup-good);
+}
+.ampelDot[data-ampel="neutral"] {
+  background: var(--matchup-neutral);
+}
+.ampelDot[data-ampel="bad"] {
+  background: var(--matchup-bad);
+}

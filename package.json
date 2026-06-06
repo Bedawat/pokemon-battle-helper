@@ -1,0 +1,29 @@
+{
+  "name": "pokemon-battle-helper",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "VGC-Begleit-App für Pokémon Champions — Pick-Phase und Live-Kampf. HCI-Semesterprojekt.",
+  "scripts": {
+    "dev": "vite",
+    "dev:lan": "vite --host",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --noEmit",
+    "data": "node scripts/build-data.mjs",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.5",
+    "vitest": "^4.1.8"
+  }
+}

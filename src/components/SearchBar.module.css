@@ -1,0 +1,63 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  height: 44px;
+  padding: 0 var(--space-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+}
+
+.bar:focus-within {
+  border-color: var(--border-active);
+}
+
+.icon {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: var(--body-default-size);
+  line-height: var(--body-default-lh);
+}
+
+.input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* native Clear-Icon der Such-Inputs ausblenden (eigener Button) */
+.input::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.clear {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background: var(--bg-surface-hover);
+  border: none;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* unsichtbare Trefferfläche auf ≥ 44×44px erweitern (Fitts' Law, Phase 7) */
+.clear::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+}

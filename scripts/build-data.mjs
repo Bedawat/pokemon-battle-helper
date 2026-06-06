@@ -1,0 +1,412 @@
+// @ts-nocheck
+/**
+ * build-data.mjs — baut den Datensatz für den Battle Helper.
+ *
+ * Quellen:
+ *   - Pikalytics (gen9championsvgc2026regma): Usage %, Top-Attacken UND Typen
+ *     (inkl. der Champions-eigenen Mega-Formen) + Sprite.
+ *   - PokéAPI: deutsche Namen, Official-Artwork-Sprites, Typ-Effektivitäts-Matrix.
+ *
+ * Ausgabe (nach ../data/):
+ *   - pokemon.json     statische Daten (id, Namen, Typen, Sprite)
+ *   - usage.json       Usage % + Top-Moves pro Pokémon
+ *   - type-chart.json  18×18 Typ-Effektivität
+ *
+ * Ausführen (Node ≥ 18, hat globales fetch):
+ *   node scripts/build-data.mjs
+ *
+ * Robustheit: Pikalytics wird über den SICHTBAREN TEXT geparst (Tags entfernt),
+ * nicht über CSS-Klassen. Bei Lücken kommen Warnungen am Ende.
+ */
+
+import { writeFile, mkdir } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const DATA_DIR = join(__dirname, "..", "data");
+
+const FORMAT = "gen9championsvgc2026regma";
+const PIKALYTICS_BASE = `https://www.pikalytics.com/pokedex/${FORMAT}`;
+const POKEAPI = "https://pokeapi.co/api/v2";
+
+const TYPES = [
+  "normal", "fire", "water", "electric", "grass", "ice",
+  "fighting", "poison", "ground", "flying", "psychic", "bug",
+  "rock", "ghost", "dragon", "dark", "steel", "fairy",
+];
+
+/**
+ * Roster (~Top 40 der Champions-Meta, Stand Mai 2026).
+ * [Pikalytics-Name, PokéAPI-Slug | null].
+ * PokéAPI-Slug nur noch für Sprite + DE-Name nötig (Typen kommen von Pikalytics).
+ * null = Champions-eigene Form ohne PokéAPI-Eintrag → Sprite von Pikalytics.
+ */
+const ROSTER = [
+  ["Basculegion", "basculegion-male"],
+  ["Kingambit", "kingambit"],
+  ["Garchomp", "garchomp"],
+  ["Charizard-Mega-Y", "charizard-mega-y"],
+  ["Sneasler", "sneasler"],
+  ["Incineroar", "incineroar"],
+  ["Floette-Mega", null],
+  ["Sinistcha", "sinistcha"],
+  ["Sylveon", "sylveon"],
+  ["Whimsicott", "whimsicott"],
+  ["Archaludon", "archaludon"],
+  ["Farigiraf", "farigiraf"],
+  ["Aerodactyl-Mega", "aerodactyl-mega"],
+  ["Pelipper", "pelipper"],
+  ["Sableye", "sableye"],
+  ["Dragonite-Mega", null],
+  ["Maushold", "maushold-family-of-four"],
+  ["Aegislash", "aegislash-shield"],
+  ["Blastoise-Mega", "blastoise-mega"],
+  ["Rotom-Wash", "rotom-wash"],
+  ["Talonflame", "talonflame"],
+  ["Tyranitar-Mega", "tyranitar-mega"],
+  ["Scizor-Mega", "scizor-mega"],
+  ["Skarmory-Mega", null],
+  ["Gardevoir-Mega", "gardevoir-mega"],
+  ["Kangaskhan-Mega", "kangaskhan-mega"],
+  ["Kommo-o", "kommo-o"],
+  ["Venusaur-Mega", "venusaur-mega"],
+  ["Vivillon", "vivillon"],
+  ["Corviknight", "corviknight"],
+  ["Hydreigon", "hydreigon"],
+  ["Froslass-Mega", null],
+  ["Arcanine-Hisui", "arcanine-hisui"],
+  ["Camerupt-Mega", "camerupt-mega"],
+  ["Oranguru", "oranguru"],
+  ["Abomasnow-Mega", "abomasnow-mega"],
+  ["Araquanid", "araquanid"],
+  ["Gengar-Mega", "gengar-mega"],
+  ["Politoed", "politoed"],
+  ["Glimmora", "glimmora"],
+  ["Steelix-Mega", "steelix-mega"],
+];
+
+/** Letzter Notnagel für Typen, falls Pikalytics-Parsing fehlschlägt. */
+const TYPE_OVERRIDES = {
+  "floette-mega": ["fairy"],
+};
+
+const slug = (name) =>
+  name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/** Leitet den Spezies-Slug (für DE-Namen) aus dem Form-Namen ab. */
+function speciesSlug(name) {
+  return slug(name)
+    .replace(/-mega(-[xy])?$/, "")
+    .replace(/-(hisui|alola|galar|paldea)$/, "")
+    .replace(/-(wash|heat|frost|mow|fan)$/, "")
+    .replace(/-(family-of-four|family-of-three)$/, "")
+    .replace(/-(shield|blade)$/, "")
+    .replace(/-(average|small|large|super)$/, "");
+}
+
+/** Zerlegt "waterghost" → ["water","ghost"] (greedy longest match). */
+function typesFromConcat(s) {
+  const out = [];
+  let rest = s.toLowerCase();
+  while (rest.length && out.length < 2) {
+    let best = null;
+    for (const t of TYPES) {
+      if (rest.startsWith(t) && (!best || t.length > best.length)) best = t;
+    }
+    if (!best) break;
+    out.push(best);
+    rest = rest.slice(best.length);
+  }
+  return out;
+}
+
+/** Entfernt <script>/<style> und alle Tags, dekodiert die wichtigsten Entities. */
+function htmlToText(html) {
+  return html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, "\n")
+    .replace(/&amp;/g, "&")
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&nbsp;/g, " ");
+}
+
+async function fetchText(url) {
+  const res = await fetch(url, {
+    headers: { "User-Agent": "battle-helper-data-build/0.1 (HCI student project)" },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.text();
+}
+
+async function fetchJson(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+/** Baut die 18×18-Typ-Matrix aus PokéAPI. */
+async function buildTypeChart() {
+  const chart = {};
+  for (const t of TYPES) {
+    const rel = (await fetchJson(`${POKEAPI}/type/${t}`)).damage_relations;
+    const row = {};
+    for (const x of rel.double_damage_to) row[x.name] = 2;
+    for (const x of rel.half_damage_to) row[x.name] = 0.5;
+    for (const x of rel.no_damage_to) row[x.name] = 0;
+    chart[t] = row;
+    await sleep(50);
+  }
+  return chart;
+}
+
+/** Parst Typen, Usage %, Sprite und Top-Moves von einer Pikalytics-Detailseite. */
+function parsePikalyticsDetail(html, pikalyticsName) {
+  const flat = htmlToText(html).replace(/\s+/g, " ").trim();
+
+  // Eigene Typen: erste zusammenhängende Typ-Badges im HTML, z. B.
+  // <span class="type water" aria-hidden="true">water</span><span class="type ghost" …>
+  // Die exakte Quote nach dem Typnamen schließt Filter-Chips
+  // (class="type water pokedex-type-chip-offset") und andere Widgets aus.
+  let types = [];
+  const badgeBlock = html.match(
+    /(?:<span class="type [a-z]+"[^>]*>[^<]*<\/span>\s*){1,2}/i,
+  );
+  if (badgeBlock) {
+    types = [...badgeBlock[0].matchAll(/class="type ([a-z]+)"/gi)]
+      .map((m) => m[1].toLowerCase())
+      .filter((t) => TYPES.includes(t))
+      .slice(0, 2);
+  }
+
+  // Usage %: "Usage Percent … 38%"
+  let usagePercent = null;
+  const usageMatch = flat.match(/Usage Percent\s*([\d.]+)\s*%/i);
+  if (usageMatch) usagePercent = parseFloat(usageMatch[1]);
+
+  // Sprite (Pikalytics-CDN) als Fallback
+  let pikaSprite = null;
+  const spriteMatch = html.match(/championssprites\/([a-z0-9_]+)\.png/i);
+  if (spriteMatch) {
+    pikaSprite = `https://cdn.pikalytics.com/images/championssprites/${spriteMatch[1]}.png`;
+  }
+
+  // Top-Moves zwischen "Best Moves" und der nächsten Sektion
+  const topMoves = [];
+  const start = flat.search(/Best Moves for/i);
+  if (start !== -1) {
+    let block = flat.slice(start);
+    const end = block.search(/Best (Teammates|Items|Abilities|EV)/i);
+    if (end !== -1) block = block.slice(0, end);
+    const escName = pikalyticsName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    block = block
+      .replace(new RegExp(`Best Moves for\\s+${escName}`, "i"), " ")
+      .replace(/Best Moves for/i, " ");
+    const typeAlt = TYPES.join("|");
+    const re = new RegExp(
+      `([A-Za-z][A-Za-z'’.\\- ]*?)\\s+(${typeAlt})\\s+(\\d{1,3}(?:\\.\\d+)?)%`,
+      "gi",
+    );
+    let m;
+    while ((m = re.exec(block)) !== null && topMoves.length < 4) {
+      const name = m[1].trim().replace(/\s+/g, " ");
+      if (/^other$/i.test(name) || name.length < 2) continue;
+      topMoves.push({ name, type: m[2].toLowerCase(), usagePercent: parseFloat(m[3]) });
+    }
+  }
+
+  return { types, usagePercent, pikaSprite, topMoves };
+}
+
+/**
+ * Holt Sprite (Official Artwork) UND die Movepool-Slugs in einem Fetch.
+ * Gibt { sprite, moveSlugs } zurück; bei Fehler { sprite: null, moveSlugs: [] }.
+ */
+async function fetchPokemonApi(apiSlug) {
+  try {
+    const mon = await fetchJson(`${POKEAPI}/pokemon/${apiSlug}`);
+    const sprite = mon.sprites?.other?.["official-artwork"]?.front_default ?? null;
+    const moveSlugs = (mon.moves ?? []).map((m) => m.move.name);
+    return { sprite, moveSlugs };
+  } catch {
+    return { sprite: null, moveSlugs: [] };
+  }
+}
+
+/** Gültige Schadensklassen (PokéAPI `damage_class`). */
+const MOVE_CATEGORIES = ["physical", "special", "status"];
+
+/** Normalisierter Schlüssel für den Abgleich von Move-Namen (Pikalytics ↔ PokéAPI). */
+const moveKey = (name) => name.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+/**
+ * Holt Typ, englischen Anzeigenamen und Schadensklasse einer Attacke von PokéAPI.
+ * Gibt { name, type, category } zurück oder null (z. B. 404 / unbekannter Typ).
+ */
+async function fetchMoveInfo(moveSlug) {
+  try {
+    const mv = await fetchJson(`${POKEAPI}/move/${moveSlug}`);
+    const type = mv.type?.name;
+    if (!type || !TYPES.includes(type)) return null;
+    const en = mv.names?.find((n) => n.language.name === "en")?.name;
+    // Fallback: Slug entkernen ("close-combat" → "Close Combat").
+    const name =
+      en ??
+      moveSlug
+        .split("-")
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(" ");
+    const cat = mv.damage_class?.name;
+    const category = MOVE_CATEGORIES.includes(cat) ? cat : undefined;
+    return { name, type, category };
+  } catch {
+    return null;
+  }
+}
+
+/** Holt den deutschen Namen über die Spezies. */
+async function fetchNameDe(species) {
+  try {
+    const data = await fetchJson(`${POKEAPI}/pokemon-species/${species}`);
+    return data.names.find((n) => n.language.name === "de")?.name ?? null;
+  } catch {
+    return null;
+  }
+}
+
+async function main() {
+  await mkdir(DATA_DIR, { recursive: true });
+
+  console.log("→ Typ-Effektivitäts-Matrix von PokéAPI …");
+  const typeChart = await buildTypeChart();
+
+  const pokemon = [];
+  const usage = [];
+  const warnings = [];
+  /** Pro Pokémon gesammelte Movepool-Slugs (PokéAPI) für die 2. Phase. */
+  const moveSlugsById = {};
+
+  for (const [name, apiSlug] of ROSTER) {
+    const id = slug(name);
+    process.stdout.write(`→ ${name} … `);
+
+    // Pikalytics: Typen, Usage, Sprite, Moves
+    let detail = { types: [], usagePercent: null, pikaSprite: null, topMoves: [] };
+    try {
+      const html = await fetchText(`${PIKALYTICS_BASE}/${name}`);
+      detail = parsePikalyticsDetail(html, name);
+    } catch (e) {
+      warnings.push(`${name}: Pikalytics-Fehler (${e.message})`);
+    }
+    if (detail.topMoves.length === 0) warnings.push(`${name}: keine Moves geparst`);
+    if (detail.usagePercent === null) warnings.push(`${name}: kein Usage % geparst`);
+
+    // Typen: Pikalytics → Override
+    let types = detail.types;
+    if (types.length === 0) {
+      if (TYPE_OVERRIDES[id]) types = TYPE_OVERRIDES[id];
+      else warnings.push(`${name}: keine Typen geparst — BITTE PRÜFEN`);
+    }
+
+    // Sprite + Movepool-Slugs: PokéAPI (ein Fetch) → Pikalytics-Sprite-Fallback
+    const api = apiSlug ? await fetchPokemonApi(apiSlug) : { sprite: null, moveSlugs: [] };
+    const sprite = api.sprite ?? detail.pikaSprite;
+    if (!sprite) warnings.push(`${name}: kein Sprite gefunden`);
+    moveSlugsById[id] = api.moveSlugs;
+
+    // DE-Name über die Spezies
+    const nameDe = (await fetchNameDe(speciesSlug(name))) ?? name;
+
+    // movepool wird in Phase 2 befüllt; Champions-Megas ohne Slug bekommen
+    // ihre Top-4 als Fallback-Movepool.
+    pokemon.push({ id, nameEn: name, nameDe, types, sprite: sprite ?? "", movepool: [] });
+    usage.push({ id, nameEn: name, usagePercent: detail.usagePercent, topMoves: detail.topMoves });
+
+    console.log(
+      `${types.join("/") || "?"}  usage ${detail.usagePercent ?? "?"}%  moves ${detail.topMoves.length}  pool ${api.moveSlugs.length}`,
+    );
+    await sleep(350); // höflich zu Pikalytics
+  }
+
+  // --- Movepool-Auflösung: alle eindeutigen Move-Slugs einmal von PokéAPI holen ---
+  const allSlugs = [...new Set(Object.values(moveSlugsById).flat())];
+  console.log(`\n→ ${allSlugs.length} eindeutige Attacken von PokéAPI auflösen …`);
+  const moveInfo = {}; // slug → { name, type, category }
+  let done = 0;
+  for (const ms of allSlugs) {
+    const info = await fetchMoveInfo(ms);
+    if (info) moveInfo[ms] = info;
+    if (++done % 25 === 0) process.stdout.write(`  … ${done}/${allSlugs.length}\n`);
+    await sleep(30);
+  }
+
+  // Name → Kategorie (für den Abgleich der Pikalytics-Top-Moves, die nur über den
+  // Anzeigenamen vorliegen — nicht über einen PokéAPI-Slug).
+  const categoryByName = {};
+  for (const info of Object.values(moveInfo)) {
+    if (info.category) categoryByName[moveKey(info.name)] = info.category;
+  }
+
+  // Top-Moves (Pikalytics) um die Schadensklasse anreichern, wo bekannt.
+  for (const u of usage) {
+    for (const mv of u.topMoves) {
+      const cat = categoryByName[moveKey(mv.name)];
+      if (cat) mv.category = cat;
+    }
+  }
+
+  // Movepool je Pokémon bauen (Name+Typ+Kategorie, alphabetisch). Slug-Fehlschläge ignorieren.
+  for (const mon of pokemon) {
+    const slugs = moveSlugsById[mon.id] ?? [];
+    let pool = slugs
+      .map((s) => moveInfo[s])
+      .filter(Boolean)
+      .map((m) => ({ name: m.name, type: m.type, category: m.category }));
+    // Fallback für Pokémon ohne PokéAPI-Movepool (Champions-Megas): Top-4 nutzen.
+    if (pool.length === 0) {
+      const u = usage.find((x) => x.id === mon.id);
+      pool = (u?.topMoves ?? []).map((m) => ({
+        name: m.name,
+        type: m.type,
+        category: m.category,
+      }));
+    }
+    // dedupe nach Name, alphabetisch sortieren
+    const seen = new Set();
+    pool = pool
+      .filter((m) => (seen.has(m.name) ? false : (seen.add(m.name), true)))
+      .sort((a, b) => a.name.localeCompare(b.name));
+    mon.movepool = pool;
+    if (pool.length === 0) warnings.push(`${mon.nameEn}: leerer Movepool`);
+  }
+
+  usage.sort((a, b) => (b.usagePercent ?? 0) - (a.usagePercent ?? 0));
+
+  const now = new Date().toISOString();
+  await writeFile(join(DATA_DIR, "type-chart.json"), JSON.stringify(typeChart, null, 2));
+  await writeFile(
+    join(DATA_DIR, "pokemon.json"),
+    JSON.stringify({ meta: { generated: now, format: FORMAT, count: pokemon.length }, pokemon }, null, 2),
+  );
+  await writeFile(
+    join(DATA_DIR, "usage.json"),
+    JSON.stringify({ meta: { source: "pikalytics", format: FORMAT, date: now }, usage }, null, 2),
+  );
+
+  console.log(`\n✓ ${pokemon.length} Pokémon geschrieben nach data/`);
+  if (warnings.length) {
+    console.log(`\n⚠ ${warnings.length} Warnungen:`);
+    for (const w of warnings) console.log(`  - ${w}`);
+  } else {
+    console.log("Keine Warnungen.");
+  }
+}
+
+main().catch((e) => {
+  console.error("Fehler:", e);
+  process.exit(1);
+});

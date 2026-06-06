@@ -1,0 +1,1262 @@
+{
+  "meta": {
+    "source": "pikalytics",
+    "format": "gen9championsvgc2026regma",
+    "date": "2026-06-06T12:52:19.074Z"
+  },
+  "usage": [
+    {
+      "id": "basculegion",
+      "nameEn": "Basculegion",
+      "usagePercent": 52,
+      "topMoves": [
+        {
+          "name": "Last Respects",
+          "type": "ghost",
+          "usagePercent": 99.701,
+          "category": "physical"
+        },
+        {
+          "name": "Aqua Jet",
+          "type": "water",
+          "usagePercent": 96.52,
+          "category": "physical"
+        },
+        {
+          "name": "Wave Crash",
+          "type": "water",
+          "usagePercent": 67.641,
+          "category": "physical"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 61.307,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "kingambit",
+      "nameEn": "Kingambit",
+      "usagePercent": 41,
+      "topMoves": [
+        {
+          "name": "Sucker Punch",
+          "type": "dark",
+          "usagePercent": 99.417,
+          "category": "physical"
+        },
+        {
+          "name": "Kowtow Cleave",
+          "type": "dark",
+          "usagePercent": 95.769,
+          "category": "physical"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 73.373,
+          "category": "status"
+        },
+        {
+          "name": "Low Kick",
+          "type": "fighting",
+          "usagePercent": 60.078,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "garchomp",
+      "nameEn": "Garchomp",
+      "usagePercent": 41,
+      "topMoves": [
+        {
+          "name": "Earthquake",
+          "type": "ground",
+          "usagePercent": 90.794,
+          "category": "physical"
+        },
+        {
+          "name": "Dragon Claw",
+          "type": "dragon",
+          "usagePercent": 76.368,
+          "category": "physical"
+        },
+        {
+          "name": "Rock Slide",
+          "type": "rock",
+          "usagePercent": 67.762,
+          "category": "physical"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 61.94,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "charizard-mega-y",
+      "nameEn": "Charizard-Mega-Y",
+      "usagePercent": 32,
+      "topMoves": [
+        {
+          "name": "Mega Charizard Y Heat Wave",
+          "type": "fire",
+          "usagePercent": 99.77
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 99.725,
+          "category": "status"
+        },
+        {
+          "name": "Solar Beam",
+          "type": "grass",
+          "usagePercent": 87.034,
+          "category": "special"
+        },
+        {
+          "name": "Weather Ball",
+          "type": "normal",
+          "usagePercent": 84.143,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "sneasler",
+      "nameEn": "Sneasler",
+      "usagePercent": 29,
+      "topMoves": [
+        {
+          "name": "Close Combat",
+          "type": "fighting",
+          "usagePercent": 99.58,
+          "category": "physical"
+        },
+        {
+          "name": "Dire Claw",
+          "type": "poison",
+          "usagePercent": 93.113,
+          "category": "physical"
+        },
+        {
+          "name": "Fake Out",
+          "type": "normal",
+          "usagePercent": 88.626,
+          "category": "physical"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 66.634,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "incineroar",
+      "nameEn": "Incineroar",
+      "usagePercent": 26,
+      "topMoves": [
+        {
+          "name": "Fake Out",
+          "type": "normal",
+          "usagePercent": 99.755,
+          "category": "physical"
+        },
+        {
+          "name": "Parting Shot",
+          "type": "dark",
+          "usagePercent": 96.629,
+          "category": "status"
+        },
+        {
+          "name": "Flare Blitz",
+          "type": "fire",
+          "usagePercent": 86.542,
+          "category": "physical"
+        },
+        {
+          "name": "Throat Chop",
+          "type": "dark",
+          "usagePercent": 49.265,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "floette-mega",
+      "nameEn": "Floette-Mega",
+      "usagePercent": 24,
+      "topMoves": [
+        {
+          "name": "Mega Floette Protect",
+          "type": "normal",
+          "usagePercent": 99.186
+        },
+        {
+          "name": "Dazzling Gleam",
+          "type": "fairy",
+          "usagePercent": 98.487,
+          "category": "special"
+        },
+        {
+          "name": "Moonblast",
+          "type": "fairy",
+          "usagePercent": 79.559,
+          "category": "special"
+        },
+        {
+          "name": "Light of Ruin",
+          "type": "fairy",
+          "usagePercent": 52.285
+        }
+      ]
+    },
+    {
+      "id": "sinistcha",
+      "nameEn": "Sinistcha",
+      "usagePercent": 20,
+      "topMoves": [
+        {
+          "name": "Matcha Gotcha",
+          "type": "grass",
+          "usagePercent": 96.393,
+          "category": "special"
+        },
+        {
+          "name": "Rage Powder",
+          "type": "bug",
+          "usagePercent": 95.797,
+          "category": "status"
+        },
+        {
+          "name": "Trick Room",
+          "type": "psychic",
+          "usagePercent": 70.555,
+          "category": "status"
+        },
+        {
+          "name": "Life Dew",
+          "type": "water",
+          "usagePercent": 57.503,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "sylveon",
+      "nameEn": "Sylveon",
+      "usagePercent": 18,
+      "topMoves": [
+        {
+          "name": "Hyper Voice",
+          "type": "normal",
+          "usagePercent": 99.896,
+          "category": "special"
+        },
+        {
+          "name": "Quick Attack",
+          "type": "normal",
+          "usagePercent": 79.028,
+          "category": "physical"
+        },
+        {
+          "name": "Detect",
+          "type": "fighting",
+          "usagePercent": 49.837,
+          "category": "status"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 48.824,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "whimsicott",
+      "nameEn": "Whimsicott",
+      "usagePercent": 18,
+      "topMoves": [
+        {
+          "name": "Tailwind",
+          "type": "flying",
+          "usagePercent": 99.449,
+          "category": "status"
+        },
+        {
+          "name": "Moonblast",
+          "type": "fairy",
+          "usagePercent": 94.946,
+          "category": "special"
+        },
+        {
+          "name": "Encore",
+          "type": "normal",
+          "usagePercent": 91.276,
+          "category": "status"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 75.599,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "archaludon",
+      "nameEn": "Archaludon",
+      "usagePercent": 17,
+      "topMoves": [
+        {
+          "name": "Flash Cannon",
+          "type": "steel",
+          "usagePercent": 92.756,
+          "category": "special"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 87.967,
+          "category": "status"
+        },
+        {
+          "name": "Electro Shot",
+          "type": "electric",
+          "usagePercent": 87.884,
+          "category": "special"
+        },
+        {
+          "name": "Dragon Pulse",
+          "type": "dragon",
+          "usagePercent": 59.96,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "farigiraf",
+      "nameEn": "Farigiraf",
+      "usagePercent": 16,
+      "topMoves": [
+        {
+          "name": "Trick Room",
+          "type": "psychic",
+          "usagePercent": 95.483,
+          "category": "status"
+        },
+        {
+          "name": "Psychic",
+          "type": "psychic",
+          "usagePercent": 61.932,
+          "category": "special"
+        },
+        {
+          "name": "Helping Hand",
+          "type": "normal",
+          "usagePercent": 60.015,
+          "category": "status"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 42.993,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "aerodactyl-mega",
+      "nameEn": "Aerodactyl-Mega",
+      "usagePercent": 12,
+      "topMoves": [
+        {
+          "name": "Mega Aerodactyl Rock Slide",
+          "type": "rock",
+          "usagePercent": 98.498
+        },
+        {
+          "name": "Dual Wingbeat",
+          "type": "flying",
+          "usagePercent": 90.763,
+          "category": "physical"
+        },
+        {
+          "name": "Tailwind",
+          "type": "flying",
+          "usagePercent": 88.481,
+          "category": "status"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 79.381,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "pelipper",
+      "nameEn": "Pelipper",
+      "usagePercent": 12,
+      "topMoves": [
+        {
+          "name": "Hurricane",
+          "type": "flying",
+          "usagePercent": 98.494,
+          "category": "special"
+        },
+        {
+          "name": "Weather Ball",
+          "type": "normal",
+          "usagePercent": 90.864,
+          "category": "special"
+        },
+        {
+          "name": "Tailwind",
+          "type": "flying",
+          "usagePercent": 83.31,
+          "category": "status"
+        },
+        {
+          "name": "Wide Guard",
+          "type": "rock",
+          "usagePercent": 57.775,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "sableye",
+      "nameEn": "Sableye",
+      "usagePercent": 9,
+      "topMoves": [
+        {
+          "name": "Light Screen",
+          "type": "psychic",
+          "usagePercent": 74.917,
+          "category": "status"
+        },
+        {
+          "name": "Rain Dance",
+          "type": "water",
+          "usagePercent": 65.225,
+          "category": "status"
+        },
+        {
+          "name": "Encore",
+          "type": "normal",
+          "usagePercent": 58.169,
+          "category": "status"
+        },
+        {
+          "name": "Reflect",
+          "type": "psychic",
+          "usagePercent": 56.626,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "dragonite-mega",
+      "nameEn": "Dragonite-Mega",
+      "usagePercent": 8,
+      "topMoves": [
+        {
+          "name": "Mega Dragonite Tailwind",
+          "type": "flying",
+          "usagePercent": 66.617
+        },
+        {
+          "name": "Dragon Pulse",
+          "type": "dragon",
+          "usagePercent": 59.355,
+          "category": "special"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 56.202,
+          "category": "status"
+        },
+        {
+          "name": "Hurricane",
+          "type": "flying",
+          "usagePercent": 49.255,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "maushold",
+      "nameEn": "Maushold",
+      "usagePercent": 8,
+      "topMoves": [
+        {
+          "name": "Follow Me",
+          "type": "normal",
+          "usagePercent": 99.313,
+          "category": "status"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 93.791,
+          "category": "status"
+        },
+        {
+          "name": "Super Fang",
+          "type": "normal",
+          "usagePercent": 82.212,
+          "category": "physical"
+        },
+        {
+          "name": "Feint",
+          "type": "normal",
+          "usagePercent": 41.853,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "aegislash",
+      "nameEn": "Aegislash",
+      "usagePercent": 7,
+      "topMoves": [
+        {
+          "name": "Shadow Sneak",
+          "type": "ghost",
+          "usagePercent": 89.758,
+          "category": "physical"
+        },
+        {
+          "name": "Poltergeist",
+          "type": "ghost",
+          "usagePercent": 88.688,
+          "category": "physical"
+        },
+        {
+          "name": "Iron Head",
+          "type": "steel",
+          "usagePercent": 35.842,
+          "category": "physical"
+        },
+        {
+          "name": "Close Combat",
+          "type": "fighting",
+          "usagePercent": 34.207,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "blastoise-mega",
+      "nameEn": "Blastoise-Mega",
+      "usagePercent": 7,
+      "topMoves": [
+        {
+          "name": "Mega Blastoise Water Spout",
+          "type": "water",
+          "usagePercent": 90.032
+        },
+        {
+          "name": "Dark Pulse",
+          "type": "dark",
+          "usagePercent": 86.973,
+          "category": "special"
+        },
+        {
+          "name": "Fake Out",
+          "type": "normal",
+          "usagePercent": 63.275,
+          "category": "physical"
+        },
+        {
+          "name": "Aura Sphere",
+          "type": "fighting",
+          "usagePercent": 48.819,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "rotom-wash",
+      "nameEn": "Rotom-Wash",
+      "usagePercent": 7,
+      "topMoves": [
+        {
+          "name": "Hydro Pump",
+          "type": "water",
+          "usagePercent": 86.732,
+          "category": "special"
+        },
+        {
+          "name": "Will-O-Wisp",
+          "type": "fire",
+          "usagePercent": 68.625,
+          "category": "status"
+        },
+        {
+          "name": "Thunderbolt",
+          "type": "electric",
+          "usagePercent": 67.048,
+          "category": "special"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 51.792,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "glimmora",
+      "nameEn": "Glimmora",
+      "usagePercent": 7,
+      "topMoves": [
+        {
+          "name": "Sludge Bomb",
+          "type": "poison",
+          "usagePercent": 96.927,
+          "category": "special"
+        },
+        {
+          "name": "Power Gem",
+          "type": "rock",
+          "usagePercent": 95.28,
+          "category": "special"
+        },
+        {
+          "name": "Earth Power",
+          "type": "ground",
+          "usagePercent": 95.113,
+          "category": "special"
+        },
+        {
+          "name": "Spiky Shield",
+          "type": "grass",
+          "usagePercent": 93.31,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "talonflame",
+      "nameEn": "Talonflame",
+      "usagePercent": 6,
+      "topMoves": [
+        {
+          "name": "Tailwind",
+          "type": "flying",
+          "usagePercent": 97.118,
+          "category": "status"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 77.79,
+          "category": "status"
+        },
+        {
+          "name": "Flare Blitz",
+          "type": "fire",
+          "usagePercent": 54.564,
+          "category": "physical"
+        },
+        {
+          "name": "Brave Bird",
+          "type": "flying",
+          "usagePercent": 45.409,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "venusaur-mega",
+      "nameEn": "Venusaur-Mega",
+      "usagePercent": 6,
+      "topMoves": [
+        {
+          "name": "Mega Venusaur Sludge Bomb",
+          "type": "poison",
+          "usagePercent": 94.787
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 93.844,
+          "category": "status"
+        },
+        {
+          "name": "Earth Power",
+          "type": "ground",
+          "usagePercent": 91.493,
+          "category": "special"
+        },
+        {
+          "name": "Giga Drain",
+          "type": "grass",
+          "usagePercent": 81.82,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "froslass-mega",
+      "nameEn": "Froslass-Mega",
+      "usagePercent": 6,
+      "topMoves": [
+        {
+          "name": "Mega Froslass Blizzard",
+          "type": "ice",
+          "usagePercent": 99.904
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 98.41,
+          "category": "status"
+        },
+        {
+          "name": "Shadow Ball",
+          "type": "ghost",
+          "usagePercent": 91.528,
+          "category": "special"
+        },
+        {
+          "name": "Aurora Veil",
+          "type": "ice",
+          "usagePercent": 75.666
+        }
+      ]
+    },
+    {
+      "id": "gengar-mega",
+      "nameEn": "Gengar-Mega",
+      "usagePercent": 6,
+      "topMoves": [
+        {
+          "name": "Mega Gengar Protect",
+          "type": "normal",
+          "usagePercent": 99.089
+        },
+        {
+          "name": "Shadow Ball",
+          "type": "ghost",
+          "usagePercent": 96.81,
+          "category": "special"
+        },
+        {
+          "name": "Perish Song",
+          "type": "normal",
+          "usagePercent": 65.543,
+          "category": "status"
+        },
+        {
+          "name": "Disable",
+          "type": "normal",
+          "usagePercent": 55.315,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "tyranitar-mega",
+      "nameEn": "Tyranitar-Mega",
+      "usagePercent": 5,
+      "topMoves": [
+        {
+          "name": "Mega Tyranitar Rock Slide",
+          "type": "rock",
+          "usagePercent": 98.768
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 98.544,
+          "category": "status"
+        },
+        {
+          "name": "Knock Off",
+          "type": "dark",
+          "usagePercent": 82.663,
+          "category": "physical"
+        },
+        {
+          "name": "Low Kick",
+          "type": "fighting",
+          "usagePercent": 59.085,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "kangaskhan-mega",
+      "nameEn": "Kangaskhan-Mega",
+      "usagePercent": 5,
+      "topMoves": [
+        {
+          "name": "Mega Kangaskhan Double-Edge",
+          "type": "normal",
+          "usagePercent": 96.59
+        },
+        {
+          "name": "Fake Out",
+          "type": "normal",
+          "usagePercent": 95.872,
+          "category": "physical"
+        },
+        {
+          "name": "Ice Punch",
+          "type": "ice",
+          "usagePercent": 55.225,
+          "category": "physical"
+        },
+        {
+          "name": "Low Kick",
+          "type": "fighting",
+          "usagePercent": 51.543,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "kommo-o",
+      "nameEn": "Kommo-o",
+      "usagePercent": 5,
+      "topMoves": [
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 98.466,
+          "category": "status"
+        },
+        {
+          "name": "Clanging Scales",
+          "type": "dragon",
+          "usagePercent": 97.28,
+          "category": "special"
+        },
+        {
+          "name": "Aura Sphere",
+          "type": "fighting",
+          "usagePercent": 85.303,
+          "category": "special"
+        },
+        {
+          "name": "Clangorous Soul",
+          "type": "dragon",
+          "usagePercent": 84.316,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "vivillon",
+      "nameEn": "Vivillon",
+      "usagePercent": 5,
+      "topMoves": [
+        {
+          "name": "Sleep Powder",
+          "type": "grass",
+          "usagePercent": 95.447,
+          "category": "status"
+        },
+        {
+          "name": "Hurricane",
+          "type": "flying",
+          "usagePercent": 85.554,
+          "category": "special"
+        },
+        {
+          "name": "Rage Powder",
+          "type": "bug",
+          "usagePercent": 67.437,
+          "category": "status"
+        },
+        {
+          "name": "Tailwind",
+          "type": "flying",
+          "usagePercent": 50.354,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "scizor-mega",
+      "nameEn": "Scizor-Mega",
+      "usagePercent": 4,
+      "topMoves": [
+        {
+          "name": "Mega Scizor Bullet Punch",
+          "type": "steel",
+          "usagePercent": 99.962
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 95.424,
+          "category": "status"
+        },
+        {
+          "name": "Bug Bite",
+          "type": "bug",
+          "usagePercent": 79.312,
+          "category": "physical"
+        },
+        {
+          "name": "Swords Dance",
+          "type": "normal",
+          "usagePercent": 79.171,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "gardevoir-mega",
+      "nameEn": "Gardevoir-Mega",
+      "usagePercent": 4,
+      "topMoves": [
+        {
+          "name": "Mega Gardevoir Hyper Voice",
+          "type": "normal",
+          "usagePercent": 99.586
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 98.109,
+          "category": "status"
+        },
+        {
+          "name": "Trick Room",
+          "type": "psychic",
+          "usagePercent": 65.057,
+          "category": "status"
+        },
+        {
+          "name": "Psyshock",
+          "type": "psychic",
+          "usagePercent": 47.261,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "corviknight",
+      "nameEn": "Corviknight",
+      "usagePercent": 4,
+      "topMoves": [
+        {
+          "name": "Brave Bird",
+          "type": "flying",
+          "usagePercent": 91.019,
+          "category": "physical"
+        },
+        {
+          "name": "Tailwind",
+          "type": "flying",
+          "usagePercent": 75.618,
+          "category": "status"
+        },
+        {
+          "name": "Roost",
+          "type": "flying",
+          "usagePercent": 57.243,
+          "category": "status"
+        },
+        {
+          "name": "Bulk Up",
+          "type": "fighting",
+          "usagePercent": 53.843,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "politoed",
+      "nameEn": "Politoed",
+      "usagePercent": 4,
+      "topMoves": [
+        {
+          "name": "Weather Ball",
+          "type": "normal",
+          "usagePercent": 84.38,
+          "category": "special"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 81.878,
+          "category": "status"
+        },
+        {
+          "name": "Perish Song",
+          "type": "normal",
+          "usagePercent": 62.087,
+          "category": "status"
+        },
+        {
+          "name": "Encore",
+          "type": "normal",
+          "usagePercent": 57.88,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "hydreigon",
+      "nameEn": "Hydreigon",
+      "usagePercent": 3,
+      "topMoves": [
+        {
+          "name": "Dark Pulse",
+          "type": "dark",
+          "usagePercent": 92.107,
+          "category": "special"
+        },
+        {
+          "name": "Draco Meteor",
+          "type": "dragon",
+          "usagePercent": 91.585,
+          "category": "special"
+        },
+        {
+          "name": "Snarl",
+          "type": "dark",
+          "usagePercent": 64.92,
+          "category": "special"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 46.696,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "skarmory-mega",
+      "nameEn": "Skarmory-Mega",
+      "usagePercent": 2,
+      "topMoves": [
+        {
+          "name": "Mega Skarmory Iron Head",
+          "type": "steel",
+          "usagePercent": 98.365
+        },
+        {
+          "name": "Brave Bird",
+          "type": "flying",
+          "usagePercent": 94.606,
+          "category": "physical"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 73.787,
+          "category": "status"
+        },
+        {
+          "name": "Tailwind",
+          "type": "flying",
+          "usagePercent": 52.511,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "camerupt-mega",
+      "nameEn": "Camerupt-Mega",
+      "usagePercent": 2,
+      "topMoves": [
+        {
+          "name": "Mega Camerupt Earth Power",
+          "type": "ground",
+          "usagePercent": 99.351
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 94.968,
+          "category": "status"
+        },
+        {
+          "name": "Heat Wave",
+          "type": "fire",
+          "usagePercent": 88.293,
+          "category": "special"
+        },
+        {
+          "name": "Ancient Power",
+          "type": "rock",
+          "usagePercent": 68.556,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "arcanine-hisui",
+      "nameEn": "Arcanine-Hisui",
+      "usagePercent": 1,
+      "topMoves": [
+        {
+          "name": "Flare Blitz",
+          "type": "fire",
+          "usagePercent": 97.043,
+          "category": "physical"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 73.832,
+          "category": "status"
+        },
+        {
+          "name": "Rock Slide",
+          "type": "rock",
+          "usagePercent": 70.574,
+          "category": "physical"
+        },
+        {
+          "name": "Extreme Speed",
+          "type": "normal",
+          "usagePercent": 64.046,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "oranguru",
+      "nameEn": "Oranguru",
+      "usagePercent": 1,
+      "topMoves": [
+        {
+          "name": "Instruct",
+          "type": "psychic",
+          "usagePercent": 97.894,
+          "category": "status"
+        },
+        {
+          "name": "Trick Room",
+          "type": "psychic",
+          "usagePercent": 97.295,
+          "category": "status"
+        },
+        {
+          "name": "Psychic",
+          "type": "psychic",
+          "usagePercent": 63.891,
+          "category": "special"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 45.14,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "araquanid",
+      "nameEn": "Araquanid",
+      "usagePercent": 1,
+      "topMoves": [
+        {
+          "name": "Liquidation",
+          "type": "water",
+          "usagePercent": 70.307,
+          "category": "physical"
+        },
+        {
+          "name": "Wide Guard",
+          "type": "rock",
+          "usagePercent": 69.558,
+          "category": "status"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 53.72,
+          "category": "status"
+        },
+        {
+          "name": "Leech Life",
+          "type": "bug",
+          "usagePercent": 48.543,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "abomasnow-mega",
+      "nameEn": "Abomasnow-Mega",
+      "usagePercent": 0,
+      "topMoves": [
+        {
+          "name": "Mega Abomasnow Blizzard",
+          "type": "ice",
+          "usagePercent": 98.009
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 77.447,
+          "category": "status"
+        },
+        {
+          "name": "Energy Ball",
+          "type": "grass",
+          "usagePercent": 53.641,
+          "category": "special"
+        },
+        {
+          "name": "Earth Power",
+          "type": "ground",
+          "usagePercent": 47.775,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "steelix-mega",
+      "nameEn": "Steelix-Mega",
+      "usagePercent": 0,
+      "topMoves": [
+        {
+          "name": "Mega Steelix Heavy Slam",
+          "type": "steel",
+          "usagePercent": 93.274
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 85.248,
+          "category": "status"
+        },
+        {
+          "name": "High Horsepower",
+          "type": "ground",
+          "usagePercent": 83.774,
+          "category": "physical"
+        },
+        {
+          "name": "Wide Guard",
+          "type": "rock",
+          "usagePercent": 76.885,
+          "category": "status"
+        }
+      ]
+    }
+  ]
+}

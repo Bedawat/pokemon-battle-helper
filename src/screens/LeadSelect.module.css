@@ -1,0 +1,114 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.back {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--accent-primary);
+  font-size: var(--body-default-size);
+  cursor: pointer;
+  /* Touch-Target ≥ 44px (Fitts' Law, Phase 7) */
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-xs) 0;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--heading-section-size);
+  font-weight: var(--heading-section-weight);
+  line-height: var(--heading-section-lh);
+  letter-spacing: var(--heading-section-ls);
+}
+
+.count {
+  color: var(--text-secondary);
+  font-size: var(--body-large-size);
+  font-weight: 600;
+}
+
+.hint {
+  margin: 0;
+  font-size: var(--caption-size);
+  line-height: var(--caption-lh);
+  color: var(--text-secondary);
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  width: 100%;
+  padding: var(--space-md) var(--space-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
+
+.card[data-selected="true"] {
+  border-color: var(--border-active);
+  background: var(--bg-surface-hover);
+}
+
+.card:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.name {
+  font-size: var(--body-default-size);
+  font-weight: 600;
+  color: var(--text-primary);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.types {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.badge {
+  position: absolute;
+  top: var(--space-xs);
+  right: var(--space-xs);
+  padding: 2px 8px;
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  font-size: var(--pill-size, 12px);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.cta {
+  position: sticky;
+  bottom: 0;
+  padding-top: var(--space-sm);
+}

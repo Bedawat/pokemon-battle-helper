@@ -1,0 +1,138 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.back {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--accent-primary);
+  font-size: var(--button-size);
+  font-weight: 600;
+  cursor: pointer;
+  padding: var(--space-xs) 0;
+  min-height: 44px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.name {
+  margin: 0;
+  font-size: var(--heading-section-size);
+  font-weight: var(--heading-section-weight);
+}
+
+.types {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.movesSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: var(--body-large-size);
+  font-weight: 600;
+}
+
+.moves {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.chevron {
+  color: var(--text-tertiary);
+  font-size: 18px;
+}
+
+.addMove {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-sm) var(--space-md);
+  background: none;
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: var(--body-default-size);
+  cursor: pointer;
+}
+
+.removeBtn {
+  min-height: 44px;
+  background: var(--matchup-bad-bg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  color: var(--matchup-bad);
+  font-size: var(--button-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.missing {
+  color: var(--text-secondary);
+}
+
+/* ---------- Move-Picker (Overlay über dem Screen) ---------- */
+
+.picker {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--content-padding);
+  padding-bottom: calc(var(--navbar-height) + var(--space-lg));
+  background: var(--bg-primary);
+  overflow-y: auto;
+}
+
+.pickerHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pickerTitle {
+  font-size: var(--heading-card-size);
+  font-weight: var(--heading-card-weight);
+}
+
+.pickerClose {
+  background: none;
+  border: none;
+  color: var(--accent-primary);
+  font-size: var(--button-size);
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.pickerList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.poolEmpty {
+  margin: var(--space-md) 0;
+  color: var(--text-secondary);
+  font-size: var(--body-default-size);
+  text-align: center;
+}

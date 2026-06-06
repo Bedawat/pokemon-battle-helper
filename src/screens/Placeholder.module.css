@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  gap: var(--space-sm);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--heading-section-size);
+  font-weight: var(--heading-section-weight);
+  line-height: var(--heading-section-lh);
+  letter-spacing: var(--heading-section-ls);
+  color: var(--text-primary);
+}
+
+.note {
+  margin: 0;
+  max-width: 260px;
+  font-size: var(--body-default-size);
+  color: var(--text-secondary);
+}

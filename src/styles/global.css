@@ -1,0 +1,93 @@
+/*
+ * Globale Styles + App-Frame.
+ * Auf dem iPhone füllt die App den Viewport; auf dem Desktop wird ein
+ * zentrierter 393×852-Frame als Geräte-Vorschau gezeigt.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--body-default-size);
+  line-height: var(--body-default-lh);
+  color: var(--text-primary);
+  background: #0d0d18; /* dunkler als der App-BG, damit der Frame auf Desktop absticht */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  /* zentriert den Geräte-Frame auf dem Desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+#root {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Touch-Verhalten: kein Doppeltipp-Zoom, kein Text-Callout */
+button {
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Standard-Fokus für Tastatur, aber nicht bei Maus/Touch */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* ---------- App-Frame ---------- */
+
+.app-frame {
+  position: relative;
+  width: 100%;
+  max-width: var(--frame-width);
+  height: 100dvh;
+  max-height: var(--frame-height);
+  background: var(--bg-primary);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Auf größeren Screens: abgerundeter Geräte-Frame mit Rahmen */
+@media (min-width: 440px) {
+  .app-frame {
+    border-radius: 40px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Scrollbarer Inhaltsbereich oberhalb der NavBar */
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--content-padding);
+  /* Platz für die fixe NavBar am unteren Rand */
+  padding-bottom: calc(var(--navbar-height) + var(--safe-bottom) + var(--space-lg));
+}
+
+/* Ein Screen ohne NavBar (z. B. Vollbild-Flows) nutzt die volle Höhe */
+.app-content--full {
+  padding-bottom: var(--space-lg);
+}

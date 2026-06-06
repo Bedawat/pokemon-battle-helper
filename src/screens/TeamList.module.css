@@ -1,0 +1,146 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--heading-section-size);
+  font-weight: var(--heading-section-weight);
+  line-height: var(--heading-section-lh);
+  letter-spacing: var(--heading-section-ls);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--body-default-size);
+}
+
+.emptyState {
+  margin: var(--space-md) 0;
+  padding: var(--space-lg);
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  font-size: var(--body-default-size);
+  line-height: var(--body-default-lh);
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.card[data-active="true"] {
+  border-color: var(--border-active);
+}
+
+.cardMain {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.teamName {
+  font-size: var(--heading-card-size);
+  font-weight: var(--heading-card-weight);
+  color: var(--text-primary);
+}
+
+.activePill {
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--matchup-good-bg);
+  color: var(--matchup-good);
+  font-size: var(--pill-size);
+  font-weight: var(--pill-weight);
+  letter-spacing: var(--pill-ls);
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-xs);
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+}
+
+.slotEmpty {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--border-default);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.action {
+  flex: 1;
+  /* Touch-Target ≥ 44px (Fitts' Law, Phase 7) */
+  min-height: 44px;
+  background: none;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--accent-primary);
+  font-size: var(--button-size);
+  font-weight: var(--button-weight);
+  cursor: pointer;
+}
+
+.action:active {
+  background: var(--bg-surface-hover);
+}
+
+.action[data-danger] {
+  color: var(--matchup-bad);
+}
+
+.create {
+  margin-top: var(--space-xs);
+}

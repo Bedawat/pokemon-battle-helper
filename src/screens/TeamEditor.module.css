@@ -1,0 +1,129 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--heading-section-size);
+  font-weight: var(--heading-section-weight);
+  line-height: var(--heading-section-lh);
+  letter-spacing: var(--heading-section-ls);
+}
+
+.count {
+  color: var(--text-secondary);
+  font-size: var(--body-large-size);
+  font-weight: 600;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.slot {
+  position: relative;
+}
+
+.slotMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  width: 100%;
+  min-height: 96px;
+  padding: var(--space-sm) var(--space-xs);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
+
+.slotMain:active {
+  background: var(--bg-surface-hover);
+}
+
+.slotName {
+  font-size: var(--caption-size);
+  line-height: var(--caption-lh);
+  color: var(--text-primary);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--matchup-bad);
+  /* dunkles × statt weiß: 6.1:1 statt 2.8:1 auf Rot (WCAG, Phase 7) */
+  color: var(--text-on-accent);
+  border: 2px solid var(--bg-primary);
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* unsichtbare Trefferfläche auf ≥ 44×44px erweitern (Fitts' Law, Phase 7) */
+.remove::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+}
+
+.slotEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-lg);
+  color: var(--text-tertiary);
+  font-size: var(--caption-size);
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.addTitle {
+  margin: 0;
+  font-size: var(--body-large-size);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.fullHint {
+  margin: 0;
+  padding: var(--space-md);
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: var(--body-default-size);
+  text-align: center;
+}
+
+.cta {
+  position: sticky;
+  bottom: 0;
+  padding-top: var(--space-sm);
+}

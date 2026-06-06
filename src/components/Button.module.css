@@ -1,0 +1,46 @@
+.button {
+  width: 100%;
+  min-height: 48px;
+  padding: 14px var(--space-lg);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-size: var(--button-size);
+  font-weight: var(--button-weight);
+  line-height: var(--button-lh);
+  letter-spacing: var(--button-ls);
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.08s ease,
+    opacity 0.15s ease;
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Primary — Akzent-CTA */
+.button[data-variant="primary"] {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+}
+
+.button[data-variant="primary"]:active:not(:disabled) {
+  background: var(--accent-primary-hover);
+}
+
+/* Secondary — dezent auf Surface */
+.button[data-variant="secondary"] {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
+
+.button[data-variant="secondary"]:active:not(:disabled) {
+  background: var(--bg-surface-hover);
+}

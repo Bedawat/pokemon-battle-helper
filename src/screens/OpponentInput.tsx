@@ -1,0 +1,102 @@
+import { useState } from "react";
+import { Button } from "../components/Button";
+import { PokemonGrid } from "../components/PokemonGrid";
+import { PokemonSprite } from "../components/PokemonSprite";
+import { SearchBar } from "../components/SearchBar";
+import { ALL_POKEMON, getPokemon } from "../lib/data";
+import {
+  MAX_OPPONENTS,
+  addOpponent,
+  gridSource,
+  isOpponentFull,
+  removeOpponent,
+  type OpponentTeam,
+} from "../lib/opponent";
+import styles from "./OpponentInput.module.css";
+
+interface OpponentInputProps {
+  opponent: OpponentTeam;
+  onChange: (opponent: OpponentTeam) => void;
+  onAnalyze: () => void;
+}
+
+/**
+ * S2 — Gegner-Eingabe: 6 Slots, Top-20-Grid nach Usage, Suche (DE + EN).
+ * Tap aufs Grid füllt den nächsten freien Slot, Tap auf einen Slot entfernt
+ * (Korrektur). „Analyse starten" wird erst bei 6 gefüllten Slots aktiv.
+ */
+export function OpponentInput({
+  opponent,
+  onChange,
+  onAnalyze,
+}: OpponentInputProps) {
+  const [query, setQuery] = useState("");
+  const chosen = new Set(opponent);
+  const grid = gridSource(ALL_POKEMON, query);
+  const full = isOpponentFull(opponent);
+
+  return (
+    <div className={styles.screen}>
+      <header className={styles.head}>
+        <h2 className={styles.title}>Gegner-Team</h2>
+        <span className={styles.count}>
+          {opponent.length}/{MAX_OPPONENTS}
+        </span>
+      </header>
+
+      <div className={styles.slots}>
+        {Array.from({ length: MAX_OPPONENTS }).map((_, i) => {
+          const id = opponent[i];
+          const mon = id ? getPokemon(id) : undefined;
+          if (!id || !mon) {
+            return (
+              <div key={i} className={styles.slotEmpty}>
+                <span>Leer</span>
+              </div>
+            );
+          }
+          return (
+            <button
+              key={i}
+              type="button"
+              className={styles.slot}
+              onClick={() => onChange(removeOpponent(opponent, id))}
+              aria-label={`${mon.nameDe} entfernen`}
+            >
+              <PokemonSprite src={mon.sprite} alt={mon.nameDe} size={48} />
+              <span className={styles.slotName}>{mon.nameDe}</span>
+              <span className={styles.slotRemove} aria-hidden="true">
+                ×
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      <section className={styles.add}>
+        <h3 className={styles.addTitle}>
+          {query.trim() ? "Suchergebnisse" : "Häufigste Pokémon"}
+        </h3>
+        <SearchBar value={query} onChange={setQuery} />
+        {full ? (
+          <p className={styles.fullHint}>
+            Gegner-Team komplett. Tippe auf einen Slot, um zu korrigieren.
+          </p>
+        ) : (
+          <PokemonGrid
+            pokemon={grid}
+            onSelect={(id) => onChange(addOpponent(opponent, id))}
+            disabledIds={chosen}
+            emptyHint="Kein Pokémon gefunden."
+          />
+        )}
+      </section>
+
+      <div className={styles.cta}>
+        <Button variant="primary" onClick={onAnalyze} disabled={!full}>
+          Analyse starten
+        </Button>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,114 @@
+/*
+ * Design Tokens — Pokémon Battle Helper
+ * 1:1 aus dem Figma-Prototyp.
+ * Quelle: "Pokémon Battle Helper — Design Tokens (Figma).md"
+ * Dark-Mode-only.
+ */
+
+:root {
+  /* ---------- Farben: semantisch ---------- */
+  --bg-primary: #1b1b2f; /* App-Hintergrund */
+  --bg-surface: #262640; /* Cards, Panels */
+  --bg-surface-hover: #2e2e50; /* Hover/Selected */
+  --bg-navigation: #0f3460; /* Header, Bottom-Tab-Bar */
+
+  --text-primary: #f0f0f5; /* Haupttext, Pokémon-Namen */
+  --text-secondary: #9e9eb8; /* Labels, Hinweise */
+  --text-tertiary: #9090b0; /* Captions, Timestamps — aufgehellt für WCAG AA (4.74:1 auf Surface). Figma-Token entsprechend nachziehen. */
+  --text-on-accent: #1b1b2f; /* Text auf Akzent-Buttons */
+
+  --accent-primary: #5bc0eb; /* Buttons, CTAs, aktive Tabs */
+  --accent-primary-hover: #7dd3f0; /* Hover/Pressed */
+
+  --matchup-good: #4ade80; /* Ampel grün */
+  --matchup-neutral: #fbbf24; /* Ampel gelb */
+  --matchup-bad: #f87171; /* Ampel rot */
+  --matchup-good-bg: rgba(74, 222, 128, 0.15);
+  --matchup-neutral-bg: rgba(251, 191, 36, 0.15);
+  --matchup-bad-bg: rgba(248, 113, 113, 0.15);
+
+  --border-default: #3a3a5c;
+  --border-active: #5bc0eb;
+  --border-subtle: #2a2a4a;
+
+  /* ---------- Farben: Pokémon-Typen ---------- */
+  --type-normal: #a8a77a;
+  --type-fire: #ee8130;
+  --type-water: #6390f0;
+  --type-electric: #f7d02c;
+  --type-grass: #7ac74c;
+  --type-ice: #96d9d6;
+  --type-fighting: #c22e28;
+  --type-poison: #a33ea1;
+  --type-ground: #e2bf65;
+  --type-flying: #a98ff3;
+  --type-psychic: #f95587;
+  --type-bug: #a6b91a;
+  --type-rock: #b6a136;
+  --type-ghost: #735797;
+  --type-dragon: #6f35fc;
+  --type-dark: #705746;
+  --type-steel: #b7b7ce;
+  --type-fairy: #d685ad;
+
+  /* ---------- Spacing ---------- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+
+  /* ---------- Radii ---------- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 999px;
+
+  /* ---------- Typografie ---------- */
+  --font-family:
+    -apple-system, "SF Pro Text", "SF Pro Display", "Inter", system-ui,
+    sans-serif;
+
+  /* Text-Styles: Größe / Weight / Line-Height / Letter-Spacing */
+  --heading-section-size: 22px;
+  --heading-section-weight: 700;
+  --heading-section-lh: 28px;
+  --heading-section-ls: -0.3px;
+
+  --heading-card-size: 20px;
+  --heading-card-weight: 600;
+  --heading-card-lh: 26px;
+  --heading-card-ls: -0.2px;
+
+  --body-large-size: 17px;
+  --body-large-weight: 500;
+  --body-large-lh: 22px;
+
+  --body-default-size: 15px;
+  --body-default-weight: 400;
+  --body-default-lh: 20px;
+
+  --caption-size: 13px;
+  --caption-weight: 400;
+  --caption-lh: 18px;
+  --caption-ls: 0.1px;
+
+  --button-size: 15px;
+  --button-weight: 600;
+  --button-lh: 20px;
+  --button-ls: 0.2px;
+
+  --pill-size: 12px;
+  --pill-weight: 600;
+  --pill-lh: 16px;
+  --pill-ls: 0.3px;
+
+  /* ---------- Layout ---------- */
+  --frame-width: 393px;
+  --frame-height: 852px;
+  --content-padding: 16px;
+  --navbar-height: 64px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
