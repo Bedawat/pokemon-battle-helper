@@ -1,4 +1,5 @@
 import type { PokemonView } from "../lib/dataset";
+import { MegaMarker } from "./MegaMarker";
 import { PokemonSprite } from "./PokemonSprite";
 import { TypeBadge } from "./TypeBadge";
 import styles from "./PokemonGrid.module.css";
@@ -38,7 +39,10 @@ export function PokemonGrid({
               data-disabled={disabled}
               onClick={() => onSelect(p.id)}
             >
-              <PokemonSprite src={p.sprite} alt={p.nameDe} size={56} />
+              <span className={styles.spriteWrap}>
+                <PokemonSprite src={p.sprite} alt={p.nameDe} size={56} />
+                {p.megas && p.megas.length > 0 && <MegaMarker />}
+              </span>
               <span className={styles.name}>{p.nameDe}</span>
               <span className={styles.types}>
                 {p.types.map((t) => (

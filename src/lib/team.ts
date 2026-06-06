@@ -9,7 +9,10 @@ export const MAX_MEMBERS = 6;
 export const MAX_MOVES = 4;
 export const MAX_TEAMS = 3;
 
-const STORAGE_KEY = "pbh.teams.v1";
+// v2 (Phase 9): Mega-fähige Pokémon haben jetzt Spezies-ids (z. B. "charizard"
+// statt "charizard-mega-y"). Der Bump verwirft alte Teams mit veralteten ids
+// sauber, statt verwaiste Mitglieder zu zeigen.
+const STORAGE_KEY = "pbh.teams.v2";
 const TEAM_IDS: TeamId[] = [1, 2, 3];
 
 /** Minimales Storage-Interface (Web-localStorage erfüllt es; Tests faken es). */

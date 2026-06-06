@@ -32,6 +32,11 @@
   cursor: not-allowed;
 }
 
+.spriteWrap {
+  position: relative;
+  display: inline-flex;
+}
+
 .name {
   font-size: var(--caption-size);
   line-height: var(--caption-lh);

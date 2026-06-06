@@ -63,13 +63,29 @@
   background: var(--bg-surface);
   border: 1px solid var(--border-default);
   border-radius: var(--radius-lg);
-  cursor: pointer;
-  text-align: left;
 }
 
 .fieldCard[data-selected="true"] {
   border-color: var(--border-active);
   background: var(--bg-surface-hover);
+}
+
+.fieldCard[data-preview="true"] {
+  outline: 2px dashed var(--accent-primary);
+  outline-offset: 2px;
+}
+
+.fieldSelect {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
 }
 
 .fieldHead {
@@ -216,4 +232,108 @@
 }
 .ampelDot[data-ampel="bad"] {
   background: var(--matchup-bad);
+}
+
+.ampelChip[data-preview="true"] {
+  outline: 2px dashed var(--accent-primary);
+  outline-offset: 1px;
+}
+
+/* --- Eigene Pokémon: Info-Spalte + Mega-Chips --- */
+.ownInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.ownNameRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+/* --- Mega-Chips (interaktiv, S5) --- */
+.megaChips {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.megaChip {
+  display: inline-flex;
+  align-items: center;
+  /* Touch-Target ≥ 44px (Fitts' Law) */
+  min-height: 44px;
+  padding: 4px 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-full);
+  color: var(--accent-primary);
+  font-size: var(--caption-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.megaChip[data-state="preview"] {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  border-style: dashed;
+}
+
+.megaChip[data-state="committed"] {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+}
+
+.megaChip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* --- Vorschau-Banner --- */
+.previewBar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-surface-hover);
+  border: 1px dashed var(--accent-primary);
+  border-radius: var(--radius-md);
+}
+
+.previewText {
+  font-size: var(--caption-size);
+  color: var(--text-primary);
+}
+
+.previewActions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.previewConfirm,
+.previewCancel {
+  min-height: 44px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--caption-size);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.previewConfirm {
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  border: 1px solid var(--accent-primary);
+}
+
+.previewCancel {
+  background: none;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
 }

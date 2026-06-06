@@ -51,6 +51,24 @@ export interface MovepoolMove {
   category?: MoveCategory;
 }
 
+/**
+ * Eine Mega-Form einer Spezies. Mega ändert im Scope dieser App **nur die
+ * Typen** (und damit das Matchup) sowie das Artwork — keine Werte/Fähigkeiten.
+ * Usage und Movesets bleiben auf Spezies-Ebene (werden vor dem Kampf, also vor
+ * der Mega-Entwicklung gewählt). Mehrdeutige Megas (z. B. Glurak X/Y) stehen als
+ * mehrere Einträge in `Pokemon.megas`.
+ */
+export interface MegaForm {
+  /** Stabiler Slug der Mega-Form, z. B. "charizard-mega-x". */
+  id: string;
+  /** Kurzlabel für die UI, z. B. "Mega X" oder "Mega". */
+  label: string;
+  /** Typen der Mega-Form (überschreiben im Live-Kampf die Grund-Typen). */
+  types: PokemonType[];
+  /** Mega-Artwork (PokéAPI bzw. Pikalytics-CDN bei Champions-Megas). */
+  sprite: string;
+}
+
 /** Statische Pokémon-Daten (data/pokemon.json). */
 export interface Pokemon {
   /** Stabiler Slug, Join-Key zwischen pokemon.json und usage.json. */
@@ -59,12 +77,21 @@ export interface Pokemon {
   nameEn: string;
   /** Deutscher Anzeigename (UI). Fällt auf nameEn zurück, falls unbekannt. */
   nameDe: string;
-  /** Primär- und optionaler Sekundärtyp. */
+  /**
+   * Primär- und optionaler Sekundärtyp der **Grund-Form**. In der Pick-Phase
+   * (S2/S3) rechnet das Matchup mit diesen Typen; Mega-Typen lösen sich erst im
+   * Live-Kampf auf (siehe `megas`).
+   */
   types: PokemonType[];
   /** Sprite-URL (PokéAPI Official Artwork oder Pikalytics-CDN). */
   sprite: string;
   /** Voller Movepool (PokéAPI), alphabetisch. Für den Move-Picker in S8. */
   movepool: MovepoolMove[];
+  /**
+   * Mega-Formen dieser Spezies. Leer/fehlend = nicht mega-fähig. Bei
+   * mehrdeutigen Megas mehrere Einträge (z. B. Glurak: Mega X und Mega Y).
+   */
+  megas?: MegaForm[];
 }
 
 /** Usage-Eintrag pro Pokémon (data/usage.json). */

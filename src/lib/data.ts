@@ -54,7 +54,7 @@ export const DEMO_TEAM_IDS = [
   "basculegion",
   "kingambit",
   "garchomp",
-  "charizard-mega-y",
+  "charizard", // Spezies-id (Phase 9): Grund-Form, mega-fähig zu Mega X/Y im Live-Kampf
   "incineroar",
   "whimsicott",
 ];

@@ -2,7 +2,7 @@
   "meta": {
     "source": "pikalytics",
     "format": "gen9championsvgc2026regma",
-    "date": "2026-06-06T12:52:19.074Z"
+    "date": "2026-06-06T14:49:28.323Z"
   },
   "usage": [
     {
@@ -99,8 +99,8 @@
       ]
     },
     {
-      "id": "charizard-mega-y",
-      "nameEn": "Charizard-Mega-Y",
+      "id": "charizard",
+      "nameEn": "Charizard",
       "usagePercent": 32,
       "topMoves": [
         {
@@ -191,8 +191,8 @@
       ]
     },
     {
-      "id": "floette-mega",
-      "nameEn": "Floette-Mega",
+      "id": "floette",
+      "nameEn": "Floette",
       "usagePercent": 24,
       "topMoves": [
         {
@@ -375,36 +375,6 @@
       ]
     },
     {
-      "id": "aerodactyl-mega",
-      "nameEn": "Aerodactyl-Mega",
-      "usagePercent": 12,
-      "topMoves": [
-        {
-          "name": "Mega Aerodactyl Rock Slide",
-          "type": "rock",
-          "usagePercent": 98.498
-        },
-        {
-          "name": "Dual Wingbeat",
-          "type": "flying",
-          "usagePercent": 90.763,
-          "category": "physical"
-        },
-        {
-          "name": "Tailwind",
-          "type": "flying",
-          "usagePercent": 88.481,
-          "category": "status"
-        },
-        {
-          "name": "Protect",
-          "type": "normal",
-          "usagePercent": 79.381,
-          "category": "status"
-        }
-      ]
-    },
-    {
       "id": "pelipper",
       "nameEn": "Pelipper",
       "usagePercent": 12,
@@ -431,6 +401,36 @@
           "name": "Wide Guard",
           "type": "rock",
           "usagePercent": 57.775,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "aerodactyl",
+      "nameEn": "Aerodactyl",
+      "usagePercent": 12,
+      "topMoves": [
+        {
+          "name": "Mega Aerodactyl Rock Slide",
+          "type": "rock",
+          "usagePercent": 98.498
+        },
+        {
+          "name": "Dual Wingbeat",
+          "type": "flying",
+          "usagePercent": 90.763,
+          "category": "physical"
+        },
+        {
+          "name": "Tailwind",
+          "type": "flying",
+          "usagePercent": 88.481,
+          "category": "status"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 79.381,
           "category": "status"
         }
       ]
@@ -467,36 +467,6 @@
       ]
     },
     {
-      "id": "dragonite-mega",
-      "nameEn": "Dragonite-Mega",
-      "usagePercent": 8,
-      "topMoves": [
-        {
-          "name": "Mega Dragonite Tailwind",
-          "type": "flying",
-          "usagePercent": 66.617
-        },
-        {
-          "name": "Dragon Pulse",
-          "type": "dragon",
-          "usagePercent": 59.355,
-          "category": "special"
-        },
-        {
-          "name": "Protect",
-          "type": "normal",
-          "usagePercent": 56.202,
-          "category": "status"
-        },
-        {
-          "name": "Hurricane",
-          "type": "flying",
-          "usagePercent": 49.255,
-          "category": "special"
-        }
-      ]
-    },
-    {
       "id": "maushold",
       "nameEn": "Maushold",
       "usagePercent": 8,
@@ -528,6 +498,36 @@
       ]
     },
     {
+      "id": "dragonite",
+      "nameEn": "Dragonite",
+      "usagePercent": 8,
+      "topMoves": [
+        {
+          "name": "Mega Dragonite Tailwind",
+          "type": "flying",
+          "usagePercent": 66.617
+        },
+        {
+          "name": "Dragon Pulse",
+          "type": "dragon",
+          "usagePercent": 59.355,
+          "category": "special"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 56.202,
+          "category": "status"
+        },
+        {
+          "name": "Hurricane",
+          "type": "flying",
+          "usagePercent": 49.255,
+          "category": "special"
+        }
+      ]
+    },
+    {
       "id": "aegislash",
       "nameEn": "Aegislash",
       "usagePercent": 7,
@@ -555,36 +555,6 @@
           "type": "fighting",
           "usagePercent": 34.207,
           "category": "physical"
-        }
-      ]
-    },
-    {
-      "id": "blastoise-mega",
-      "nameEn": "Blastoise-Mega",
-      "usagePercent": 7,
-      "topMoves": [
-        {
-          "name": "Mega Blastoise Water Spout",
-          "type": "water",
-          "usagePercent": 90.032
-        },
-        {
-          "name": "Dark Pulse",
-          "type": "dark",
-          "usagePercent": 86.973,
-          "category": "special"
-        },
-        {
-          "name": "Fake Out",
-          "type": "normal",
-          "usagePercent": 63.275,
-          "category": "physical"
-        },
-        {
-          "name": "Aura Sphere",
-          "type": "fighting",
-          "usagePercent": 48.819,
-          "category": "special"
         }
       ]
     },
@@ -651,6 +621,36 @@
       ]
     },
     {
+      "id": "blastoise",
+      "nameEn": "Blastoise",
+      "usagePercent": 7,
+      "topMoves": [
+        {
+          "name": "Mega Blastoise Water Spout",
+          "type": "water",
+          "usagePercent": 90.032
+        },
+        {
+          "name": "Dark Pulse",
+          "type": "dark",
+          "usagePercent": 86.973,
+          "category": "special"
+        },
+        {
+          "name": "Fake Out",
+          "type": "normal",
+          "usagePercent": 63.275,
+          "category": "physical"
+        },
+        {
+          "name": "Aura Sphere",
+          "type": "fighting",
+          "usagePercent": 48.819,
+          "category": "special"
+        }
+      ]
+    },
+    {
       "id": "talonflame",
       "nameEn": "Talonflame",
       "usagePercent": 6,
@@ -682,8 +682,8 @@
       ]
     },
     {
-      "id": "venusaur-mega",
-      "nameEn": "Venusaur-Mega",
+      "id": "venusaur",
+      "nameEn": "Venusaur",
       "usagePercent": 6,
       "topMoves": [
         {
@@ -712,37 +712,8 @@
       ]
     },
     {
-      "id": "froslass-mega",
-      "nameEn": "Froslass-Mega",
-      "usagePercent": 6,
-      "topMoves": [
-        {
-          "name": "Mega Froslass Blizzard",
-          "type": "ice",
-          "usagePercent": 99.904
-        },
-        {
-          "name": "Protect",
-          "type": "normal",
-          "usagePercent": 98.41,
-          "category": "status"
-        },
-        {
-          "name": "Shadow Ball",
-          "type": "ghost",
-          "usagePercent": 91.528,
-          "category": "special"
-        },
-        {
-          "name": "Aurora Veil",
-          "type": "ice",
-          "usagePercent": 75.666
-        }
-      ]
-    },
-    {
-      "id": "gengar-mega",
-      "nameEn": "Gengar-Mega",
+      "id": "gengar",
+      "nameEn": "Gengar",
       "usagePercent": 6,
       "topMoves": [
         {
@@ -771,62 +742,32 @@
       ]
     },
     {
-      "id": "tyranitar-mega",
-      "nameEn": "Tyranitar-Mega",
-      "usagePercent": 5,
+      "id": "froslass",
+      "nameEn": "Froslass",
+      "usagePercent": 6,
       "topMoves": [
         {
-          "name": "Mega Tyranitar Rock Slide",
-          "type": "rock",
-          "usagePercent": 98.768
+          "name": "Mega Froslass Blizzard",
+          "type": "ice",
+          "usagePercent": 99.904
         },
         {
           "name": "Protect",
           "type": "normal",
-          "usagePercent": 98.544,
+          "usagePercent": 98.41,
           "category": "status"
         },
         {
-          "name": "Knock Off",
-          "type": "dark",
-          "usagePercent": 82.663,
-          "category": "physical"
+          "name": "Shadow Ball",
+          "type": "ghost",
+          "usagePercent": 91.528,
+          "category": "special"
         },
         {
-          "name": "Low Kick",
-          "type": "fighting",
-          "usagePercent": 59.085,
-          "category": "physical"
-        }
-      ]
-    },
-    {
-      "id": "kangaskhan-mega",
-      "nameEn": "Kangaskhan-Mega",
-      "usagePercent": 5,
-      "topMoves": [
-        {
-          "name": "Mega Kangaskhan Double-Edge",
-          "type": "normal",
-          "usagePercent": 96.59
-        },
-        {
-          "name": "Fake Out",
-          "type": "normal",
-          "usagePercent": 95.872,
-          "category": "physical"
-        },
-        {
-          "name": "Ice Punch",
+          "name": "Aurora Veil",
           "type": "ice",
-          "usagePercent": 55.225,
-          "category": "physical"
-        },
-        {
-          "name": "Low Kick",
-          "type": "fighting",
-          "usagePercent": 51.543,
-          "category": "physical"
+          "usagePercent": 75.666,
+          "category": "status"
         }
       ]
     },
@@ -893,62 +834,62 @@
       ]
     },
     {
-      "id": "scizor-mega",
-      "nameEn": "Scizor-Mega",
-      "usagePercent": 4,
+      "id": "tyranitar",
+      "nameEn": "Tyranitar",
+      "usagePercent": 5,
       "topMoves": [
         {
-          "name": "Mega Scizor Bullet Punch",
-          "type": "steel",
-          "usagePercent": 99.962
+          "name": "Mega Tyranitar Rock Slide",
+          "type": "rock",
+          "usagePercent": 98.768
         },
         {
           "name": "Protect",
           "type": "normal",
-          "usagePercent": 95.424,
+          "usagePercent": 98.544,
           "category": "status"
         },
         {
-          "name": "Bug Bite",
-          "type": "bug",
-          "usagePercent": 79.312,
+          "name": "Knock Off",
+          "type": "dark",
+          "usagePercent": 82.663,
           "category": "physical"
         },
         {
-          "name": "Swords Dance",
-          "type": "normal",
-          "usagePercent": 79.171,
-          "category": "status"
+          "name": "Low Kick",
+          "type": "fighting",
+          "usagePercent": 59.085,
+          "category": "physical"
         }
       ]
     },
     {
-      "id": "gardevoir-mega",
-      "nameEn": "Gardevoir-Mega",
-      "usagePercent": 4,
+      "id": "kangaskhan",
+      "nameEn": "Kangaskhan",
+      "usagePercent": 5,
       "topMoves": [
         {
-          "name": "Mega Gardevoir Hyper Voice",
+          "name": "Mega Kangaskhan Double-Edge",
           "type": "normal",
-          "usagePercent": 99.586
+          "usagePercent": 96.59
         },
         {
-          "name": "Protect",
+          "name": "Fake Out",
           "type": "normal",
-          "usagePercent": 98.109,
-          "category": "status"
+          "usagePercent": 95.872,
+          "category": "physical"
         },
         {
-          "name": "Trick Room",
-          "type": "psychic",
-          "usagePercent": 65.057,
-          "category": "status"
+          "name": "Ice Punch",
+          "type": "ice",
+          "usagePercent": 55.225,
+          "category": "physical"
         },
         {
-          "name": "Psyshock",
-          "type": "psychic",
-          "usagePercent": 47.261,
-          "category": "special"
+          "name": "Low Kick",
+          "type": "fighting",
+          "usagePercent": 51.543,
+          "category": "physical"
         }
       ]
     },
@@ -1015,6 +956,66 @@
       ]
     },
     {
+      "id": "scizor",
+      "nameEn": "Scizor",
+      "usagePercent": 4,
+      "topMoves": [
+        {
+          "name": "Mega Scizor Bullet Punch",
+          "type": "steel",
+          "usagePercent": 99.962
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 95.424,
+          "category": "status"
+        },
+        {
+          "name": "Bug Bite",
+          "type": "bug",
+          "usagePercent": 79.312,
+          "category": "physical"
+        },
+        {
+          "name": "Swords Dance",
+          "type": "normal",
+          "usagePercent": 79.171,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "gardevoir",
+      "nameEn": "Gardevoir",
+      "usagePercent": 4,
+      "topMoves": [
+        {
+          "name": "Mega Gardevoir Hyper Voice",
+          "type": "normal",
+          "usagePercent": 99.586
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 98.109,
+          "category": "status"
+        },
+        {
+          "name": "Trick Room",
+          "type": "psychic",
+          "usagePercent": 65.057,
+          "category": "status"
+        },
+        {
+          "name": "Psyshock",
+          "type": "psychic",
+          "usagePercent": 47.261,
+          "category": "special"
+        }
+      ]
+    },
+    {
       "id": "hydreigon",
       "nameEn": "Hydreigon",
       "usagePercent": 3,
@@ -1046,38 +1047,8 @@
       ]
     },
     {
-      "id": "skarmory-mega",
-      "nameEn": "Skarmory-Mega",
-      "usagePercent": 2,
-      "topMoves": [
-        {
-          "name": "Mega Skarmory Iron Head",
-          "type": "steel",
-          "usagePercent": 98.365
-        },
-        {
-          "name": "Brave Bird",
-          "type": "flying",
-          "usagePercent": 94.606,
-          "category": "physical"
-        },
-        {
-          "name": "Protect",
-          "type": "normal",
-          "usagePercent": 73.787,
-          "category": "status"
-        },
-        {
-          "name": "Tailwind",
-          "type": "flying",
-          "usagePercent": 52.511,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "camerupt-mega",
-      "nameEn": "Camerupt-Mega",
+      "id": "camerupt",
+      "nameEn": "Camerupt",
       "usagePercent": 2,
       "topMoves": [
         {
@@ -1102,6 +1073,36 @@
           "type": "rock",
           "usagePercent": 68.556,
           "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "skarmory",
+      "nameEn": "Skarmory",
+      "usagePercent": 2,
+      "topMoves": [
+        {
+          "name": "Mega Skarmory Iron Head",
+          "type": "steel",
+          "usagePercent": 98.365
+        },
+        {
+          "name": "Brave Bird",
+          "type": "flying",
+          "usagePercent": 94.606,
+          "category": "physical"
+        },
+        {
+          "name": "Protect",
+          "type": "normal",
+          "usagePercent": 73.787,
+          "category": "status"
+        },
+        {
+          "name": "Tailwind",
+          "type": "flying",
+          "usagePercent": 52.511,
+          "category": "status"
         }
       ]
     },
@@ -1199,8 +1200,8 @@
       ]
     },
     {
-      "id": "abomasnow-mega",
-      "nameEn": "Abomasnow-Mega",
+      "id": "abomasnow",
+      "nameEn": "Abomasnow",
       "usagePercent": 0,
       "topMoves": [
         {
@@ -1229,8 +1230,8 @@
       ]
     },
     {
-      "id": "steelix-mega",
-      "nameEn": "Steelix-Mega",
+      "id": "steelix",
+      "nameEn": "Steelix",
       "usagePercent": 0,
       "topMoves": [
         {

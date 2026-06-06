@@ -1,4 +1,5 @@
 import { Button } from "../components/Button";
+import { MegaMarker } from "../components/MegaMarker";
 import { PokemonSprite } from "../components/PokemonSprite";
 import { TypeBadge } from "../components/TypeBadge";
 import { ownCombatant, oppCombatant } from "../lib/combatant";
@@ -21,10 +22,52 @@ interface SynergyOverviewProps {
   onBack: () => void;
 }
 
+/** Hinweistext für den ⚡-Marker: bei mehrdeutigen Megas die Varianten zeigen. */
+function megaHint(megas: { label: string }[]): string {
+  if (megas.length > 1) return `→ ${megas.map((m) => m.label).join(" / ")}`;
+  return "Kann mega-entwickeln";
+}
+
+/** Eine Sprite-Zeile der S3-Aufschlüsselung (Trifft / Bedroht von). */
+function BreakdownRow({
+  label,
+  ids,
+  kind,
+}: {
+  label: string;
+  ids: string[];
+  kind: "covered" | "threat";
+}) {
+  return (
+    <span className={styles.bdRow} data-kind={kind}>
+      <span className={styles.bdLabel}>{label}</span>
+      <span className={styles.bdSprites}>
+        {ids.length === 0 ? (
+          <span className={styles.bdEmpty}>–</span>
+        ) : (
+          ids.map((id) => {
+            const opp = getPokemon(id);
+            return (
+              <PokemonSprite
+                key={id}
+                src={opp?.sprite ?? ""}
+                alt={opp?.nameDe ?? id}
+                size={22}
+              />
+            );
+          })
+        )}
+      </span>
+    </span>
+  );
+}
+
 /**
  * S3 — Synergie-Übersicht (Pick-Phase): die eigenen Pokémon mit dynamischer
  * Ampel gegen das Gegner-Team. Die Bewertung der noch nicht gewählten Pokémon
- * berücksichtigt, welche Gegner bereits von Picks abgedeckt sind.
+ * berücksichtigt, welche Gegner bereits von Picks abgedeckt sind. Pro Pokémon
+ * zwei Sprite-Zeilen (Trifft sehr effektiv / Wird bedroht von, Phase 9). Das
+ * Matchup rechnet mit den Grund-Typen; mega-fähige tragen einen ⚡-Marker.
  */
 export function SynergyOverview({
   team,
@@ -35,7 +78,7 @@ export function SynergyOverview({
   onBack,
 }: SynergyOverviewProps) {
   const opponents = opponentIds
-    .map(oppCombatant)
+    .map((id) => oppCombatant(id))
     .filter((c): c is NonNullable<typeof c> => c != null);
 
   const pickedSet = new Set(picked);
@@ -87,13 +130,14 @@ export function SynergyOverview({
             .filter(
               (m) => pickedSet.has(m.pokemonId) && m.pokemonId !== member.pokemonId,
             )
-            .map(ownCombatant)
+            .map((m) => ownCombatant(m))
             .filter((c): c is NonNullable<typeof c> => c != null);
 
           const ampel = synergyAmpel(own, opponents, others);
-          const hits = coveredOpponents(own, opponents).length;
-          const threatenedBy = threats(own, opponents).length;
+          const covered = coveredOpponents(own, opponents);
+          const threatenedBy = threats(own, opponents);
           const lockedOut = !selected && ready;
+          const canMega = (mon.megas?.length ?? 0) > 0;
 
           return (
             <li key={member.pokemonId}>
@@ -107,16 +151,33 @@ export function SynergyOverview({
                 aria-pressed={selected}
               >
                 <span className={styles.dot} data-ampel={ampel} aria-hidden="true" />
-                <PokemonSprite src={mon.sprite} alt={mon.nameDe} size={48} />
+                <span className={styles.spriteWrap}>
+                  <PokemonSprite src={mon.sprite} alt={mon.nameDe} size={48} />
+                  {canMega && <MegaMarker label={megaHint(mon.megas ?? [])} />}
+                </span>
                 <span className={styles.info}>
-                  <span className={styles.name}>{mon.nameDe}</span>
+                  <span className={styles.nameRow}>
+                    <span className={styles.name}>{mon.nameDe}</span>
+                    {canMega && mon.megas && mon.megas.length > 1 && (
+                      <span className={styles.megaHint}>{megaHint(mon.megas)}</span>
+                    )}
+                  </span>
                   <span className={styles.types}>
                     {mon.types.map((t) => (
                       <TypeBadge key={t} type={t} size="sm" />
                     ))}
                   </span>
-                  <span className={styles.stats}>
-                    trifft {hits} · bedroht von {threatenedBy}
+                  <span className={styles.breakdown}>
+                    <BreakdownRow
+                      label="Trifft sehr effektiv"
+                      ids={covered}
+                      kind="covered"
+                    />
+                    <BreakdownRow
+                      label="Wird bedroht von"
+                      ids={threatenedBy}
+                      kind="threat"
+                    />
                   </span>
                 </span>
                 {selected && (

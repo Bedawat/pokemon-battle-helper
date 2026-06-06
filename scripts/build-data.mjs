@@ -37,58 +37,88 @@ const TYPES = [
 ];
 
 /**
- * Roster (~Top 40 der Champions-Meta, Stand Mai 2026).
- * [Pikalytics-Name, PokéAPI-Slug | null].
- * PokéAPI-Slug nur noch für Sprite + DE-Name nötig (Typen kommen von Pikalytics).
- * null = Champions-eigene Form ohne PokéAPI-Eintrag → Sprite von Pikalytics.
+ * Roster (~Top 40 der Champions-Meta, Stand Mai 2026), Spezies-Modell (Phase 9).
+ *
+ * Zwei Eintrags-Formen:
+ *  1. Nicht-Mega: Tupel [Pikalytics-Name, PokéAPI-Slug].
+ *     Typen kommen von Pikalytics, Sprite + Movepool + DE-Name von PokéAPI.
+ *  2. Mega-fähige Spezies: Objekt
+ *       { species, base, usage, megas: [{ label, api } | { label, pika }] }
+ *     - `base`  PokéAPI-Slug der **Grund-Form** → Grund-Typen, Grund-Sprite,
+ *               Movepool, DE-Name. (Pick-Phase rechnet mit den Grund-Typen.)
+ *     - `usage` Pikalytics-Seite, von der Usage % + Top-Moves gezogen werden
+ *               (im Champions-Meta unter dem **Mega**-Namen gelistet, nicht unter
+ *               der Grund-Form). Top-Moves sind Spezies-Ebene (vor der Mega gewählt).
+ *     - `megas` je Variante: `api` (PokéAPI-Slug → Typen + Mega-Artwork) ODER
+ *               `pika` (Champions-eigene Mega ohne PokéAPI-Eintrag → Typen +
+ *               Sprite von der Pikalytics-Seite).
+ *
+ * Hinweis: Im aktuellen Meta hat nur Glurak zwei Megas (X/Y). Das Modell trägt
+ * generisch N Mega-Formen pro Spezies.
  */
 const ROSTER = [
+  // --- Nicht-Mega ---
   ["Basculegion", "basculegion-male"],
   ["Kingambit", "kingambit"],
   ["Garchomp", "garchomp"],
-  ["Charizard-Mega-Y", "charizard-mega-y"],
   ["Sneasler", "sneasler"],
   ["Incineroar", "incineroar"],
-  ["Floette-Mega", null],
   ["Sinistcha", "sinistcha"],
   ["Sylveon", "sylveon"],
   ["Whimsicott", "whimsicott"],
   ["Archaludon", "archaludon"],
   ["Farigiraf", "farigiraf"],
-  ["Aerodactyl-Mega", "aerodactyl-mega"],
   ["Pelipper", "pelipper"],
   ["Sableye", "sableye"],
-  ["Dragonite-Mega", null],
   ["Maushold", "maushold-family-of-four"],
   ["Aegislash", "aegislash-shield"],
-  ["Blastoise-Mega", "blastoise-mega"],
   ["Rotom-Wash", "rotom-wash"],
   ["Talonflame", "talonflame"],
-  ["Tyranitar-Mega", "tyranitar-mega"],
-  ["Scizor-Mega", "scizor-mega"],
-  ["Skarmory-Mega", null],
-  ["Gardevoir-Mega", "gardevoir-mega"],
-  ["Kangaskhan-Mega", "kangaskhan-mega"],
   ["Kommo-o", "kommo-o"],
-  ["Venusaur-Mega", "venusaur-mega"],
   ["Vivillon", "vivillon"],
   ["Corviknight", "corviknight"],
   ["Hydreigon", "hydreigon"],
-  ["Froslass-Mega", null],
   ["Arcanine-Hisui", "arcanine-hisui"],
-  ["Camerupt-Mega", "camerupt-mega"],
   ["Oranguru", "oranguru"],
-  ["Abomasnow-Mega", "abomasnow-mega"],
   ["Araquanid", "araquanid"],
-  ["Gengar-Mega", "gengar-mega"],
   ["Politoed", "politoed"],
   ["Glimmora", "glimmora"],
-  ["Steelix-Mega", "steelix-mega"],
+
+  // --- Mega-fähige Spezies (PokéAPI-Megas) ---
+  {
+    species: "Charizard",
+    base: "charizard",
+    usage: "Charizard-Mega-Y",
+    megas: [
+      { label: "Mega X", api: "charizard-mega-x" },
+      { label: "Mega Y", api: "charizard-mega-y" },
+    ],
+  },
+  { species: "Aerodactyl", base: "aerodactyl", usage: "Aerodactyl-Mega", megas: [{ label: "Mega", api: "aerodactyl-mega" }] },
+  { species: "Blastoise", base: "blastoise", usage: "Blastoise-Mega", megas: [{ label: "Mega", api: "blastoise-mega" }] },
+  { species: "Tyranitar", base: "tyranitar", usage: "Tyranitar-Mega", megas: [{ label: "Mega", api: "tyranitar-mega" }] },
+  { species: "Scizor", base: "scizor", usage: "Scizor-Mega", megas: [{ label: "Mega", api: "scizor-mega" }] },
+  { species: "Gardevoir", base: "gardevoir", usage: "Gardevoir-Mega", megas: [{ label: "Mega", api: "gardevoir-mega" }] },
+  { species: "Kangaskhan", base: "kangaskhan", usage: "Kangaskhan-Mega", megas: [{ label: "Mega", api: "kangaskhan-mega" }] },
+  { species: "Venusaur", base: "venusaur", usage: "Venusaur-Mega", megas: [{ label: "Mega", api: "venusaur-mega" }] },
+  { species: "Camerupt", base: "camerupt", usage: "Camerupt-Mega", megas: [{ label: "Mega", api: "camerupt-mega" }] },
+  { species: "Abomasnow", base: "abomasnow", usage: "Abomasnow-Mega", megas: [{ label: "Mega", api: "abomasnow-mega" }] },
+  { species: "Gengar", base: "gengar", usage: "Gengar-Mega", megas: [{ label: "Mega", api: "gengar-mega" }] },
+  { species: "Steelix", base: "steelix", usage: "Steelix-Mega", megas: [{ label: "Mega", api: "steelix-mega" }] },
+
+  // --- Mega-fähige Spezies (Champions-eigene Megas, kein PokéAPI-Eintrag) ---
+  { species: "Floette", base: "floette", usage: "Floette-Mega", megas: [{ label: "Mega", pika: "Floette-Mega" }] },
+  { species: "Dragonite", base: "dragonite", usage: "Dragonite-Mega", megas: [{ label: "Mega", pika: "Dragonite-Mega" }] },
+  { species: "Skarmory", base: "skarmory", usage: "Skarmory-Mega", megas: [{ label: "Mega", pika: "Skarmory-Mega" }] },
+  { species: "Froslass", base: "froslass", usage: "Froslass-Mega", megas: [{ label: "Mega", pika: "Froslass-Mega" }] },
 ];
 
-/** Letzter Notnagel für Typen, falls Pikalytics-Parsing fehlschlägt. */
+/** Letzter Notnagel für Typen, falls Pikalytics-/PokéAPI-Parsing fehlschlägt. */
 const TYPE_OVERRIDES = {
+  // Champions-Mega-Formen (id der Mega-Form):
   "floette-mega": ["fairy"],
+  // Grund-Formen (Spezies-id) — greifen nur, wenn PokéAPI keine Typen liefert:
+  // (i. d. R. nicht nötig, PokéAPI ist hier zuverlässig)
 };
 
 const slug = (name) =>
@@ -223,17 +253,24 @@ function parsePikalyticsDetail(html, pikalyticsName) {
 }
 
 /**
- * Holt Sprite (Official Artwork) UND die Movepool-Slugs in einem Fetch.
- * Gibt { sprite, moveSlugs } zurück; bei Fehler { sprite: null, moveSlugs: [] }.
+ * Holt Typen, Sprite (Official Artwork) UND die Movepool-Slugs in einem Fetch.
+ * Typen in Slot-Reihenfolge (Primär zuerst). Bei Fehler leere Defaults.
+ * Gibt { types, sprite, moveSlugs } zurück.
  */
 async function fetchPokemonApi(apiSlug) {
   try {
     const mon = await fetchJson(`${POKEAPI}/pokemon/${apiSlug}`);
+    const types = (mon.types ?? [])
+      .slice()
+      .sort((a, b) => a.slot - b.slot)
+      .map((t) => t.type?.name)
+      .filter((t) => TYPES.includes(t))
+      .slice(0, 2);
     const sprite = mon.sprites?.other?.["official-artwork"]?.front_default ?? null;
     const moveSlugs = (mon.moves ?? []).map((m) => m.move.name);
-    return { sprite, moveSlugs };
+    return { types, sprite, moveSlugs };
   } catch {
-    return { sprite: null, moveSlugs: [] };
+    return { types: [], sprite: null, moveSlugs: [] };
   }
 }
 
@@ -278,6 +315,114 @@ async function fetchNameDe(species) {
   }
 }
 
+/** Holt + parst eine Pikalytics-Detailseite (mit Fehler-Warnung). */
+async function loadPikalytics(name, warnings) {
+  let detail = { types: [], usagePercent: null, pikaSprite: null, topMoves: [] };
+  try {
+    const html = await fetchText(`${PIKALYTICS_BASE}/${name}`);
+    detail = parsePikalyticsDetail(html, name);
+  } catch (e) {
+    warnings.push(`${name}: Pikalytics-Fehler (${e.message})`);
+  }
+  return detail;
+}
+
+/**
+ * Verarbeitet einen Nicht-Mega-Eintrag [Pikalytics-Name, PokéAPI-Slug].
+ * Typen von Pikalytics, Sprite + Movepool + DE-Name von PokéAPI. (Wie bisher.)
+ */
+async function processNonMega([name, apiSlug], ctx) {
+  const { pokemon, usage, warnings, moveSlugsById } = ctx;
+  const id = slug(name);
+  process.stdout.write(`→ ${name} … `);
+
+  const detail = await loadPikalytics(name, warnings);
+  if (detail.topMoves.length === 0) warnings.push(`${name}: keine Moves geparst`);
+  if (detail.usagePercent === null) warnings.push(`${name}: kein Usage % geparst`);
+
+  let types = detail.types;
+  if (types.length === 0) {
+    if (TYPE_OVERRIDES[id]) types = TYPE_OVERRIDES[id];
+    else warnings.push(`${name}: keine Typen geparst — BITTE PRÜFEN`);
+  }
+
+  const api = apiSlug
+    ? await fetchPokemonApi(apiSlug)
+    : { types: [], sprite: null, moveSlugs: [] };
+  const sprite = api.sprite ?? detail.pikaSprite;
+  if (!sprite) warnings.push(`${name}: kein Sprite gefunden`);
+  moveSlugsById[id] = api.moveSlugs;
+
+  const nameDe = (await fetchNameDe(speciesSlug(name))) ?? name;
+
+  pokemon.push({ id, nameEn: name, nameDe, types, sprite: sprite ?? "", movepool: [], megas: [] });
+  usage.push({ id, nameEn: name, usagePercent: detail.usagePercent, topMoves: detail.topMoves });
+
+  console.log(
+    `${types.join("/") || "?"}  usage ${detail.usagePercent ?? "?"}%  moves ${detail.topMoves.length}  pool ${api.moveSlugs.length}`,
+  );
+}
+
+/**
+ * Verarbeitet eine mega-fähige Spezies { species, base, usage, megas }.
+ * Grund-Typen/-Sprite/-Movepool/-DE-Name aus PokéAPI (base); Usage + Top-Moves
+ * von der Mega-Pikalytics-Seite (Spezies-Ebene); pro Mega Typen + Artwork aus
+ * PokéAPI (api) bzw. Pikalytics (pika, Champions-Megas).
+ */
+async function processMegaSpecies(spec, ctx) {
+  const { pokemon, usage, warnings, moveSlugsById } = ctx;
+  const id = slug(spec.species);
+  const name = spec.species;
+  process.stdout.write(`→ ${name} (Mega-Spezies) … `);
+
+  // Usage + Top-Moves von der Mega-Seite (im Champions-Meta dort gelistet).
+  const usageDetail = await loadPikalytics(spec.usage, warnings);
+  if (usageDetail.topMoves.length === 0) warnings.push(`${name}: keine Moves geparst (${spec.usage})`);
+  if (usageDetail.usagePercent === null) warnings.push(`${name}: kein Usage % geparst (${spec.usage})`);
+
+  // Grund-Form aus PokéAPI: Typen, Sprite, Movepool.
+  const base = await fetchPokemonApi(spec.base);
+  let baseTypes = base.types;
+  if (baseTypes.length === 0) {
+    if (TYPE_OVERRIDES[id]) baseTypes = TYPE_OVERRIDES[id];
+    else warnings.push(`${name}: keine Grund-Typen von PokéAPI (${spec.base}) — BITTE PRÜFEN`);
+  }
+  const baseSprite = base.sprite ?? usageDetail.pikaSprite;
+  if (!baseSprite) warnings.push(`${name}: kein Grund-Sprite gefunden`);
+  moveSlugsById[id] = base.moveSlugs;
+
+  const nameDe = (await fetchNameDe(speciesSlug(spec.species))) ?? name;
+
+  // Mega-Formen.
+  const megas = [];
+  for (const m of spec.megas) {
+    if (m.api) {
+      const mApi = await fetchPokemonApi(m.api);
+      if (mApi.types.length === 0) warnings.push(`${name}/${m.label}: keine Mega-Typen (${m.api})`);
+      if (!mApi.sprite) warnings.push(`${name}/${m.label}: kein Mega-Artwork (${m.api})`);
+      megas.push({ id: slug(m.api), label: m.label, types: mApi.types, sprite: mApi.sprite ?? "" });
+      await sleep(120);
+    } else {
+      // Champions-Mega: eigene Pikalytics-Seite (== usage-Seite, falls gleicher Name).
+      const mDetail = m.pika === spec.usage ? usageDetail : await loadPikalytics(m.pika, warnings);
+      const megaId = slug(m.pika);
+      let mTypes = mDetail.types;
+      if (mTypes.length === 0) mTypes = TYPE_OVERRIDES[megaId] ?? [];
+      if (mTypes.length === 0) warnings.push(`${name}/${m.label}: keine Mega-Typen (${m.pika})`);
+      if (!mDetail.pikaSprite) warnings.push(`${name}/${m.label}: kein Mega-Sprite (${m.pika})`);
+      megas.push({ id: megaId, label: m.label, types: mTypes, sprite: mDetail.pikaSprite ?? "" });
+      if (m.pika !== spec.usage) await sleep(120);
+    }
+  }
+
+  pokemon.push({ id, nameEn: name, nameDe, types: baseTypes, sprite: baseSprite ?? "", movepool: [], megas });
+  usage.push({ id, nameEn: name, usagePercent: usageDetail.usagePercent, topMoves: usageDetail.topMoves });
+
+  console.log(
+    `base ${baseTypes.join("/") || "?"}  megas [${megas.map((x) => x.types.join("/") || "?").join(", ")}]  usage ${usageDetail.usagePercent ?? "?"}%  moves ${usageDetail.topMoves.length}  pool ${base.moveSlugs.length}`,
+  );
+}
+
 async function main() {
   await mkdir(DATA_DIR, { recursive: true });
 
@@ -290,45 +435,13 @@ async function main() {
   /** Pro Pokémon gesammelte Movepool-Slugs (PokéAPI) für die 2. Phase. */
   const moveSlugsById = {};
 
-  for (const [name, apiSlug] of ROSTER) {
-    const id = slug(name);
-    process.stdout.write(`→ ${name} … `);
-
-    // Pikalytics: Typen, Usage, Sprite, Moves
-    let detail = { types: [], usagePercent: null, pikaSprite: null, topMoves: [] };
-    try {
-      const html = await fetchText(`${PIKALYTICS_BASE}/${name}`);
-      detail = parsePikalyticsDetail(html, name);
-    } catch (e) {
-      warnings.push(`${name}: Pikalytics-Fehler (${e.message})`);
+  const ctx = { pokemon, usage, warnings, moveSlugsById };
+  for (const entry of ROSTER) {
+    if (Array.isArray(entry)) {
+      await processNonMega(entry, ctx);
+    } else {
+      await processMegaSpecies(entry, ctx);
     }
-    if (detail.topMoves.length === 0) warnings.push(`${name}: keine Moves geparst`);
-    if (detail.usagePercent === null) warnings.push(`${name}: kein Usage % geparst`);
-
-    // Typen: Pikalytics → Override
-    let types = detail.types;
-    if (types.length === 0) {
-      if (TYPE_OVERRIDES[id]) types = TYPE_OVERRIDES[id];
-      else warnings.push(`${name}: keine Typen geparst — BITTE PRÜFEN`);
-    }
-
-    // Sprite + Movepool-Slugs: PokéAPI (ein Fetch) → Pikalytics-Sprite-Fallback
-    const api = apiSlug ? await fetchPokemonApi(apiSlug) : { sprite: null, moveSlugs: [] };
-    const sprite = api.sprite ?? detail.pikaSprite;
-    if (!sprite) warnings.push(`${name}: kein Sprite gefunden`);
-    moveSlugsById[id] = api.moveSlugs;
-
-    // DE-Name über die Spezies
-    const nameDe = (await fetchNameDe(speciesSlug(name))) ?? name;
-
-    // movepool wird in Phase 2 befüllt; Champions-Megas ohne Slug bekommen
-    // ihre Top-4 als Fallback-Movepool.
-    pokemon.push({ id, nameEn: name, nameDe, types, sprite: sprite ?? "", movepool: [] });
-    usage.push({ id, nameEn: name, usagePercent: detail.usagePercent, topMoves: detail.topMoves });
-
-    console.log(
-      `${types.join("/") || "?"}  usage ${detail.usagePercent ?? "?"}%  moves ${detail.topMoves.length}  pool ${api.moveSlugs.length}`,
-    );
     await sleep(350); // höflich zu Pikalytics
   }
 

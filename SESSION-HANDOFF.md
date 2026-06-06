@@ -1,4 +1,4 @@
-# Session-Handoff — Pokémon Battle Helper (Stand 05.06.2026)
+# Session-Handoff — Pokémon Battle Helper (Stand 06.06.2026)
 
 Für einen neuen Chat/Agent, um die Web-App nahtlos weiterzubauen.
 Sag im neuen Chat: **„Lies SESSION-HANDOFF.md im pokemon-battle-helper Ordner und mach weiter."**
@@ -45,23 +45,27 @@ offline im Sandbox mit `node` testen (Node ist da, nur ohne Netz).
   - Reine Logik getestet in `lib/{search,team,dataset}.test.ts` (offline).
   - Demo-Team beim ersten Start vorbefüllt + aktiv.
 
-Phasen 1–6 verifiziert grün — der funktionale Prototyp ist fertig (alle drei User
-Journeys laufen). Es bleibt **Phase 7 (Polish & Testing)** vor dem Usability-Test.
-Offene Punkte siehe Backlog.
+Phasen 1–7 **und Phase 9 (Mega-Handling)** verifiziert grün — der funktionale
+Prototyp inkl. Mega-Mechanik ist fertig (alle drei User Journeys + Mega-Vorschau im
+Live-Kampf laufen, bei Pete durchgeklickt 06.06.).
+
+**Offen / nächste Session (nicht blockierend):**
+- **Phase 7 Restpunkte:** Cross-Device-Test auf dem iPhone (`npm run dev:lan`),
+  Sicht-Check der aufgehellten Tertiärfarbe.
+- **Backlog:** committetes Mega bleibt „verbraucht" beim Bank-Tausch (One-per-Side,
+  akzeptabel); Top-Move-Name „Mega Charizard Y Heat Wave" (Pikalytics-Artefakt, kosmetisch).
+- **Danach:** Usability-Test (Schwellen in `synergy.ts` kalibrieren).
+- **Git:** Änderungen committen + pushen (lokal auf dem Mac, siehe Abschnitt „Git & GitHub").
 
 ## Backlog / Offene Punkte (später, nicht blockierend)
 
 - **Floette-Sprite fehlt** — bei Floette (Champions-Mega ohne PokéAPI-Slug) lädt
   kein Bild. Vermutlich Pikalytics-CDN-URL falsch/leer. In `build-data.mjs` den
   Sprite-Fallback für die Champions-Megas prüfen (ggf. manuell hinterlegen).
-- **Mega-Entwicklungen in der Pick-Phase** — bei der Champion-/Gegner-Auswahl ist
-  nur das Basis-Pokémon sichtbar (z. B. „Glurak"), **nicht** welche Mega der Gegner
-  mitnimmt (Glurak-X = Feuer/Drache vs. Glurak-Y = Feuer/Flug). Das ändert die
-  Typen und damit die Matchup-Bewertung. Aktuell stehen einzelne Mega-Formen als
-  eigene Einträge im Datensatz — Konzept fehlt noch, wie wir Basis-Form vs.
-  ungewisse Mega in der Gegner-Eingabe und im Matchup darstellen. Designentscheidung
-  vor sauberer Umsetzung nötig (z. B. Basis-Form picken + im Live-Kampf Mega-Variante
-  wählen, oder beide Mega-Matchups anzeigen).
+- ~~**Mega-Entwicklungen in der Pick-Phase**~~ → **Design entschieden 06.06.2026**
+  (Grill-Session). Volle Entscheidung + Umsetzungsplan im Wiki:
+  `University Wiki/.../Pokémon Battle Helper — Web-App Handoff.md` §11.
+  Kurzfassung → siehe **Phase 9** unten. Umsetzung noch offen.
 - ~~Status-Moves verfälschen die Coverage~~ → **erledigt 06.06.** (siehe Phase 7).
   **Wichtig:** wirkt erst nach `npm run data` (Kategorie kommt frisch aus PokéAPI);
   bis dahin Safe Default (jeder Move zählt wie bisher).
@@ -157,6 +161,106 @@ Noch offen für Phase 7: Cross-Device-Test auf dem iPhone (`npm run dev:lan`),
 Sicht-Check der aufgehellten Tertiär-Farbe. Plus Restbacklog (Floette-Sprite,
 Mega-Handling). (`npm run data` ist gelaufen — Move-Kategorien sind im Datensatz.)
 
+## Phase 9 — Mega-Handling + S3-Detailaufschlüsselung (Design entschieden 06.06.2026, Umsetzung offen)
+
+Volle Entscheidung + Begründung im Wiki-Handoff §11. Kurzfassung:
+
+**Mega-Handling.** 16/41 Pokémon sind Megas. Neues Modell: in der **Pick-Phase
+pickt man die Grund-Form** (Matchup nutzt Grund-Typen) mit „⚡"-Marker bei
+mega-fähigen; im **Live-Kampf** mega-entwickelbar — **beide Seiten**, aber **nur
+eines pro Seite** (One-per-Side). Kernfeature: **Was-wäre-wenn-Vorschau** vor dem
+Commit. Mega ändert **nur Typen** (keine Werte/Fähigkeiten). Sprite wechselt auf
+**Mega-Artwork**. Movesets bleiben geteilt (vor dem Kampf gewählt = vor der Mega).
+
+Umsetzungsschritte (jede testbar):
+1. Datenmodell `Pokemon.megas?: MegaForm[] {id,label,types,sprite}`, `Pokemon.types`
+   = Grund-Typen. `build-data.mjs`: Roster auf Spezies umbauen, **Charizard mit
+   Mega-X UND Mega-Y**, Grund-Typen + Mega-Typen/-Artwork fetchen.
+2. „⚡"-Marker in S2 + S3.
+3. S5: Mega-Chip + Vorschau→Commit, One-per-Side, Sprite-Wechsel, Ampeln mit
+   aktiver Form. State pro Slot: `base | megaId` + je Seite „Mega verbraucht".
+4. `combatant.ts`: aktive Form als Parameter.
+5. Tests: Mega-Matchup, One-per-Side, S3-Breakdown.
+
+**S3-Synergie-Karte (separate Entscheidung, gleiche Session).** Die Zahlen „trifft X
+· bedroht von Y" werden ersetzt durch **zwei beschriftete Sprite-Zeilen** „Trifft
+sehr effektiv" (grün, `coveredOpponents`) / „Wird bedroht von" (rot, `threats`) mit
+den Gegner-Sprites — Variante B (volle Breite, gestapelt). Großer Synergie-Punkt
+bleibt die dynamische Gesamtwertung. Macht *gegen wen* sichtbar (Time-to-Insight).
+
+### Phase 9 — Umsetzungsstand (Daten-Layer erledigt 06.06.2026, App-Layer offen)
+
+**Erledigt (Schritt 1 des Plans, von mir typecheck-grün):**
+- **Datenmodell** (`types/pokemon.ts`): neues `MegaForm { id, label, types, sprite }`,
+  `Pokemon.megas?: MegaForm[]`, `Pokemon.types` jetzt = **Grund-Typen**.
+- **`build-data.mjs` auf Spezies-Modell umgebaut:** Roster trägt zwei Eintrags-
+  Formen — Nicht-Mega-Tupel (wie bisher) und Mega-Spezies-Objekte
+  `{ species, base, usage, megas }`. Grund-Typen/-Sprite/-Movepool/-DE-Name aus
+  PokéAPI (`base`); Usage + Top-Moves von der Mega-Pikalytics-Seite (`usage`,
+  Spezies-Ebene); pro Mega Typen + Artwork aus PokéAPI (`api`) bzw. Pikalytics
+  (`pika`, Champions-Megas). **Glurak mit Mega-X *und* Mega-Y.** 41 Spezies
+  (25 Nicht-Mega + 16 Mega), keine ID-Kollisionen.
+- **ID-Migration:** mega-fähige ids sind jetzt **Spezies-ids** (`charizard` statt
+  `charizard-mega-y`). `DEMO_TEAM_IDS` angepasst; `STORAGE_KEY` `v1` → `v2`
+  (verwirft alte Teams mit veralteten ids sauber).
+
+**WICHTIG — Reihenfolge bei dir:** Code-Änderungen ziehen **und** `npm run data`
+laufen lassen, *bevor* du die App testest. Bis zum Rebuild hat `pokemon.json` noch
+die alten Mega-ids → das Demo-Team fände „charizard" nicht (5 statt 6 Mon). Nach
+`npm run data` ist alles konsistent.
+
+**Beim Lauf gegenprüfen (meine Annahmen, ich sehe Pikalytics/PokéAPI nicht):**
+1. **Usage-Seiten** existieren unter den Mega-Namen (`Charizard-Mega-Y`,
+   `Aerodactyl-Mega`, …) — die Top-Moves/Usage kommen von dort.
+2. **Charizard-Mega-X** liefert via PokéAPI fire/dragon + Artwork (Mega-Y fire/flying).
+3. **Champions-Megas** (Floette/Dragonite/Skarmory/Froslass): Grund-Form aus PokéAPI
+   (`floette`/`dragonite`/`skarmory`/`froslass`), Mega-Typen+Sprite von der
+   Pikalytics-Mega-Seite. Floette-Mega hat `fairy` als Override-Fallback.
+4. **Erwartete Konsole:** pro Mega-Spezies eine Zeile `base …  megas […]  usage …`.
+   Achte auf Warnungen „keine Grund-Typen", „keine Mega-Typen", „kein … Sprite".
+
+Daten-Lauf bei Pete: **41 Pokémon, keine Warnungen** (06.06.). Charizard base
+fire/flying → Mega X fire/dragon, Mega Y fire/flying; alle 16 mega-fähig korrekt.
+
+### Phase 9 — App-Layer ✅ (verifiziert bei Pete 06.06.2026)
+
+Schritte 2–6 gebaut. `tsc -b --noEmit` clean; reine Logik (mega.ts, resolveActiveTypes)
+offline mit Node verifiziert (10/10). **Bei Pete: `npm test` grün + Durchklick i. O.**
+(vitest läuft im Agent-Sandbox nicht — Rollup-Native-Binary ist für macOS, nicht linux-arm64.)
+
+- **`lib/mega.ts`** (neu, rein): `MegaState`, `canMega`/`commitMega`/`revertMega`/
+  `activeMegaId` — One-per-Side, Seiten unabhängig, immutabel. Tests `mega.test.ts`.
+- **`combatant.ts`**: `ownCombatant`/`oppCombatant` nehmen optional `megaId` →
+  aktive Typen aus Grund- oder Mega-Form. Reine Hilfsfunktion `resolveActiveTypes`
+  exportiert + getestet (`combatant.test.ts`). **Achtung:** alle `.map(oppCombatant)`-
+  Stellen auf `.map((id) => oppCombatant(id))` umgestellt (sonst Index als megaId).
+- **⚡-Marker** (`components/MegaMarker.tsx`): statischer Corner-Badge. Im
+  `PokemonGrid` → erscheint in **S2** (Gegner-Eingabe) *und* **S7** (Team-Editor,
+  da Grid geteilt — gewollt konsistent). In **S3** zusätzlich Inline-Hinweis
+  „→ Mega X / Mega Y" bei mehrdeutigen Megas (Glurak).
+- **S3-Sprite-Zeilen** (Variante B): „Trifft sehr effektiv" (grün) / „Wird bedroht
+  von" (rot) mit Gegner-Sprites statt „trifft X · bedroht von Y". Leere Zeile = „–".
+- **S5-Mega-Interaktion** (`LiveBattle.tsx`): ⚡-Mega-Chip an eigenen + Feld-Gegner-
+  Pokémon. Tap → Vorschau (Sprite/Typen/Ampeln rechnen „als ob", gestrichelt +
+  Banner „Vorschau … → Mega Y") → „Mega bestätigen"/„Abbrechen". Nach Commit andere
+  Chips derselben Seite ausgegraut (One-per-Side); committetes Mega per Tap
+  rücknehmbar. Glurak zeigt zwei Chips (Mega X / Mega Y). Feld-Karte ist jetzt
+  Container + innerer Select-Button (Chips dürfen nicht im Button verschachtelt sein).
+
+**Durchgeklickt + bestätigt (06.06.) — für Regressionstests künftig prüfen:**
+1. **S2/S7:** ⚡ an allen 16 mega-fähigen, an keinem anderen.
+2. **S3:** Glurak zeigt „→ Mega X / Mega Y"; Sprite-Zeilen plausibel (mit Grund-Typen).
+3. **S5 Vorschau:** Glurak-Chip „Mega X" antippen → Ampeln/Typen/Sprite ändern sich
+   gestrichelt, Banner erscheint; „Mega Y" wechselt die Vorschau; Bestätigen schreibt
+   fest, Sprite = Mega-Artwork.
+4. **One-per-Side:** nach Commit eines eigenen Megas sind die anderen eigenen Chips
+   grau; die Gegner-Seite bleibt frei. Commit rücknehmbar (Chip erneut tippen).
+5. **Layout auf 393px:** Chips/Banner brechen sauber, Touch-Targets ≥ 44px.
+
+Minor/Backlog: (a) committetes Mega bleibt „verbraucht", auch wenn das Mon auf die
+Bank getauscht wird (One-per-Side-Semantik, akzeptabel); (b) Top-Move-Name
+„Mega Charizard Y Heat Wave" (Pikalytics-Artefakt) — kosmetisch.
+
 ## Befehle (auf Petes Mac)
 
 ```bash
@@ -169,44 +273,28 @@ npm test             # Vitest (search/team/dataset/opponent/matchup/synergy)
 npm run typecheck    # TS prüfen
 ```
 
-## Git & GitHub (Stand 06.06.2026 — offen)
+## Git & GitHub (Stand 06.06.2026 — ✅ erledigt)
 
-Ziel: Projekt unter Versionskontrolle und als **privates** GitHub-Repo sichtbar.
+Projekt ist unter Versionskontrolle und liegt **privat** auf GitHub:
+**`github.com/Bedawat/pokemon-battle-helper`** (Remote `origin` via SSH, `main`
+trackt `origin/main`). Root-Commit `d2b218e`, 73 Dateien.
 
-**Erledigt:**
-- `.gitignore` ergänzt (`*.tsbuildinfo` zusätzlich zum Vite-Default). Liegt im Ordner.
-- Entscheidung Pete: `data/*.json` **wird mitcommittet** (ohne Netz nicht reproduzierbar,
-  ~356 KB) → bewusst NICHT in `.gitignore`.
+- `.gitignore` ergänzt (`*.tsbuildinfo` zusätzlich zum Vite-Default).
+- `data/*.json` **wird mitcommittet** (ohne Netz nicht reproduzierbar, ~356 KB) —
+  bewusst NICHT in `.gitignore`.
+- Setup lief komplett **lokal auf Petes Mac** (init → commit → SSH-Push).
 
-**Blocker 1 — lokales git aus der Agent-Sandbox geht nicht.** Der Mount auf Petes
-Ordner erlaubt **kein Unlink/Löschen** von Dateien (`rm` → „Operation not permitted",
-selbst auf frisch angelegten Dateien). Git braucht aber ständig Unlink (`index.lock`
-etc.), deshalb hängt jeder Commit. Ein von mir angefangenes `.git/` mit klemmendem
-`index.lock` liegt evtl. noch im Ordner → Pete macht `rm -rf .git` und initialisiert frisch.
+**Lessons learned (für künftige Git-Aufgaben):**
+- **Agent-Sandbox kann kein lokales git auf Petes Ordner.** Der Mount erlaubt kein
+  Unlink/Löschen (`rm` → „Operation not permitted"), git braucht das aber laufend
+  (`index.lock`). → git-Operationen immer Pete auf dem Mac ausführen lassen.
+- **Die „GitHub-Integration" ist Lese-/Kontext-only** (Dateien an Chat anhängen,
+  Codebase-Sync, Repo-Auswahl in Claude Code) — **keine Write-Tools** (`create_repository`/
+  `push`) im Chat verfügbar, auch nach App-Neustart nicht. Repo anlegen/pushen geht
+  daher nur lokal (oder mit `gh`, das aber NICHT installiert ist).
 
-**Blocker 2 — GitHub-Connector bringt keine Write-Tools.** Pete hat die
-„GitHub-Integration" verbunden (gleiche Ebene wie Google Calendar). Laut Beschreibung
-ist das eine **Lese-/Kontext-Integration** (Repo-Dateien an Chat anhängen, Codebase als
-Projekt-Kontext syncen, Repo-/Branch-/PR-Auswahl in Claude Code) — **kein MCP mit
-`create_repository`/`push`**. Auch nach App-Neustart sind bei mir keine GitHub-Tools
-aufgetaucht (mehrfach per ToolSearch geprüft). Erwartung: Ein neuer Chat zeigt sie
-vermutlich auch nicht, weil diese Integration sie schlicht nicht mitbringt.
-
-**TODO für nächsten Chat / Pete:**
-1. (Optional) In neuem Chat checken, ob doch GitHub-Write-Tools auftauchen.
-2. Wenn nicht (erwartbar): Repo lokal auf dem Mac anlegen + pushen. `gh` ist NICHT
-   installiert → entweder `gh` installieren oder leeres Repo auf github.com anlegen.
-
-```bash
-cd "/Users/peter/Projects/CoworkPlayground/pokemon-battle-helper"
-rm -rf .git && git init -b main
-git config user.name "Pete"
-git config user.email "peter.waetzel@gmail.com"
-git add -A && git commit -m "Initial commit: Pokémon Battle Helper Prototyp (Phasen 1-7)"
-# leeres PRIVATES Repo auf github.com anlegen (ohne README/gitignore), dann:
-git remote add origin git@github.com:<dein-user>/pokemon-battle-helper.git
-git push -u origin main
-```
+**Künftiger Workflow:** Änderungen, die ich (Agent) in Petes Ordner schreibe, committet
+und pusht **Pete** auf dem Mac (`git add -A && git commit && git push`).
 
 **Spätere Zugriffsbeschränkung (Petes Wunsch):** Kein Schreibzugriff auf bestimmte
 Repos. Richtiges Mittel = **Fine-grained Personal Access Token**: nur ausgewählte Repos
