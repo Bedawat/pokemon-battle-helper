@@ -6,7 +6,7 @@ export type Screen =
   | "main-menu" // S1 — Hauptmenü / Begrüßung
   | "opponent-input" // S2 — Gegner-Eingabe
   | "synergy" // S3 — Synergie-Übersicht (Pick-Phase)
-  | "lead-select" // S4 — Lead-Auswahl
+  | "opponent-leads" // S4 — „Was führt der Gegner?" (Feld-Leads, Phase 11 §14)
   | "live-battle" // S5 — Live-Kampf
   | "team-list" // S6 — Team-Liste
   | "team-editor" // S7 — Team-Editor
@@ -20,7 +20,7 @@ export const SCREEN_TO_TAB: Record<Screen, NavTab> = {
   "main-menu": "home",
   "opponent-input": "home",
   synergy: "home",
-  "lead-select": "home",
+  "opponent-leads": "home",
   "live-battle": "home",
   "team-list": "team",
   "team-editor": "team",

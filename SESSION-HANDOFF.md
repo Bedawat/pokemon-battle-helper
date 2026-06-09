@@ -326,7 +326,46 @@ Grill-Session (Phase 11). Jeder Schritt einzeln testbar:
    aktives Team, Zurück auf allen Screens, Grid räumt gewählte Mons ab, Move-Namen
    deutsch nach Rebuild.
 
-## Phase 11 — Live-Kampf-Redesign (Design entschieden 08.06.2026, Umsetzung offen)
+## Phase 11 — Live-Kampf-Redesign (Code erledigt 09.06.2026 — Verifikation bei Pete offen)
+
+> [!success] Schritte 1–6 **agentenseitig umgesetzt** (09.06.). `tsc -b --noEmit`
+> clean im Sandbox; `initFromLeads` offline mit Node verifiziert (7/7, inkl.
+> Regression `initLive` + Dedup-Robustheit). Zwei-Kanal-Matchup nutzt das schon
+> getestete `canHitSuperEffective` in beiden Richtungen (kein neuer Lib-Code).
+>
+> **Bei dir noch offen:** `npm test` (Vitest läuft im Sandbox nicht — Rollup-Native
+> ist macOS, nicht linux-arm64) + Durchklick auf 393px. Danach committen/pushen.
+>
+> **Aufräum-Notiz:** `src/screens/LeadSelect.tsx` + `LeadSelect.module.css` sind jetzt
+> **toter Code** (nicht mehr importiert, kompilieren aber sauber). Die Sandbox kann
+> auf deinem Mount nicht löschen — bitte lokal `git rm src/screens/LeadSelect.tsx
+> src/screens/LeadSelect.module.css`.
+>
+> **Geänderte/neue Dateien:** `lib/battle.ts` (+`initFromLeads`, +Test),
+> `types/navigation.ts` (`lead-select`→`opponent-leads`), `App.tsx` (Flow +
+> `fieldLeadIds`-State), `screens/OpponentLeads.tsx` + `.module.css` (neu),
+> `screens/LiveBattle.tsx` + `.module.css` (komplett neu, gegner-zentrisch).
+>
+> **Durchklick-Checkliste (für deinen Test):**
+> 1. **Flow:** S3 „Picks bestätigen" → neuer Screen „Was führt der Gegner?" (2 von 6
+>    Gegnern wählbar, ⚡ an mega-fähigen) → „Kampf starten". S4 (eigene Leads) ist weg.
+> 2. **Feld:** 2 Gegner als gestapelte Karten = genau die 2 gewählten Leads; die
+>    anderen 4 auf der Bank.
+> 3. **Zwei-Kanal:** in jeder Gegner-Karte stehen deine 4 Mons (feste Reihenfolge,
+>    in beiden Karten gleich) mit ⚔️ (grün = ich treffe SE) und 🛡️ (rot = ich werde
+>    SE getroffen). „aus" = grau/gedämpft.
+> 4. **Gegner-Detail:** Haupt-View nur 4 Typ-Badges; „Attacken"-Chevron klappt
+>    „Häufigste Attacken (geschätzt)" inline auf. Eigene Mons nicht antippbar.
+> 5. **Mega:** ⚡-Chip an eigenen + Gegner-Mons. Eigenes Mega färbt **beide** Karten
+>    live; One-per-Side (andere eigene Chips grau nach Commit); Gegner-Seite unabhängig;
+>    Glurak zeigt zwei Chips. Vorschau gestrichelt + Banner → „Mega bestätigen".
+> 6. **Eintausch:** Bank-Mon antippen → Vorschau-Karte (gestrichelt + Banner) mit
+>    seinem Matchup → „Ersetzt <Feld-Mon>" (2 Buttons) / „Abbrechen". Kein
+>    Vorwahl-Slot mehr (`selectedSlot` entfernt).
+> 7. **393px:** Karten/Banner brechen sauber, Touch-Targets (Chevron, Chips, Buttons,
+>    Exit) ≥ 44px.
+
+### Ursprünglicher Plan (Design 08.06.2026)
 
 Grill-Session am 08.06. durchgeführt. Volle Begründung + Umsetzungsplan im Wiki:
 `University Wiki/.../Pokémon Battle Helper — Web-App Handoff.md` **§13** (Design) und

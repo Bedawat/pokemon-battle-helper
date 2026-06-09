@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import { MoveRow } from "../components/MoveRow";
 import { PokemonSprite } from "../components/PokemonSprite";
 import { TypeBadge } from "../components/TypeBadge";
-import { initLive, swapToField } from "../lib/battle";
+import { initFromLeads, swapToField } from "../lib/battle";
 import { oppCombatant, ownCombatant } from "../lib/combatant";
 import { getPokemon } from "../lib/data";
-import { pairAmpel } from "../lib/matchup";
+import { canHitSuperEffective } from "../lib/matchup";
 import {
   type MegaState,
   type Side,
@@ -16,80 +16,102 @@ import {
   revertMega,
 } from "../lib/mega";
 import type { PokemonView } from "../lib/dataset";
-import type { Combatant } from "../lib/synergy";
 import type { Team } from "../types/team";
 import styles from "./LiveBattle.module.css";
 
 interface LiveBattleProps {
   team: Team;
+  /** Die 4 gepickten eigenen Pokémon (feste Reihenfolge in beiden Karten). */
   picked: string[];
-  leads: string[];
+  /** Welche 2 Gegner zu Beginn auf dem Feld stehen (§14). */
+  fieldLeads: string[];
   opponentIds: string[];
   onExit: () => void;
 }
 
-interface Preview {
+interface MegaPreview {
   side: Side;
   id: string;
   megaId: string;
 }
 
 /**
- * S5 — Live-Kampf: das Gegner-Team in „auf dem Feld" (2 aktiv) und „auf der Bank"
- * (4) aufgeteilt. Für jedes eigene Pokémon wird die Ampel gegen die aktiven Gegner
- * gezeigt; ein Tap auf ein Bank-Pokémon holt es auf den ausgewählten Feld-Slot.
+ * S5 — Live-Kampf (Phase 11, gegner-zentrisch). Primärachse sind die 2 aktiven
+ * Feld-Gegner als gestapelte Karten; *in* jeder Karte stehen deine 4 Pokémon mit
+ * bidirektionalem Matchup (zwei Icon-Kanäle):
  *
- * Mega-Handling (Phase 9): mega-fähige Pokémon auf dem Feld bzw. in der eigenen
- * Liste zeigen einen ⚡-Mega-Chip. Tap → Vorschau (Ampeln rechnen „als ob",
- * gestrichelt markiert) → Bestätigen/Abbrechen. Pro Seite nur ein Mega
- * (One-per-Side, eigene/Gegner unabhängig); bestätigte Mega ist rücknehmbar.
+ * - ⚔️ grün = ich treffe diesen Gegner super-effektiv (meine Move-Typen, gewiss).
+ * - 🛡️ rot = ich werde von ihm super-effektiv getroffen (seine geschätzten Top-4).
+ *
+ * Gegner-Moves sind als kompakte Typ-Badge-Zeile reduziert; ein Chevron klappt die
+ * „Häufigsten Attacken (geschätzt)" inline auf. Mega und Eintausch teilen eine
+ * Gestik: Vorschau → Bestätigen (Mega via ⚡-Chip, Eintausch via Bank-Tap).
  */
 export function LiveBattle({
   team,
   picked,
-  leads,
+  fieldLeads,
   opponentIds,
   onExit,
 }: LiveBattleProps) {
-  const [live, setLive] = useState(() => initLive(opponentIds));
-  const [selectedSlot, setSelectedSlot] = useState(0);
+  const [live, setLive] = useState(() => initFromLeads(opponentIds, fieldLeads));
   const [megaState, setMegaState] = useState<MegaState>(NO_MEGA);
-  const [preview, setPreview] = useState<Preview | null>(null);
-
-  const leadSet = new Set(leads);
+  const [megaPreview, setMegaPreview] = useState<MegaPreview | null>(null);
+  /** Bank-Pokémon, das gerade für den Eintausch vorgeschaut wird (§13 Punkt 8). */
+  const [swapBankId, setSwapBankId] = useState<string | null>(null);
+  /** Welche Gegner-Karten ihr Attacken-Detail aufgeklappt haben. */
+  const [openDetails, setOpenDetails] = useState<Set<string>>(new Set());
 
   /** Wirksame Mega-Form (Vorschau schlägt Festgeschriebenes für dieses Mon). */
   const effMegaId = (side: Side, id: string): string | null => {
-    if (preview && preview.side === side && preview.id === id) return preview.megaId;
+    if (megaPreview && megaPreview.side === side && megaPreview.id === id) {
+      return megaPreview.megaId;
+    }
     return activeMegaId(megaState, side, id);
   };
 
-  /** Sprite passend zur wirksamen Form (Mega-Artwork bzw. Grund-Sprite). */
   const spriteFor = (mon: PokemonView, side: Side, id: string): string => {
     const mId = effMegaId(side, id);
     const mega = mId ? mon.megas?.find((m) => m.id === mId) : undefined;
     return mega?.sprite ?? mon.sprite;
   };
 
-  /** Typen passend zur wirksamen Form (für die Badge-Anzeige). */
   const typesFor = (mon: PokemonView, side: Side, id: string) => {
     const mId = effMegaId(side, id);
     const mega = mId ? mon.megas?.find((m) => m.id === mId) : undefined;
     return mega?.types ?? mon.types;
   };
 
-  const fieldCombatants = live.field
-    .map((id) => oppCombatant(id, effMegaId("opp", id)))
-    .filter((c): c is Combatant => c != null);
-
   const handleExit = () => {
     if (window.confirm("Kampf wirklich beenden?")) onExit();
   };
 
-  const confirmPreview = () => {
-    if (!preview) return;
-    setMegaState(commitMega(megaState, preview.side, preview.id, preview.megaId));
-    setPreview(null);
+  const toggleDetail = (id: string) => {
+    setOpenDetails((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const confirmMega = () => {
+    if (!megaPreview) return;
+    setMegaState(
+      commitMega(megaState, megaPreview.side, megaPreview.id, megaPreview.megaId),
+    );
+    setMegaPreview(null);
+  };
+
+  const startSwapPreview = (bankId: string) => {
+    setMegaPreview(null); // keine verschachtelte „X kommt rein + megst"-Vorschau
+    setSwapBankId(bankId);
+  };
+
+  const confirmSwap = (fieldSlot: number) => {
+    if (!swapBankId) return;
+    setLive(swapToField(live, fieldSlot, swapBankId));
+    setSwapBankId(null);
   };
 
   /** Mega-Chips für ein Pokémon (eigene Liste oder Feld-Gegner). */
@@ -101,7 +123,9 @@ export function LiveBattle({
         {mon.megas.map((m) => {
           const committed = activeMegaId(megaState, side, id) === m.id;
           const previewing =
-            preview?.side === side && preview.id === id && preview.megaId === m.id;
+            megaPreview?.side === side &&
+            megaPreview.id === id &&
+            megaPreview.megaId === m.id;
           const state = committed ? "committed" : previewing ? "preview" : "idle";
           const label = mon.megas!.length > 1 ? m.label : "Mega";
           return (
@@ -114,11 +138,11 @@ export function LiveBattle({
               aria-pressed={committed || previewing}
               onClick={() => {
                 if (committed) {
-                  // bereits Mega → zurücknehmen (Fehltipp-Schutz)
                   setMegaState(revertMega(megaState, side, id));
-                  setPreview(null);
+                  setMegaPreview(null);
                 } else {
-                  setPreview({ side, id, megaId: m.id });
+                  setSwapBankId(null);
+                  setMegaPreview({ side, id, megaId: m.id });
                 }
               }}
             >
@@ -131,9 +155,151 @@ export function LiveBattle({
     );
   };
 
-  // Vorschau-Banner-Infos
-  const previewMon = preview ? getPokemon(preview.id) : undefined;
-  const previewMega = previewMon?.megas?.find((m) => m.id === preview?.megaId);
+  /** Die zwei Icon-Kanäle (⚔️ offensiv / 🛡️ defensiv) für ein eigenes Mon. */
+  const renderChannels = (atk: boolean, def: boolean) => (
+    <div className={styles.channels} aria-hidden={false}>
+      <span
+        className={styles.channel}
+        data-kind="atk"
+        data-on={atk}
+        title={atk ? "Trifft super-effektiv" : "Trifft nicht super-effektiv"}
+        aria-label={atk ? "Trifft super-effektiv" : "Trifft nicht super-effektiv"}
+      >
+        ⚔️
+      </span>
+      <span
+        className={styles.channel}
+        data-kind="def"
+        data-on={def}
+        title={
+          def
+            ? "Wird super-effektiv getroffen"
+            : "Wird nicht super-effektiv getroffen"
+        }
+        aria-label={
+          def
+            ? "Wird super-effektiv getroffen"
+            : "Wird nicht super-effektiv getroffen"
+        }
+      >
+        🛡️
+      </span>
+    </div>
+  );
+
+  /** Die 4 eigenen Mons mit Zwei-Kanal-Matchup gegen diesen Gegner. */
+  const renderOwnRows = (oppId: string) => {
+    const opp = oppCombatant(oppId, effMegaId("opp", oppId));
+    if (!opp) return null;
+    return (
+      <ul className={styles.ownList}>
+        {picked.map((id) => {
+          const mon = getPokemon(id);
+          const member = team.members.find((m) => m.pokemonId === id);
+          const own = member ? ownCombatant(member, effMegaId("own", id)) : undefined;
+          if (!mon || !own) return null;
+          const atk = canHitSuperEffective(own.moveTypes, opp.types);
+          const def = canHitSuperEffective(opp.moveTypes, own.types);
+          return (
+            <li key={id} className={styles.ownRow}>
+              <div className={styles.ownMain}>
+                <PokemonSprite
+                  src={spriteFor(mon, "own", id)}
+                  alt={mon.nameDe}
+                  size={36}
+                />
+                <span className={styles.name}>{mon.nameDe}</span>
+              </div>
+              <div className={styles.ownRight}>
+                {renderMegaChips(mon, "own", id)}
+                {renderChannels(atk, def)}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
+
+  /**
+   * Gegner-Karte: Kopf (Sprite/Name/Typen) + Typ-Badge-Zeile + Chevron-Detail,
+   * darunter die 4 eigenen Mons. `footer` zeigt im Eintausch-Preview die
+   * Slot-Buttons. `previewing` markiert die Karte gestrichelt.
+   */
+  const renderOpponentCard = (
+    oppId: string,
+    opts: { previewing?: boolean; footer?: ReactNode; interactive?: boolean } = {},
+  ) => {
+    const mon = getPokemon(oppId);
+    if (!mon) return null;
+    const { previewing = false, footer, interactive = true } = opts;
+    const open = openDetails.has(oppId);
+    const moveBadges = mon.topMoves.slice(0, 4);
+    return (
+      <div
+        key={oppId}
+        className={styles.oppCard}
+        data-preview={previewing}
+      >
+        <div className={styles.oppHead}>
+          <PokemonSprite src={spriteFor(mon, "opp", oppId)} alt={mon.nameDe} size={48} />
+          <div className={styles.oppInfo}>
+            <span className={styles.name}>{mon.nameDe}</span>
+            <span className={styles.types}>
+              {typesFor(mon, "opp", oppId).map((t) => (
+                <TypeBadge key={t} type={t} size="sm" />
+              ))}
+            </span>
+          </div>
+          {interactive && renderMegaChips(mon, "opp", oppId)}
+        </div>
+
+        <div className={styles.oppMoves}>
+          <div className={styles.moveTypes}>
+            {moveBadges.map((m, i) => (
+              <TypeBadge key={`${m.type}-${i}`} type={m.type} size="sm" />
+            ))}
+          </div>
+          {interactive && (
+            <button
+              type="button"
+              className={styles.detailToggle}
+              onClick={() => toggleDetail(oppId)}
+              aria-expanded={open}
+            >
+              <span className={styles.detailLabel}>Attacken</span>
+              <span className={styles.chevron} data-open={open} aria-hidden="true">
+                ›
+              </span>
+            </button>
+          )}
+        </div>
+
+        {interactive && open && (
+          <div className={styles.detail}>
+            <span className={styles.detailHead}>Häufigste Attacken (geschätzt)</span>
+            {moveBadges.map((m) => (
+              <MoveRow
+                key={m.name}
+                name={m.name}
+                type={m.type}
+                usagePercent={m.usagePercent}
+              />
+            ))}
+          </div>
+        )}
+
+        <div className={styles.cardDivider} />
+        {renderOwnRows(oppId)}
+        {footer}
+      </div>
+    );
+  };
+
+  // Banner-Infos für die Mega-Vorschau
+  const previewMon = megaPreview ? getPokemon(megaPreview.id) : undefined;
+  const previewMega = previewMon?.megas?.find((m) => m.id === megaPreview?.megaId);
+  const swapMon = swapBankId ? getPokemon(swapBankId) : undefined;
 
   return (
     <div className={styles.screen}>
@@ -144,24 +310,20 @@ export function LiveBattle({
         </button>
       </header>
 
-      {preview && previewMon && previewMega && (
+      {megaPreview && previewMon && previewMega && (
         <div className={styles.previewBar} role="status">
           <span className={styles.previewText}>
             Vorschau: <strong>{previewMon.nameDe}</strong> → {previewMega.label} (
             {previewMega.types.join("/")})
           </span>
           <div className={styles.previewActions}>
-            <button
-              type="button"
-              className={styles.previewConfirm}
-              onClick={confirmPreview}
-            >
+            <button type="button" className={styles.previewConfirm} onClick={confirmMega}>
               Mega bestätigen
             </button>
             <button
               type="button"
               className={styles.previewCancel}
-              onClick={() => setPreview(null)}
+              onClick={() => setMegaPreview(null)}
             >
               Abbrechen
             </button>
@@ -169,153 +331,82 @@ export function LiveBattle({
         </div>
       )}
 
+      {swapBankId && swapMon && (
+        <section>
+          <div className={styles.previewBar} role="status">
+            <span className={styles.previewText}>
+              Vorschau Eintausch: <strong>{swapMon.nameDe}</strong> — für welchen
+              Feld-Gegner?
+            </span>
+            <div className={styles.previewActions}>
+              <button
+                type="button"
+                className={styles.previewCancel}
+                onClick={() => setSwapBankId(null)}
+              >
+                Abbrechen
+              </button>
+            </div>
+          </div>
+          {renderOpponentCard(swapBankId, {
+            previewing: true,
+            interactive: false,
+            footer: (
+              <div className={styles.swapSlots}>
+                {live.field.map((fid, slot) => {
+                  const fmon = getPokemon(fid);
+                  return (
+                    <button
+                      key={fid}
+                      type="button"
+                      className={styles.swapSlotBtn}
+                      onClick={() => confirmSwap(slot)}
+                    >
+                      Ersetzt {fmon?.nameDe ?? `Slot ${slot + 1}`}
+                    </button>
+                  );
+                })}
+              </div>
+            ),
+          })}
+        </section>
+      )}
+
       <section>
         <h3 className={styles.sectionTitle}>Auf dem Feld</h3>
         <div className={styles.field}>
-          {live.field.map((id, slot) => {
-            const mon = getPokemon(id);
-            if (!mon) return null;
-            const selected = slot === selectedSlot;
-            const previewingThis =
-              preview?.side === "opp" && preview.id === id;
-            return (
-              <div
-                key={id}
-                className={styles.fieldCard}
-                data-selected={selected}
-                data-preview={previewingThis}
-              >
-                <button
-                  type="button"
-                  className={styles.fieldSelect}
-                  onClick={() => setSelectedSlot(slot)}
-                  aria-pressed={selected}
-                  aria-label={`Feld-Slot ${slot + 1} (${mon.nameDe}) auswählen`}
-                >
-                  <div className={styles.fieldHead}>
-                    <PokemonSprite
-                      src={spriteFor(mon, "opp", id)}
-                      alt={mon.nameDe}
-                      size={48}
-                    />
-                    <div className={styles.fieldInfo}>
-                      <span className={styles.name}>{mon.nameDe}</span>
-                      <span className={styles.types}>
-                        {typesFor(mon, "opp", id).map((t) => (
-                          <TypeBadge key={t} type={t} size="sm" />
-                        ))}
-                      </span>
-                    </div>
-                  </div>
-                  <div className={styles.moves}>
-                    {mon.topMoves.map((m) => (
-                      <MoveRow
-                        key={m.name}
-                        name={m.name}
-                        type={m.type}
-                        usagePercent={m.usagePercent}
-                      />
-                    ))}
-                  </div>
-                </button>
-                {renderMegaChips(mon, "opp", id)}
-              </div>
-            );
-          })}
+          {live.field.map((id) => renderOpponentCard(id))}
         </div>
       </section>
 
       <section>
         <h3 className={styles.sectionTitle}>
           Bank{" "}
-          <span className={styles.subtle}>
-            — antippen, um auf den gewählten Feld-Slot zu holen
-          </span>
+          <span className={styles.subtle}>— antippen für eine Eintausch-Vorschau</span>
         </h3>
         <div className={styles.bank}>
           {live.bank.map((id) => {
             const mon = getPokemon(id);
             if (!mon) return null;
+            const active = swapBankId === id;
             return (
               <button
                 key={id}
                 type="button"
                 className={styles.benchMon}
-                onClick={() => setLive(swapToField(live, selectedSlot, id))}
-                aria-label={`${mon.nameDe} aufs Feld holen`}
+                data-active={active}
+                onClick={() => startSwapPreview(id)}
+                aria-label={`${mon.nameDe} eintauschen (Vorschau)`}
               >
                 <PokemonSprite src={mon.sprite} alt={mon.nameDe} size={40} />
                 <span className={styles.benchName}>{mon.nameDe}</span>
               </button>
             );
           })}
+          {live.bank.length === 0 && (
+            <p className={styles.subtle}>Keine Bank-Pokémon.</p>
+          )}
         </div>
-      </section>
-
-      <section>
-        <h3 className={styles.sectionTitle}>Deine Pokémon gegen das Feld</h3>
-        <ul className={styles.ownList}>
-          {picked.map((id) => {
-            const mon = getPokemon(id);
-            const member = team.members.find((m) => m.pokemonId === id);
-            const own = member ? ownCombatant(member, effMegaId("own", id)) : undefined;
-            if (!mon || !own) return null;
-            const previewingOwn = preview?.side === "own" && preview.id === id;
-            return (
-              <li key={id} className={styles.ownRow}>
-                <div className={styles.ownMain}>
-                  <PokemonSprite
-                    src={spriteFor(mon, "own", id)}
-                    alt={mon.nameDe}
-                    size={40}
-                  />
-                  <div className={styles.ownInfo}>
-                    <span className={styles.ownNameRow}>
-                      <span className={styles.name}>{mon.nameDe}</span>
-                      {leadSet.has(id) && (
-                        <span className={styles.leadPill}>Lead</span>
-                      )}
-                    </span>
-                    {renderMegaChips(mon, "own", id)}
-                  </div>
-                </div>
-                <div className={styles.ampelGroup}>
-                  {fieldCombatants.map((opp) => {
-                    const ampel = pairAmpel(
-                      own.moveTypes,
-                      own.types,
-                      opp.moveTypes,
-                      opp.types,
-                    );
-                    const oppMon = getPokemon(opp.id);
-                    const cellPreview =
-                      previewingOwn ||
-                      (preview?.side === "opp" && preview.id === opp.id);
-                    return (
-                      <span
-                        key={opp.id}
-                        className={styles.ampelChip}
-                        data-ampel={ampel}
-                        data-preview={cellPreview}
-                      >
-                        <PokemonSprite
-                          src={oppMon ? spriteFor(oppMon, "opp", opp.id) : ""}
-                          alt={oppMon?.nameDe ?? opp.id}
-                          size={22}
-                        />
-                        <span
-                          className={styles.ampelDot}
-                          data-ampel={ampel}
-                          aria-hidden="true"
-                        />
-                      </span>
-                    );
-                  })}
-                </div>
-              </li>
-            );
-          })}
-        </ul>
       </section>
     </div>
   );

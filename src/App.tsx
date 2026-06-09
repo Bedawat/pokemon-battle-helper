@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { NavBar } from "./components/NavBar";
 import { MainMenu } from "./screens/MainMenu";
-import { LeadSelect } from "./screens/LeadSelect";
 import { LiveBattle } from "./screens/LiveBattle";
 import { OpponentInput } from "./screens/OpponentInput";
+import { OpponentLeads } from "./screens/OpponentLeads";
 import { Placeholder } from "./screens/Placeholder";
 import { PokemonDetail } from "./screens/PokemonDetail";
 import { SynergyOverview } from "./screens/SynergyOverview";
 import { TeamEditor } from "./screens/TeamEditor";
 import { TeamList } from "./screens/TeamList";
 import { useTeams } from "./lib/useTeams";
+import { FIELD_SIZE } from "./lib/battle";
 import type { OpponentTeam } from "./lib/opponent";
-import { MAX_LEADS, MAX_PICKS, togglePick } from "./lib/synergy";
+import { MAX_PICKS, togglePick } from "./lib/synergy";
 import {
   createTeam,
   deleteTeam,
@@ -32,7 +33,8 @@ export default function App() {
   const [detailPokemonId, setDetailPokemonId] = useState<string | null>(null);
   const [opponentIds, setOpponentIds] = useState<OpponentTeam>([]);
   const [pickedIds, setPickedIds] = useState<string[]>([]);
-  const [leadIds, setLeadIds] = useState<string[]>([]);
+  // Welche 2 Gegner stehen zu Kampfbeginn auf dem Feld (Phase 11 §14).
+  const [fieldLeadIds, setFieldLeadIds] = useState<string[]>([]);
   const [teamsState, setTeamsState] = useTeams();
 
   const activeTab = SCREEN_TO_TAB[screen];
@@ -136,7 +138,7 @@ export default function App() {
             onChange={setOpponentIds}
             onAnalyze={() => {
               setPickedIds([]);
-              setLeadIds([]);
+              setFieldLeadIds([]);
               setScreen("synergy");
             }}
             onBack={() => setScreen("main-menu")}
@@ -168,19 +170,19 @@ export default function App() {
               setPickedIds((prev) => togglePick(prev, id, MAX_PICKS))
             }
             onConfirm={() => {
-              setLeadIds([]);
-              setScreen("lead-select");
+              setFieldLeadIds([]);
+              setScreen("opponent-leads");
             }}
             onBack={() => setScreen("opponent-input")}
           />
         );
-      case "lead-select":
+      case "opponent-leads":
         return (
-          <LeadSelect
-            picked={pickedIds}
-            leads={leadIds}
+          <OpponentLeads
+            opponentIds={opponentIds}
+            fieldLeads={fieldLeadIds}
             onToggleLead={(id) =>
-              setLeadIds((prev) => togglePick(prev, id, MAX_LEADS))
+              setFieldLeadIds((prev) => togglePick(prev, id, FIELD_SIZE))
             }
             onConfirm={() => setScreen("live-battle")}
             onBack={() => setScreen("synergy")}
@@ -199,7 +201,7 @@ export default function App() {
           <LiveBattle
             team={activeTeam}
             picked={pickedIds}
-            leads={leadIds}
+            fieldLeads={fieldLeadIds}
             opponentIds={opponentIds}
             onExit={() => setScreen("main-menu")}
           />

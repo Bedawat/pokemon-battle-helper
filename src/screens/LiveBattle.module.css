@@ -46,16 +46,14 @@
   color: var(--text-secondary);
 }
 
-/* --- Auf dem Feld --- */
-/* Einspaltig gestapelt: auf 393px ist die Breite knapp, nicht die Höhe.
-   So bleiben beide Feld-Gegner inkl. Attacken voll lesbar (Phase 7). */
+/* --- Feld: zwei Gegner-Karten gestapelt --- */
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
-.fieldCard {
+.oppCard {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -65,46 +63,171 @@
   border-radius: var(--radius-lg);
 }
 
-.fieldCard[data-selected="true"] {
-  border-color: var(--border-active);
-  background: var(--bg-surface-hover);
-}
-
-.fieldCard[data-preview="true"] {
+.oppCard[data-preview="true"] {
   outline: 2px dashed var(--accent-primary);
   outline-offset: 2px;
+  border-color: var(--accent-primary);
 }
 
-.fieldSelect {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-align: left;
-  color: inherit;
-}
-
-.fieldHead {
+.oppHead {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
 }
 
-.fieldInfo {
+.oppInfo {
   display: flex;
   flex-direction: column;
   gap: 2px;
   min-width: 0;
+  flex: 1;
 }
 
-.moves {
+/* --- Gegner-Moves: kompakte Typ-Badge-Zeile + Chevron --- */
+.oppMoves {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.moveTypes {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.detailToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  /* Touch-Target ≥ 44px */
+  min-height: 44px;
+  padding: 0 8px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: var(--caption-size);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.detailLabel {
+  font-weight: 600;
+}
+
+.chevron {
+  display: inline-block;
+  transform: rotate(90deg);
+  transition: transform 0.15s ease;
+  font-size: 16px;
+  line-height: 1;
+}
+.chevron[data-open="true"] {
+  transform: rotate(-90deg);
+}
+
+.detail {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding: var(--space-sm);
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+}
+
+.detailHead {
+  font-size: var(--caption-size);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.cardDivider {
+  height: 1px;
+  background: var(--border-default);
+  margin: 2px 0;
+}
+
+/* --- Eigene Mons in der Karte --- */
+.ownList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.ownRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.ownMain {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.ownRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: var(--body-default-size);
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.types {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+/* --- Zwei Icon-Kanäle: ⚔️ offensiv / 🛡️ defensiv --- */
+.channels {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.channel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  line-height: 1;
+  background: var(--matchup-neutral-bg);
+}
+
+/* „aus" = neutral/grau, gedämpft; nur der aktive Kanal trägt Farbe. */
+.channel[data-on="false"] {
+  opacity: 0.3;
+  filter: grayscale(1);
+}
+
+.channel[data-kind="atk"][data-on="true"] {
+  background: var(--matchup-good-bg);
+  box-shadow: inset 0 0 0 1.5px var(--matchup-good);
+}
+
+.channel[data-kind="def"][data-on="true"] {
+  background: var(--matchup-bad-bg);
+  box-shadow: inset 0 0 0 1.5px var(--matchup-bad);
 }
 
 /* --- Bank --- */
@@ -131,6 +254,12 @@
   background: var(--bg-surface-hover);
 }
 
+.benchMon[data-active="true"] {
+  border-color: var(--accent-primary);
+  outline: 2px dashed var(--accent-primary);
+  outline-offset: 1px;
+}
+
 .benchName {
   font-size: 11px;
   color: var(--text-secondary);
@@ -140,118 +269,24 @@
   white-space: nowrap;
 }
 
-/* --- Deine Pokémon --- */
-.ownList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* --- Eintausch-Slot-Buttons (Preview-Footer) --- */
+.swapSlots {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.ownRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-sm);
-  padding: var(--space-sm);
-  background: var(--bg-surface);
-  border-radius: var(--radius-md);
-}
-
-.ownMain {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  min-width: 0;
-}
-
-.name {
-  font-size: var(--body-default-size);
-  font-weight: 600;
-  color: var(--text-primary);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.types {
-  display: flex;
   gap: var(--space-xs);
-  flex-wrap: wrap;
+  margin-top: 2px;
 }
 
-.leadPill {
-  padding: 1px 8px;
+.swapSlotBtn {
+  min-height: 44px;
+  padding: 6px 16px;
   background: var(--accent-primary);
   color: var(--text-on-accent);
-  font-size: 11px;
+  border: 1px solid var(--accent-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--caption-size);
   font-weight: 600;
-  border-radius: var(--radius-full);
-  flex-shrink: 0;
-}
-
-.ampelGroup {
-  display: flex;
-  gap: var(--space-xs);
-  flex-shrink: 0;
-}
-
-.ampelChip {
-  position: relative;
-  display: inline-flex;
-  border-radius: var(--radius-full);
-  padding: 2px;
-}
-
-.ampelChip[data-ampel="good"] {
-  background: var(--matchup-good-bg);
-}
-.ampelChip[data-ampel="neutral"] {
-  background: var(--matchup-neutral-bg);
-}
-.ampelChip[data-ampel="bad"] {
-  background: var(--matchup-bad-bg);
-}
-
-.ampelDot {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 9px;
-  height: 9px;
-  border-radius: var(--radius-full);
-  border: 1.5px solid var(--bg-surface);
-}
-.ampelDot[data-ampel="good"] {
-  background: var(--matchup-good);
-}
-.ampelDot[data-ampel="neutral"] {
-  background: var(--matchup-neutral);
-}
-.ampelDot[data-ampel="bad"] {
-  background: var(--matchup-bad);
-}
-
-.ampelChip[data-preview="true"] {
-  outline: 2px dashed var(--accent-primary);
-  outline-offset: 1px;
-}
-
-/* --- Eigene Pokémon: Info-Spalte + Mega-Chips --- */
-.ownInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-
-.ownNameRow {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  min-width: 0;
+  cursor: pointer;
 }
 
 /* --- Mega-Chips (interaktiv, S5) --- */
@@ -259,6 +294,7 @@
   display: flex;
   gap: var(--space-xs);
   flex-wrap: wrap;
+  flex-shrink: 0;
 }
 
 .megaChip {
@@ -292,7 +328,7 @@
   cursor: not-allowed;
 }
 
-/* --- Vorschau-Banner --- */
+/* --- Vorschau-Banner (Mega + Eintausch) --- */
 .previewBar {
   position: sticky;
   top: 0;

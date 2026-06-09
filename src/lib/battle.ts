@@ -25,6 +25,24 @@ export function initLive(opponentIds: string[]): LiveState {
 }
 
 /**
+ * Startzustand aus den vom Nutzer gewählten Gegner-Leads (Phase 11, §14):
+ * die gewählten Leads (max. FIELD_SIZE, in Auswahlreihenfolge) aufs Feld, der
+ * Rest des Gegner-Teams in seiner ursprünglichen Reihenfolge auf die Bank.
+ * Behebt die Phase-6-Vereinfachung „die ersten 2 raten". Unbekannte Lead-ids
+ * werden ignoriert (Safe Default).
+ */
+export function initFromLeads(
+  opponentIds: string[],
+  leadIds: string[],
+): LiveState {
+  const field = [...new Set(leadIds)]
+    .filter((id) => opponentIds.includes(id))
+    .slice(0, FIELD_SIZE);
+  const bank = opponentIds.filter((id) => !field.includes(id));
+  return { field, bank };
+}
+
+/**
  * Tauscht ein Bank-Pokémon auf einen Feld-Slot; das verdrängte Feld-Pokémon geht
  * an dessen Bank-Position. No-op bei ungültigem Slot oder unbekannter Bank-id.
  */

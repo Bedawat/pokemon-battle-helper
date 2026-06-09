@@ -1,7 +1,42 @@
 import { describe, expect, it } from "vitest";
-import { FIELD_SIZE, initLive, swapToField } from "./battle";
+import { FIELD_SIZE, initFromLeads, initLive, swapToField } from "./battle";
 
 const six = ["a", "b", "c", "d", "e", "f"];
+
+describe("initFromLeads", () => {
+  it("setzt die gewählten Leads aufs Feld, den Rest in Originalreihenfolge auf die Bank", () => {
+    expect(initFromLeads(six, ["c", "e"])).toEqual({
+      field: ["c", "e"],
+      bank: ["a", "b", "d", "f"],
+    });
+  });
+
+  it("behält die Auswahlreihenfolge der Leads bei", () => {
+    expect(initFromLeads(six, ["e", "c"]).field).toEqual(["e", "c"]);
+  });
+
+  it("ignoriert unbekannte Lead-ids (Safe Default)", () => {
+    expect(initFromLeads(six, ["c", "z"])).toEqual({
+      field: ["c"],
+      bank: ["a", "b", "d", "e", "f"],
+    });
+  });
+
+  it("nimmt höchstens FIELD_SIZE Leads", () => {
+    expect(initFromLeads(six, ["a", "b", "c"]).field).toHaveLength(FIELD_SIZE);
+  });
+
+  it("kommt mit leerer Lead-Auswahl klar", () => {
+    expect(initFromLeads(six, [])).toEqual({ field: [], bank: six });
+  });
+
+  it("entdoppelt Lead-ids (Robustheit)", () => {
+    expect(initFromLeads(six, ["c", "c"])).toEqual({
+      field: ["c"],
+      bank: ["a", "b", "d", "e", "f"],
+    });
+  });
+});
 
 describe("initLive", () => {
   it("setzt die ersten 2 aufs Feld, den Rest auf die Bank", () => {
