@@ -17,17 +17,24 @@ interface TabConfig {
   icon: ReactNode;
 }
 
-const SwordIcon = () => (
+const HomeIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
     <path
-      d="M14.5 17.5 4 5l3-1 12.5 10.5M13 19l3 3M16 16l4 4M19 21l2-2"
+      d="M4 11.5 12 5l8 6.5"
       stroke="currentColor"
       strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
-      d="M9.5 17.5 20 5l-3-1L4.5 14.5M11 19l-3 3M8 16l-4 4M5 21l-2-2"
+      d="M5.5 10.5V19h13v-8.5"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M10 19v-4.5h4V19"
       stroke="currentColor"
       strokeWidth="1.8"
       strokeLinecap="round"
@@ -55,7 +62,7 @@ const TeamIcon = () => (
 );
 
 const TABS: TabConfig[] = [
-  { id: "kampf", label: "Kampf", icon: <SwordIcon /> },
+  { id: "home", label: "Home", icon: <HomeIcon /> },
   { id: "team", label: "Team", icon: <TeamIcon /> },
 ];
 

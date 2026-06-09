@@ -261,6 +261,117 @@ Minor/Backlog: (a) committetes Mega bleibt „verbraucht", auch wenn das Mon auf
 Bank getauscht wird (One-per-Side-Semantik, akzeptabel); (b) Top-Move-Name
 „Mega Charizard Y Heat Wave" (Pikalytics-Artefakt) — kosmetisch.
 
+## Phase 10 — UX-Polish-Runde (Plan beschlossen 07.06.2026, Code erledigt — Verifikation offen)
+
+> [!success] Schritte 1–7 **agentenseitig umgesetzt** (07.06.), Tests bei Pete grün.
+> `tsc -b --noEmit` clean im Sandbox; Übersetzungslogik offline mit Node verifiziert.
+>
+> **Nachtrag 07.06. (nach Petes erstem Test):**
+> - **Aktiv-Indikator verschoben:** „✓ Aktiv" sitzt jetzt an derselben Stelle wie
+>   „Aktiv setzen" (Action-Zeile links) statt als Header-Pill → gleicher Ort,
+>   Muscle-Memory. Akzent-Rahmen bleibt.
+> - **Attacken-Übersetzung robuster:** (a) nicht übersetzte Moves werden über aus dem
+>   Namen abgeleitete Slugs mitgeholt; (b) Präfix-Artefakt „Mega Charizard Y Heat Wave"
+>   wird per Suffix-Match zu „Hitzewelle" aufgelöst.
+> - **Override-Tabelle (`MOVE_DE_OVERRIDES`):** PokéAPI hat etliche neue Gen-8/9-Moves
+>   gar nicht auf Deutsch lokalisiert (im Move-JSON fehlt der `de`-Eintrag). Manuell
+>   ergänzt + **alle gegen pokemondb verifiziert** (16 Einträge). Greift nur als
+>   Fallback (echte PokéAPI-de schlägt ihn). Erste Charge: Letzte Ehre, Wellentackle,
+>   Kniefallspalter, Unheilsklauen, Quirlschuss. Zweite Charge (nach Petes 2. `npm run
+>   data`-Warnung): Tera-Ausbruch, Schneelandschaft, Kalte Dusche, Wegbereiter,
+>   Doppelstrahl, Mäuseplage, Aufräumen, Anspringen, Flammenwut, Letalwirbler,
+>   Eiskreisel. Die Warnung „Ohne deutschen Move-Namen: …" listet künftige Stragglers.
+> - **Kein Fix nötig — „Neck Strike":** das ist der offizielle **deutsche** Name von
+>   „Throat Chop" (Deutsch nutzt hier einen englisch klingenden Namen). Kommt korrekt
+>   aus PokéAPI, sieht nur englisch aus.
+>
+> **Bei dir noch offen:** `npm run data` erneut laufen lassen (alle Move-Fixes greifen
+> erst danach), dann gegenprüfen. Auf die „Ohne deutschen Move-Namen"-Warnung achten —
+> falls da noch was auftaucht, schick mir die Liste, dann ergänze ich die Override-Tabelle.
+
+Geänderte/neue Dateien: `components/ScreenHeader.tsx` + `.module.css` (neu),
+`components/NavBar.tsx`, `types/navigation.ts`, `App.tsx`, `screens/MainMenu.tsx`
+(+ CSS), `screens/TeamEditor.tsx`, `screens/TeamList.tsx` (+ CSS),
+`screens/OpponentInput.tsx`, `screens/SynergyOverview.tsx`, `screens/LeadSelect.tsx`,
+`screens/PokemonDetail.tsx`, `scripts/build-data.mjs`. Keine Lib-Signaturen geändert
+→ bestehende Tests sollten unverändert grün sein. (Nicht mehr genutzte CSS-Klassen
+wie `.back`/`.head` in einzelnen Screen-Modulen sind belassen, schaden nicht.)
+
+Feedback aus Petes Durchklicken. Entscheidungen am 07.06. getroffen. Volle Begründung
+im Wiki-Handoff §12. Punkte 1–6 umsetzungsreif, Punkt 7 (Live-Kampf) → eigene
+Grill-Session (Phase 11). Jeder Schritt einzeln testbar:
+
+1. **`ScreenHeader`-Komponente** (neu) — Titel + optionaler Zurück-Button (Pfeil,
+   ≥ 44px). Basis für die Zurück-Navigation.
+2. **NavBar:** Label „Kampf" → **„Home"**, Schwert- → **Haus-Icon** (`NavBar.tsx`).
+   Tab führt weiterhin auf `main-menu` — jetzt ehrlich benannt.
+3. **MainMenu:** „Team verwalten"-Button **raus** (redundant zum Team-Tab). Stattdessen
+   **Aktiv-Team-Karte** (Name + 6 Sprites, Tap → Team-Editor). `App.tsx` reicht
+   `activeTeam` + Open-Handler durch.
+4. **TeamEditor:** gewählte Pokémon **aus dem Grid entfernen** statt ausgrauen
+   (`filtered.filter(p => !memberIds.has(p.id))` statt `disabledIds`). Kommen beim
+   Entfernen aus dem Team reaktiv zurück. `PokemonGrid` bleibt generisch.
+5. **TeamList:** Aktiv-Indikator verstärken — **Akzent-Rahmen + „✓ Aktiv"-Badge** um
+   die ganze aktive Karte. (Ein schwacher „Aktiv"-Pill existiert schon → Pete nicht
+   aufgefallen, daher verstärken statt neu bauen.)
+6. **Zurück-Buttons per Screen** (kein globaler History-Stack — Petes Wahl). Über die
+   gemeinsame `ScreenHeader`-Komponente, jeder Screen mit eigenem `onBack`-Ziel:
+   `opponent-input` → Home, `team-list` → Home, `team-editor` → Team-Liste. Synergy/
+   Lead/Detail haben `onBack` schon → auf den Header umstellen.
+7. **Attacken auf Deutsch** (`build-data.mjs`): Movepool den `de`-Move-Namen aus PokéAPI
+   ziehen (statt `en` in `fetchMoveInfo`); Pikalytics-Top-Moves per `moveKey` auf die
+   deutschen Namen mappen (gleiche Technik wie die Move-Kategorie). **Wirkt erst nach
+   `npm run data`.**
+8. **Verifikation:** `npm run typecheck`, `npm test`, Durchklick bei Pete — Home zeigt
+   aktives Team, Zurück auf allen Screens, Grid räumt gewählte Mons ab, Move-Namen
+   deutsch nach Rebuild.
+
+## Phase 11 — Live-Kampf-Redesign (Design entschieden 08.06.2026, Umsetzung offen)
+
+Grill-Session am 08.06. durchgeführt. Volle Begründung + Umsetzungsplan im Wiki:
+`University Wiki/.../Pokémon Battle Helper — Web-App Handoff.md` **§13** (Design) und
+**§14-Flow** (Lead-Änderung). Kurzfassung:
+
+**Kern-Job (Leitfrage pro Runde, ≈45 s):** symmetrisch/bidirektional — *welchen
+Gegner treffe ich super-effektiv, und welcher trifft mich super-effektiv?* Für die
+aktiven Feld-Gegner **und** vorbereitend für Einwechsler. App **unterstützt,
+entscheidet nicht** (kein Recommender, kein Highlighting).
+
+**Entschieden:**
+
+1. **Gegner-zentrisch:** 2 aktive Feld-Gegner als gestapelte Karten; deine 4 Mons
+   stehen *in* jeder Karte (keine separate „Deine Pokémon"-Sektion mehr).
+2. **Bidirektional = zwei Icon-Kanäle pro Mon** (nicht Toggle, nicht S3-Zeilen):
+   **⚔️ grün** = ich treffe super-effektiv (meine Moves, gewiss); **🛡️ rot** = ich
+   werde super-effektiv getroffen (geschätzte Top-4 des Gegners). Sonst grau. Zeigt
+   immer alle 4 Mons mit explizitem Zustand.
+3. **Feste Mon-Reihenfolge** in beiden Karten gleich (Muscle-Memory; Sortieren nach
+   Qualität = verdecktes Highlighting → raus).
+4. **Gegner-Moves entrümpelt:** Haupt-View nur 4 **Typ-Badges**; Chevron klappt
+   inline „**Häufigste Attacken (geschätzt)**" auf (Name + Usage%). Das „(geschätzt)"
+   ist die einmalige Benennung der Daten-Unsicherheit (kein Pro-Icon-Marker). Eigene
+   Mons nicht antippbar.
+5. **Mega in die Karte gewandert:** ⚡-Chip steuert den einen geteilten State, beide
+   Karten färben live; Seiten unabhängig, One-per-Side (bestehende `mega.ts`).
+6. **Tausch + Eintausch-Vorschau = vereinheitlichtes Vorschau→Commit** (wie Mega):
+   Bank-Tap → Was-wäre-wenn-Karte (gestrichelt + Banner) → „Eintausch bestätigen"
+   (Slot-Wahl per 2 Buttons) / „Abbrechen". **`selectedSlot`-State entfällt.**
+7. **Flow:** S4 (eigene Lead-Auswahl) **gestrichen** (speiste nur die wegfallende
+   Lead-Pille). Neuer leichter **„Was führt der Gegner?"-Screen** an der S4-Position:
+   2 der 6 Gegner antippen → Feld/Bank-Init korrekt gesetzt (behebt die Phase-6-
+   „erste 2 raten"-Vereinfachung). Eigener Mini-Screen, nicht inline.
+
+**Bewusst draußen:** kein Tipp/Recommender, kein Highlighting (nach dem Test
+nachrüstbar), keine eigene Feld-Belegung modelliert (alle 4 gezeigt), kein
+Item/Fähigkeit im Detail.
+
+**Umsetzungsschritte (jede testbar):** (1) Flow/Screens (S4 raus, `opponent-leads`
+rein, `leads`/Lead-Pille aus `LiveBattle`). (2) Gegner-Karte gegner-zentrisch +
+Chevron-Detail. (3) Zwei-Kanal-Matchup: ⚔️ aus `canHitSuperEffective(own→opp)`,
+🛡️ aus `canHitSuperEffective(opp→own)` statt der kombinierten `pairAmpel`. (4)
+Eintausch-Preview→Commit via `swapToField`, `selectedSlot` weg. (5) Mega in der
+Karte (bestehende `mega.ts`). (6) Tests + Durchklick auf 393px (Targets ≥ 44px).
+
 ## Befehle (auf Petes Mac)
 
 ```bash

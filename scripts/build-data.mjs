@@ -277,8 +277,55 @@ async function fetchPokemonApi(apiSlug) {
 /** Gültige Schadensklassen (PokéAPI `damage_class`). */
 const MOVE_CATEGORIES = ["physical", "special", "status"];
 
+/**
+ * Deutsche Namen für Moves, die PokéAPI (noch) nicht auf Deutsch lokalisiert hat —
+ * v. a. neue Gen-8/9-Moves. Greift nur als Fallback, wenn PokéAPI keinen `de`-Namen
+ * liefert (eine echte PokéAPI-Lokalisierung schlägt den Override). Schlüssel =
+ * `moveKey(englischer Name)`, Werte gegen pokemondb.net verifiziert (Stand 07.06.2026).
+ * Hinweis: „Throat Chop" heißt auf Deutsch offiziell „Neck Strike" — das liefert
+ * PokéAPI bereits korrekt, daher steht es bewusst NICHT hier.
+ */
+const MOVE_DE_OVERRIDES = {
+  lastrespects: "Letzte Ehre",
+  wavecrash: "Wellentackle",
+  kowtowcleave: "Kniefallspalter",
+  direclaw: "Unheilsklauen",
+  matchagotcha: "Quirlschuss",
+  terablast: "Tera-Ausbruch",
+  snowscape: "Schneelandschaft",
+  chillingwater: "Kalte Dusche",
+  trailblaze: "Wegbereiter",
+  twinbeam: "Doppelstrahl",
+  populationbomb: "Mäuseplage",
+  tidyup: "Aufräumen",
+  pounce: "Anspringen",
+  ragingfury: "Flammenwut",
+  mortalspin: "Letalwirbler",
+  icespinner: "Eiskreisel",
+};
+
 /** Normalisierter Schlüssel für den Abgleich von Move-Namen (Pikalytics ↔ PokéAPI). */
 const moveKey = (name) => name.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+/** PokéAPI-Slug aus einem Anzeigenamen ("Wave Crash" → "wave-crash"). */
+const moveNameSlug = (s) =>
+  s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+
+/**
+ * Slug-Kandidaten für einen (evtl. mit Pokémon-Namen verunreinigten) Top-Move-Namen.
+ * Liefert den vollen Namen plus alle Suffixe — so wird sowohl ein neuer Move geholt,
+ * der nicht im PokéAPI-Movepool steht (z. B. "Wave Crash"), als auch der echte Move
+ * hinter dem Pikalytics-Präfix-Artefakt ("Mega Charizard Y Heat Wave" → "heat-wave").
+ */
+const topMoveSlugCandidates = (name) => {
+  const words = name.split(/\s+/).filter(Boolean);
+  const out = [];
+  for (let i = 0; i < words.length; i++) {
+    const slug = moveNameSlug(words.slice(i).join(" "));
+    if (slug) out.push(slug);
+  }
+  return out;
+};
 
 /**
  * Holt Typ, englischen Anzeigenamen und Schadensklasse einer Attacke von PokéAPI.
@@ -290,6 +337,7 @@ async function fetchMoveInfo(moveSlug) {
     const type = mv.type?.name;
     if (!type || !TYPES.includes(type)) return null;
     const en = mv.names?.find((n) => n.language.name === "en")?.name;
+    const de = mv.names?.find((n) => n.language.name === "de")?.name;
     // Fallback: Slug entkernen ("close-combat" → "Close Combat").
     const name =
       en ??
@@ -297,9 +345,13 @@ async function fetchMoveInfo(moveSlug) {
         .split("-")
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
         .join(" ");
+    // Deutscher Anzeigename: PokéAPI → manueller Override → (engl.) Name als Fallback.
+    const override = MOVE_DE_OVERRIDES[moveKey(name)];
+    const nameDe = de ?? override ?? name;
+    const hasDe = Boolean(de || override);
     const cat = mv.damage_class?.name;
     const category = MOVE_CATEGORIES.includes(cat) ? cat : undefined;
-    return { name, type, category };
+    return { name, nameDe, hasDe, type, category };
   } catch {
     return null;
   }
@@ -446,7 +498,15 @@ async function main() {
   }
 
   // --- Movepool-Auflösung: alle eindeutigen Move-Slugs einmal von PokéAPI holen ---
-  const allSlugs = [...new Set(Object.values(moveSlugsById).flat())];
+  // Zusätzlich Slugs aus den Pikalytics-Top-Move-Namen (inkl. Suffix-Kandidaten),
+  // damit auch Moves übersetzt werden, die nicht im PokéAPI-Movepool stehen, und das
+  // Präfix-Artefakt ("Mega Charizard Y Heat Wave") über "heat-wave" aufgelöst wird.
+  const topMoveSlugs = usage.flatMap((u) =>
+    u.topMoves.flatMap((mv) => topMoveSlugCandidates(mv.name)),
+  );
+  const allSlugs = [
+    ...new Set([...Object.values(moveSlugsById).flat(), ...topMoveSlugs]),
+  ];
   console.log(`\n→ ${allSlugs.length} eindeutige Attacken von PokéAPI auflösen …`);
   const moveInfo = {}; // slug → { name, type, category }
   let done = 0;
@@ -457,18 +517,40 @@ async function main() {
     await sleep(30);
   }
 
-  // Name → Kategorie (für den Abgleich der Pikalytics-Top-Moves, die nur über den
-  // Anzeigenamen vorliegen — nicht über einen PokéAPI-Slug).
+  // EN-Name → Kategorie bzw. DE-Name (für den Abgleich der Pikalytics-Top-Moves,
+  // die nur über den englischen Anzeigenamen vorliegen — nicht über einen Slug).
   const categoryByName = {};
+  const deByName = {};
   for (const info of Object.values(moveInfo)) {
     if (info.category) categoryByName[moveKey(info.name)] = info.category;
+    if (info.nameDe) deByName[moveKey(info.name)] = info.nameDe;
   }
 
-  // Top-Moves (Pikalytics) um die Schadensklasse anreichern, wo bekannt.
+  // Stragglers melden: Moves ohne deutschen Namen (weder PokéAPI noch Override).
+  // → ggf. in MOVE_DE_OVERRIDES (oben) ergänzen. Pikalytics-Präfix-Artefakte
+  // ("Mega …") ausgenommen, die löst der Suffix-Match unten auf.
+  const untranslated = Object.values(moveInfo)
+    .filter((info) => !info.hasDe)
+    .map((info) => info.name);
+  if (untranslated.length > 0) {
+    warnings.push(`Ohne deutschen Move-Namen: ${[...new Set(untranslated)].join(", ")}`);
+  }
+
+  // Top-Moves (Pikalytics, englisch) auf Deutsch übersetzen + Schadensklasse
+  // anreichern. Suffix-Match (längster Treffer zuerst) räumt das Pikalytics-Präfix-
+  // Artefakt ab — z. B. "Mega Charizard Y Heat Wave" → "Heat Wave" → "Hitzewelle".
+  // Kein Treffer → englischer Name bleibt stehen (Safe Default).
   for (const u of usage) {
     for (const mv of u.topMoves) {
-      const cat = categoryByName[moveKey(mv.name)];
-      if (cat) mv.category = cat;
+      const words = mv.name.split(/\s+/).filter(Boolean);
+      for (let i = 0; i < words.length; i++) {
+        const key = moveKey(words.slice(i).join(" "));
+        if (deByName[key] || categoryByName[key]) {
+          if (categoryByName[key]) mv.category = categoryByName[key];
+          if (deByName[key]) mv.name = deByName[key];
+          break;
+        }
+      }
     }
   }
 
@@ -478,7 +560,7 @@ async function main() {
     let pool = slugs
       .map((s) => moveInfo[s])
       .filter(Boolean)
-      .map((m) => ({ name: m.name, type: m.type, category: m.category }));
+      .map((m) => ({ name: m.nameDe ?? m.name, type: m.type, category: m.category }));
     // Fallback für Pokémon ohne PokéAPI-Movepool (Champions-Megas): Top-4 nutzen.
     if (pool.length === 0) {
       const u = usage.find((x) => x.id === mon.id);

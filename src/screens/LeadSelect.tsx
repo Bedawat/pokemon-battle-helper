@@ -1,5 +1,6 @@
 import { Button } from "../components/Button";
 import { PokemonSprite } from "../components/PokemonSprite";
+import { ScreenHeader } from "../components/ScreenHeader";
 import { TypeBadge } from "../components/TypeBadge";
 import { getPokemon } from "../lib/data";
 import { MAX_LEADS } from "../lib/synergy";
@@ -29,16 +30,11 @@ export function LeadSelect({
 
   return (
     <div className={styles.screen}>
-      <button type="button" className={styles.back} onClick={onBack}>
-        ‹ Zurück
-      </button>
-
-      <header className={styles.head}>
-        <h2 className={styles.title}>Leads wählen</h2>
-        <span className={styles.count}>
-          {leads.length}/{MAX_LEADS}
-        </span>
-      </header>
+      <ScreenHeader
+        title="Leads wählen"
+        onBack={onBack}
+        trailing={`${leads.length}/${MAX_LEADS}`}
+      />
 
       <p className={styles.hint}>
         Welche zwei Pokémon schickst du zuerst aufs Feld?

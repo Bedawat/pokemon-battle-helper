@@ -54,8 +54,11 @@
   overflow: hidden;
 }
 
+/* Aktive Karte deutlich hervorheben: Akzent-Rahmen + dezenter Glow (Handoff §12). */
 .card[data-active="true"] {
   border-color: var(--border-active);
+  border-width: 2px;
+  box-shadow: 0 0 0 1px var(--border-active);
 }
 
 .cardMain {
@@ -81,14 +84,17 @@
   color: var(--text-primary);
 }
 
-.activePill {
-  padding: 2px 8px;
-  border-radius: var(--radius-full);
-  background: var(--matchup-good-bg);
+/* „Aktiv"-Anzeige sitzt an derselben Stelle wie „Aktiv setzen" (Muscle-Memory). */
+.activeStatus {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 44px;
   color: var(--matchup-good);
-  font-size: var(--pill-size);
-  font-weight: var(--pill-weight);
-  letter-spacing: var(--pill-ls);
+  font-size: var(--button-size);
+  font-weight: var(--button-weight);
 }
 
 .slots {

@@ -13,15 +13,15 @@ export type Screen =
   | "pokemon-detail"; // S8 — Pokémon-Detail (Attacken bearbeiten)
 
 /** Die zwei Tabs der Bottom-NavBar. */
-export type NavTab = "kampf" | "team";
+export type NavTab = "home" | "team";
 
 /** Welcher Tab zu welchem Screen gehört (für die NavBar-Hervorhebung). */
 export const SCREEN_TO_TAB: Record<Screen, NavTab> = {
-  "main-menu": "kampf",
-  "opponent-input": "kampf",
-  synergy: "kampf",
-  "lead-select": "kampf",
-  "live-battle": "kampf",
+  "main-menu": "home",
+  "opponent-input": "home",
+  synergy: "home",
+  "lead-select": "home",
+  "live-battle": "home",
   "team-list": "team",
   "team-editor": "team",
   "pokemon-detail": "team",

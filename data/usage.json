@@ -2,7 +2,7 @@
   "meta": {
     "source": "pikalytics",
     "format": "gen9championsvgc2026regma",
-    "date": "2026-06-06T14:49:28.323Z"
+    "date": "2026-06-07T21:22:04.419Z"
   },
   "usage": [
     {
@@ -11,25 +11,25 @@
       "usagePercent": 52,
       "topMoves": [
         {
-          "name": "Last Respects",
+          "name": "Letzte Ehre",
           "type": "ghost",
           "usagePercent": 99.701,
           "category": "physical"
         },
         {
-          "name": "Aqua Jet",
+          "name": "Wasserdüse",
           "type": "water",
           "usagePercent": 96.52,
           "category": "physical"
         },
         {
-          "name": "Wave Crash",
+          "name": "Wellentackle",
           "type": "water",
           "usagePercent": 67.641,
           "category": "physical"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 61.307,
           "category": "status"
@@ -42,25 +42,25 @@
       "usagePercent": 41,
       "topMoves": [
         {
-          "name": "Sucker Punch",
+          "name": "Tiefschlag",
           "type": "dark",
           "usagePercent": 99.417,
           "category": "physical"
         },
         {
-          "name": "Kowtow Cleave",
+          "name": "Kniefallspalter",
           "type": "dark",
           "usagePercent": 95.769,
           "category": "physical"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 73.373,
           "category": "status"
         },
         {
-          "name": "Low Kick",
+          "name": "Fußkick",
           "type": "fighting",
           "usagePercent": 60.078,
           "category": "physical"
@@ -73,25 +73,25 @@
       "usagePercent": 41,
       "topMoves": [
         {
-          "name": "Earthquake",
+          "name": "Erdbeben",
           "type": "ground",
           "usagePercent": 90.794,
           "category": "physical"
         },
         {
-          "name": "Dragon Claw",
+          "name": "Drachenklaue",
           "type": "dragon",
           "usagePercent": 76.368,
           "category": "physical"
         },
         {
-          "name": "Rock Slide",
+          "name": "Steinhagel",
           "type": "rock",
           "usagePercent": 67.762,
           "category": "physical"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 61.94,
           "category": "status"
@@ -104,24 +104,25 @@
       "usagePercent": 32,
       "topMoves": [
         {
-          "name": "Mega Charizard Y Heat Wave",
+          "name": "Hitzewelle",
           "type": "fire",
-          "usagePercent": 99.77
+          "usagePercent": 99.77,
+          "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 99.725,
           "category": "status"
         },
         {
-          "name": "Solar Beam",
+          "name": "Solarstrahl",
           "type": "grass",
           "usagePercent": 87.034,
           "category": "special"
         },
         {
-          "name": "Weather Ball",
+          "name": "Meteorologe",
           "type": "normal",
           "usagePercent": 84.143,
           "category": "special"
@@ -134,25 +135,25 @@
       "usagePercent": 29,
       "topMoves": [
         {
-          "name": "Close Combat",
+          "name": "Nahkampf",
           "type": "fighting",
           "usagePercent": 99.58,
           "category": "physical"
         },
         {
-          "name": "Dire Claw",
+          "name": "Unheilsklauen",
           "type": "poison",
           "usagePercent": 93.113,
           "category": "physical"
         },
         {
-          "name": "Fake Out",
+          "name": "Mogelhieb",
           "type": "normal",
           "usagePercent": 88.626,
           "category": "physical"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 66.634,
           "category": "status"
@@ -165,25 +166,25 @@
       "usagePercent": 26,
       "topMoves": [
         {
-          "name": "Fake Out",
+          "name": "Mogelhieb",
           "type": "normal",
           "usagePercent": 99.755,
           "category": "physical"
         },
         {
-          "name": "Parting Shot",
+          "name": "Abgangstirade",
           "type": "dark",
           "usagePercent": 96.629,
           "category": "status"
         },
         {
-          "name": "Flare Blitz",
+          "name": "Flammenblitz",
           "type": "fire",
           "usagePercent": 86.542,
           "category": "physical"
         },
         {
-          "name": "Throat Chop",
+          "name": "Neck Strike",
           "type": "dark",
           "usagePercent": 49.265,
           "category": "physical"
@@ -196,26 +197,28 @@
       "usagePercent": 24,
       "topMoves": [
         {
-          "name": "Mega Floette Protect",
+          "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 99.186
+          "usagePercent": 99.186,
+          "category": "status"
         },
         {
-          "name": "Dazzling Gleam",
+          "name": "Zauberschein",
           "type": "fairy",
           "usagePercent": 98.487,
           "category": "special"
         },
         {
-          "name": "Moonblast",
+          "name": "Mondgewalt",
           "type": "fairy",
           "usagePercent": 79.559,
           "category": "special"
         },
         {
-          "name": "Light of Ruin",
+          "name": "Lux Calamitatis",
           "type": "fairy",
-          "usagePercent": 52.285
+          "usagePercent": 52.285,
+          "category": "special"
         }
       ]
     },
@@ -225,25 +228,25 @@
       "usagePercent": 20,
       "topMoves": [
         {
-          "name": "Matcha Gotcha",
+          "name": "Quirlschuss",
           "type": "grass",
           "usagePercent": 96.393,
           "category": "special"
         },
         {
-          "name": "Rage Powder",
+          "name": "Wutpulver",
           "type": "bug",
           "usagePercent": 95.797,
           "category": "status"
         },
         {
-          "name": "Trick Room",
+          "name": "Bizarroraum",
           "type": "psychic",
           "usagePercent": 70.555,
           "category": "status"
         },
         {
-          "name": "Life Dew",
+          "name": "Lebenstropfen",
           "type": "water",
           "usagePercent": 57.503,
           "category": "status"
@@ -256,25 +259,25 @@
       "usagePercent": 18,
       "topMoves": [
         {
-          "name": "Hyper Voice",
+          "name": "Schallwelle",
           "type": "normal",
           "usagePercent": 99.896,
           "category": "special"
         },
         {
-          "name": "Quick Attack",
+          "name": "Ruckzuckhieb",
           "type": "normal",
           "usagePercent": 79.028,
           "category": "physical"
         },
         {
-          "name": "Detect",
+          "name": "Scanner",
           "type": "fighting",
           "usagePercent": 49.837,
           "category": "status"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 48.824,
           "category": "status"
@@ -287,25 +290,25 @@
       "usagePercent": 18,
       "topMoves": [
         {
-          "name": "Tailwind",
+          "name": "Rückenwind",
           "type": "flying",
           "usagePercent": 99.449,
           "category": "status"
         },
         {
-          "name": "Moonblast",
+          "name": "Mondgewalt",
           "type": "fairy",
           "usagePercent": 94.946,
           "category": "special"
         },
         {
-          "name": "Encore",
+          "name": "Zugabe",
           "type": "normal",
           "usagePercent": 91.276,
           "category": "status"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 75.599,
           "category": "status"
@@ -318,25 +321,25 @@
       "usagePercent": 17,
       "topMoves": [
         {
-          "name": "Flash Cannon",
+          "name": "Lichtkanone",
           "type": "steel",
           "usagePercent": 92.756,
           "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 87.967,
           "category": "status"
         },
         {
-          "name": "Electro Shot",
+          "name": "Stromstrahl",
           "type": "electric",
           "usagePercent": 87.884,
           "category": "special"
         },
         {
-          "name": "Dragon Pulse",
+          "name": "Drachenpuls",
           "type": "dragon",
           "usagePercent": 59.96,
           "category": "special"
@@ -349,25 +352,25 @@
       "usagePercent": 16,
       "topMoves": [
         {
-          "name": "Trick Room",
+          "name": "Bizarroraum",
           "type": "psychic",
           "usagePercent": 95.483,
           "category": "status"
         },
         {
-          "name": "Psychic",
+          "name": "Psychokinese",
           "type": "psychic",
           "usagePercent": 61.932,
           "category": "special"
         },
         {
-          "name": "Helping Hand",
+          "name": "Rechte Hand",
           "type": "normal",
           "usagePercent": 60.015,
           "category": "status"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 42.993,
           "category": "status"
@@ -380,25 +383,25 @@
       "usagePercent": 12,
       "topMoves": [
         {
-          "name": "Hurricane",
+          "name": "Orkan",
           "type": "flying",
           "usagePercent": 98.494,
           "category": "special"
         },
         {
-          "name": "Weather Ball",
+          "name": "Meteorologe",
           "type": "normal",
           "usagePercent": 90.864,
           "category": "special"
         },
         {
-          "name": "Tailwind",
+          "name": "Rückenwind",
           "type": "flying",
           "usagePercent": 83.31,
           "category": "status"
         },
         {
-          "name": "Wide Guard",
+          "name": "Rundumschutz",
           "type": "rock",
           "usagePercent": 57.775,
           "category": "status"
@@ -411,24 +414,25 @@
       "usagePercent": 12,
       "topMoves": [
         {
-          "name": "Mega Aerodactyl Rock Slide",
+          "name": "Steinhagel",
           "type": "rock",
-          "usagePercent": 98.498
+          "usagePercent": 98.498,
+          "category": "physical"
         },
         {
-          "name": "Dual Wingbeat",
+          "name": "Doppelflügel",
           "type": "flying",
           "usagePercent": 90.763,
           "category": "physical"
         },
         {
-          "name": "Tailwind",
+          "name": "Rückenwind",
           "type": "flying",
           "usagePercent": 88.481,
           "category": "status"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 79.381,
           "category": "status"
@@ -441,25 +445,25 @@
       "usagePercent": 9,
       "topMoves": [
         {
-          "name": "Light Screen",
+          "name": "Lichtschild",
           "type": "psychic",
           "usagePercent": 74.917,
           "category": "status"
         },
         {
-          "name": "Rain Dance",
+          "name": "Regentanz",
           "type": "water",
           "usagePercent": 65.225,
           "category": "status"
         },
         {
-          "name": "Encore",
+          "name": "Zugabe",
           "type": "normal",
           "usagePercent": 58.169,
           "category": "status"
         },
         {
-          "name": "Reflect",
+          "name": "Reflektor",
           "type": "psychic",
           "usagePercent": 56.626,
           "category": "status"
@@ -472,25 +476,25 @@
       "usagePercent": 8,
       "topMoves": [
         {
-          "name": "Follow Me",
+          "name": "Spotlight",
           "type": "normal",
           "usagePercent": 99.313,
           "category": "status"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 93.791,
           "category": "status"
         },
         {
-          "name": "Super Fang",
+          "name": "Superzahn",
           "type": "normal",
           "usagePercent": 82.212,
           "category": "physical"
         },
         {
-          "name": "Feint",
+          "name": "Offenlegung",
           "type": "normal",
           "usagePercent": 41.853,
           "category": "physical"
@@ -503,24 +507,25 @@
       "usagePercent": 8,
       "topMoves": [
         {
-          "name": "Mega Dragonite Tailwind",
+          "name": "Rückenwind",
           "type": "flying",
-          "usagePercent": 66.617
+          "usagePercent": 66.617,
+          "category": "status"
         },
         {
-          "name": "Dragon Pulse",
+          "name": "Drachenpuls",
           "type": "dragon",
           "usagePercent": 59.355,
           "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 56.202,
           "category": "status"
         },
         {
-          "name": "Hurricane",
+          "name": "Orkan",
           "type": "flying",
           "usagePercent": 49.255,
           "category": "special"
@@ -533,7 +538,7 @@
       "usagePercent": 7,
       "topMoves": [
         {
-          "name": "Shadow Sneak",
+          "name": "Schattenstoß",
           "type": "ghost",
           "usagePercent": 89.758,
           "category": "physical"
@@ -545,13 +550,13 @@
           "category": "physical"
         },
         {
-          "name": "Iron Head",
+          "name": "Eisenschädel",
           "type": "steel",
           "usagePercent": 35.842,
           "category": "physical"
         },
         {
-          "name": "Close Combat",
+          "name": "Nahkampf",
           "type": "fighting",
           "usagePercent": 34.207,
           "category": "physical"
@@ -564,25 +569,25 @@
       "usagePercent": 7,
       "topMoves": [
         {
-          "name": "Hydro Pump",
+          "name": "Hydropumpe",
           "type": "water",
           "usagePercent": 86.732,
           "category": "special"
         },
         {
-          "name": "Will-O-Wisp",
+          "name": "Irrlicht",
           "type": "fire",
           "usagePercent": 68.625,
           "category": "status"
         },
         {
-          "name": "Thunderbolt",
+          "name": "Donnerblitz",
           "type": "electric",
           "usagePercent": 67.048,
           "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 51.792,
           "category": "status"
@@ -595,25 +600,25 @@
       "usagePercent": 7,
       "topMoves": [
         {
-          "name": "Sludge Bomb",
+          "name": "Matschbombe",
           "type": "poison",
           "usagePercent": 96.927,
           "category": "special"
         },
         {
-          "name": "Power Gem",
+          "name": "Juwelenkraft",
           "type": "rock",
           "usagePercent": 95.28,
           "category": "special"
         },
         {
-          "name": "Earth Power",
+          "name": "Erdkräfte",
           "type": "ground",
           "usagePercent": 95.113,
           "category": "special"
         },
         {
-          "name": "Spiky Shield",
+          "name": "Schutzstacheln",
           "type": "grass",
           "usagePercent": 93.31,
           "category": "status"
@@ -626,24 +631,25 @@
       "usagePercent": 7,
       "topMoves": [
         {
-          "name": "Mega Blastoise Water Spout",
+          "name": "Fontränen",
           "type": "water",
-          "usagePercent": 90.032
+          "usagePercent": 90.032,
+          "category": "special"
         },
         {
-          "name": "Dark Pulse",
+          "name": "Finsteraura",
           "type": "dark",
           "usagePercent": 86.973,
           "category": "special"
         },
         {
-          "name": "Fake Out",
+          "name": "Mogelhieb",
           "type": "normal",
           "usagePercent": 63.275,
           "category": "physical"
         },
         {
-          "name": "Aura Sphere",
+          "name": "Aurasphäre",
           "type": "fighting",
           "usagePercent": 48.819,
           "category": "special"
@@ -656,25 +662,25 @@
       "usagePercent": 6,
       "topMoves": [
         {
-          "name": "Tailwind",
+          "name": "Rückenwind",
           "type": "flying",
           "usagePercent": 97.118,
           "category": "status"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 77.79,
           "category": "status"
         },
         {
-          "name": "Flare Blitz",
+          "name": "Flammenblitz",
           "type": "fire",
           "usagePercent": 54.564,
           "category": "physical"
         },
         {
-          "name": "Brave Bird",
+          "name": "Sturzflug",
           "type": "flying",
           "usagePercent": 45.409,
           "category": "physical"
@@ -687,24 +693,25 @@
       "usagePercent": 6,
       "topMoves": [
         {
-          "name": "Mega Venusaur Sludge Bomb",
+          "name": "Matschbombe",
           "type": "poison",
-          "usagePercent": 94.787
+          "usagePercent": 94.787,
+          "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 93.844,
           "category": "status"
         },
         {
-          "name": "Earth Power",
+          "name": "Erdkräfte",
           "type": "ground",
           "usagePercent": 91.493,
           "category": "special"
         },
         {
-          "name": "Giga Drain",
+          "name": "Gigasauger",
           "type": "grass",
           "usagePercent": 81.82,
           "category": "special"
@@ -717,24 +724,25 @@
       "usagePercent": 6,
       "topMoves": [
         {
-          "name": "Mega Gengar Protect",
+          "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 99.089
+          "usagePercent": 99.089,
+          "category": "status"
         },
         {
-          "name": "Shadow Ball",
+          "name": "Spukball",
           "type": "ghost",
           "usagePercent": 96.81,
           "category": "special"
         },
         {
-          "name": "Perish Song",
+          "name": "Abgesang",
           "type": "normal",
           "usagePercent": 65.543,
           "category": "status"
         },
         {
-          "name": "Disable",
+          "name": "Aussetzer",
           "type": "normal",
           "usagePercent": 55.315,
           "category": "status"
@@ -747,24 +755,25 @@
       "usagePercent": 6,
       "topMoves": [
         {
-          "name": "Mega Froslass Blizzard",
+          "name": "Blizzard",
           "type": "ice",
-          "usagePercent": 99.904
+          "usagePercent": 99.904,
+          "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 98.41,
           "category": "status"
         },
         {
-          "name": "Shadow Ball",
+          "name": "Spukball",
           "type": "ghost",
           "usagePercent": 91.528,
           "category": "special"
         },
         {
-          "name": "Aurora Veil",
+          "name": "Auroraschleier",
           "type": "ice",
           "usagePercent": 75.666,
           "category": "status"
@@ -777,25 +786,25 @@
       "usagePercent": 5,
       "topMoves": [
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 98.466,
           "category": "status"
         },
         {
-          "name": "Clanging Scales",
+          "name": "Schuppenrasseln",
           "type": "dragon",
           "usagePercent": 97.28,
           "category": "special"
         },
         {
-          "name": "Aura Sphere",
+          "name": "Aurasphäre",
           "type": "fighting",
           "usagePercent": 85.303,
           "category": "special"
         },
         {
-          "name": "Clangorous Soul",
+          "name": "Seelentanz",
           "type": "dragon",
           "usagePercent": 84.316,
           "category": "status"
@@ -808,25 +817,25 @@
       "usagePercent": 5,
       "topMoves": [
         {
-          "name": "Sleep Powder",
+          "name": "Schlafpuder",
           "type": "grass",
           "usagePercent": 95.447,
           "category": "status"
         },
         {
-          "name": "Hurricane",
+          "name": "Orkan",
           "type": "flying",
           "usagePercent": 85.554,
           "category": "special"
         },
         {
-          "name": "Rage Powder",
+          "name": "Wutpulver",
           "type": "bug",
           "usagePercent": 67.437,
           "category": "status"
         },
         {
-          "name": "Tailwind",
+          "name": "Rückenwind",
           "type": "flying",
           "usagePercent": 50.354,
           "category": "status"
@@ -839,24 +848,25 @@
       "usagePercent": 5,
       "topMoves": [
         {
-          "name": "Mega Tyranitar Rock Slide",
+          "name": "Steinhagel",
           "type": "rock",
-          "usagePercent": 98.768
+          "usagePercent": 98.768,
+          "category": "physical"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 98.544,
           "category": "status"
         },
         {
-          "name": "Knock Off",
+          "name": "Abschlag",
           "type": "dark",
           "usagePercent": 82.663,
           "category": "physical"
         },
         {
-          "name": "Low Kick",
+          "name": "Fußkick",
           "type": "fighting",
           "usagePercent": 59.085,
           "category": "physical"
@@ -869,24 +879,25 @@
       "usagePercent": 5,
       "topMoves": [
         {
-          "name": "Mega Kangaskhan Double-Edge",
+          "name": "Risikotackle",
           "type": "normal",
-          "usagePercent": 96.59
+          "usagePercent": 96.59,
+          "category": "physical"
         },
         {
-          "name": "Fake Out",
+          "name": "Mogelhieb",
           "type": "normal",
           "usagePercent": 95.872,
           "category": "physical"
         },
         {
-          "name": "Ice Punch",
+          "name": "Eishieb",
           "type": "ice",
           "usagePercent": 55.225,
           "category": "physical"
         },
         {
-          "name": "Low Kick",
+          "name": "Fußkick",
           "type": "fighting",
           "usagePercent": 51.543,
           "category": "physical"
@@ -899,25 +910,25 @@
       "usagePercent": 4,
       "topMoves": [
         {
-          "name": "Brave Bird",
+          "name": "Sturzflug",
           "type": "flying",
           "usagePercent": 91.019,
           "category": "physical"
         },
         {
-          "name": "Tailwind",
+          "name": "Rückenwind",
           "type": "flying",
           "usagePercent": 75.618,
           "category": "status"
         },
         {
-          "name": "Roost",
+          "name": "Ruheort",
           "type": "flying",
           "usagePercent": 57.243,
           "category": "status"
         },
         {
-          "name": "Bulk Up",
+          "name": "Protzer",
           "type": "fighting",
           "usagePercent": 53.843,
           "category": "status"
@@ -930,25 +941,25 @@
       "usagePercent": 4,
       "topMoves": [
         {
-          "name": "Weather Ball",
+          "name": "Meteorologe",
           "type": "normal",
           "usagePercent": 84.38,
           "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 81.878,
           "category": "status"
         },
         {
-          "name": "Perish Song",
+          "name": "Abgesang",
           "type": "normal",
           "usagePercent": 62.087,
           "category": "status"
         },
         {
-          "name": "Encore",
+          "name": "Zugabe",
           "type": "normal",
           "usagePercent": 57.88,
           "category": "status"
@@ -961,24 +972,25 @@
       "usagePercent": 4,
       "topMoves": [
         {
-          "name": "Mega Scizor Bullet Punch",
+          "name": "Patronenhieb",
           "type": "steel",
-          "usagePercent": 99.962
+          "usagePercent": 99.962,
+          "category": "physical"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 95.424,
           "category": "status"
         },
         {
-          "name": "Bug Bite",
+          "name": "Käferbiss",
           "type": "bug",
           "usagePercent": 79.312,
           "category": "physical"
         },
         {
-          "name": "Swords Dance",
+          "name": "Schwerttanz",
           "type": "normal",
           "usagePercent": 79.171,
           "category": "status"
@@ -991,24 +1003,25 @@
       "usagePercent": 4,
       "topMoves": [
         {
-          "name": "Mega Gardevoir Hyper Voice",
+          "name": "Schallwelle",
           "type": "normal",
-          "usagePercent": 99.586
+          "usagePercent": 99.586,
+          "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 98.109,
           "category": "status"
         },
         {
-          "name": "Trick Room",
+          "name": "Bizarroraum",
           "type": "psychic",
           "usagePercent": 65.057,
           "category": "status"
         },
         {
-          "name": "Psyshock",
+          "name": "Psychoschock",
           "type": "psychic",
           "usagePercent": 47.261,
           "category": "special"
@@ -1021,7 +1034,7 @@
       "usagePercent": 3,
       "topMoves": [
         {
-          "name": "Dark Pulse",
+          "name": "Finsteraura",
           "type": "dark",
           "usagePercent": 92.107,
           "category": "special"
@@ -1033,13 +1046,13 @@
           "category": "special"
         },
         {
-          "name": "Snarl",
+          "name": "Standpauke",
           "type": "dark",
           "usagePercent": 64.92,
           "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 46.696,
           "category": "status"
@@ -1052,24 +1065,25 @@
       "usagePercent": 2,
       "topMoves": [
         {
-          "name": "Mega Camerupt Earth Power",
+          "name": "Erdkräfte",
           "type": "ground",
-          "usagePercent": 99.351
+          "usagePercent": 99.351,
+          "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 94.968,
           "category": "status"
         },
         {
-          "name": "Heat Wave",
+          "name": "Hitzewelle",
           "type": "fire",
           "usagePercent": 88.293,
           "category": "special"
         },
         {
-          "name": "Ancient Power",
+          "name": "Antik-Kraft",
           "type": "rock",
           "usagePercent": 68.556,
           "category": "special"
@@ -1082,24 +1096,25 @@
       "usagePercent": 2,
       "topMoves": [
         {
-          "name": "Mega Skarmory Iron Head",
+          "name": "Eisenschädel",
           "type": "steel",
-          "usagePercent": 98.365
+          "usagePercent": 98.365,
+          "category": "physical"
         },
         {
-          "name": "Brave Bird",
+          "name": "Sturzflug",
           "type": "flying",
           "usagePercent": 94.606,
           "category": "physical"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 73.787,
           "category": "status"
         },
         {
-          "name": "Tailwind",
+          "name": "Rückenwind",
           "type": "flying",
           "usagePercent": 52.511,
           "category": "status"
@@ -1112,25 +1127,25 @@
       "usagePercent": 1,
       "topMoves": [
         {
-          "name": "Flare Blitz",
+          "name": "Flammenblitz",
           "type": "fire",
           "usagePercent": 97.043,
           "category": "physical"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 73.832,
           "category": "status"
         },
         {
-          "name": "Rock Slide",
+          "name": "Steinhagel",
           "type": "rock",
           "usagePercent": 70.574,
           "category": "physical"
         },
         {
-          "name": "Extreme Speed",
+          "name": "Turbotempo",
           "type": "normal",
           "usagePercent": 64.046,
           "category": "physical"
@@ -1143,25 +1158,25 @@
       "usagePercent": 1,
       "topMoves": [
         {
-          "name": "Instruct",
+          "name": "Kommando",
           "type": "psychic",
           "usagePercent": 97.894,
           "category": "status"
         },
         {
-          "name": "Trick Room",
+          "name": "Bizarroraum",
           "type": "psychic",
           "usagePercent": 97.295,
           "category": "status"
         },
         {
-          "name": "Psychic",
+          "name": "Psychokinese",
           "type": "psychic",
           "usagePercent": 63.891,
           "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 45.14,
           "category": "status"
@@ -1174,25 +1189,25 @@
       "usagePercent": 1,
       "topMoves": [
         {
-          "name": "Liquidation",
+          "name": "Aquadurchstoß",
           "type": "water",
           "usagePercent": 70.307,
           "category": "physical"
         },
         {
-          "name": "Wide Guard",
+          "name": "Rundumschutz",
           "type": "rock",
           "usagePercent": 69.558,
           "category": "status"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 53.72,
           "category": "status"
         },
         {
-          "name": "Leech Life",
+          "name": "Blutsauger",
           "type": "bug",
           "usagePercent": 48.543,
           "category": "physical"
@@ -1205,24 +1220,25 @@
       "usagePercent": 0,
       "topMoves": [
         {
-          "name": "Mega Abomasnow Blizzard",
+          "name": "Blizzard",
           "type": "ice",
-          "usagePercent": 98.009
+          "usagePercent": 98.009,
+          "category": "special"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 77.447,
           "category": "status"
         },
         {
-          "name": "Energy Ball",
+          "name": "Energieball",
           "type": "grass",
           "usagePercent": 53.641,
           "category": "special"
         },
         {
-          "name": "Earth Power",
+          "name": "Erdkräfte",
           "type": "ground",
           "usagePercent": 47.775,
           "category": "special"
@@ -1235,24 +1251,25 @@
       "usagePercent": 0,
       "topMoves": [
         {
-          "name": "Mega Steelix Heavy Slam",
+          "name": "Rammboss",
           "type": "steel",
-          "usagePercent": 93.274
+          "usagePercent": 93.274,
+          "category": "physical"
         },
         {
-          "name": "Protect",
+          "name": "Schutzschild",
           "type": "normal",
           "usagePercent": 85.248,
           "category": "status"
         },
         {
-          "name": "High Horsepower",
+          "name": "Pferdestärke",
           "type": "ground",
           "usagePercent": 83.774,
           "category": "physical"
         },
         {
-          "name": "Wide Guard",
+          "name": "Rundumschutz",
           "type": "rock",
           "usagePercent": 76.885,
           "category": "status"

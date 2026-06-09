@@ -1,6 +1,7 @@
 import { Button } from "../components/Button";
 import { MegaMarker } from "../components/MegaMarker";
 import { PokemonSprite } from "../components/PokemonSprite";
+import { ScreenHeader } from "../components/ScreenHeader";
 import { TypeBadge } from "../components/TypeBadge";
 import { ownCombatant, oppCombatant } from "../lib/combatant";
 import { getPokemon } from "../lib/data";
@@ -86,16 +87,11 @@ export function SynergyOverview({
 
   return (
     <div className={styles.screen}>
-      <button type="button" className={styles.back} onClick={onBack}>
-        ‹ Zurück
-      </button>
-
-      <header className={styles.head}>
-        <h2 className={styles.title}>Synergie</h2>
-        <span className={styles.count}>
-          {picked.length}/{MAX_PICKS}
-        </span>
-      </header>
+      <ScreenHeader
+        title="Synergie"
+        onBack={onBack}
+        trailing={`${picked.length}/${MAX_PICKS}`}
+      />
 
       <section className={styles.opponents} aria-label="Gegner-Team">
         <span className={styles.opponentsLabel}>Gegner</span>

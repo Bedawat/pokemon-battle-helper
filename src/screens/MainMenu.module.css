@@ -44,3 +44,79 @@
   margin-top: auto;
   padding-top: var(--space-2xl);
 }
+
+/* --- Aktiv-Team-Karte (ersetzt den früheren „Team verwalten"-Button) --- */
+.activeTeam {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+  padding: var(--space-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-align: left;
+}
+
+.activeTeam:active {
+  background: var(--bg-surface-hover);
+}
+
+.activeTeamHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.activeTeamLabel {
+  font-size: var(--caption-size);
+  letter-spacing: var(--caption-ls);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.activeTeamName {
+  font-size: var(--heading-card-size);
+  font-weight: var(--heading-card-weight);
+  color: var(--text-primary);
+}
+
+.activeTeamSlots {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-xs);
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+}
+
+.slotEmpty {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--border-default);
+}
+
+.noTeam {
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-md);
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-default);
+  border-radius: var(--radius-lg);
+  color: var(--text-secondary);
+  font-size: var(--body-default-size);
+  cursor: pointer;
+}
+
+.noTeam:active {
+  background: var(--bg-surface-hover);
+}

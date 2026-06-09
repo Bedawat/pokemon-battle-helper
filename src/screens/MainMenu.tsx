@@ -1,16 +1,31 @@
 import { Button } from "../components/Button";
+import { PokemonSprite } from "../components/PokemonSprite";
+import { getPokemon } from "../lib/data";
+import { MAX_MEMBERS } from "../lib/team";
+import type { Team } from "../types/team";
 import styles from "./MainMenu.module.css";
 
 interface MainMenuProps {
+  /** Aktuell aktives Team (für die Vorschau-Karte). */
+  activeTeam?: Team;
   onStartBattle: () => void;
-  onManageTeam: () => void;
+  /** Öffnet das aktive Team im Editor. */
+  onOpenActiveTeam: () => void;
+  /** Öffnet die Team-Liste (Fallback, wenn kein aktives Team existiert). */
+  onManageTeams: () => void;
 }
 
 /**
- * S1 — Hauptmenü / Begrüßungsscreen.
- * Prominenter CTA "Kampf starten", sekundär "Team verwalten".
+ * S1 — Hauptmenü / Begrüßungsscreen. Prominenter CTA „Kampf starten" plus eine
+ * Karte mit dem aktiven Team (statt eines redundanten „Team verwalten"-Buttons —
+ * Team-Verwaltung liegt im Team-Tab). Tap auf die Karte öffnet das aktive Team.
  */
-export function MainMenu({ onStartBattle, onManageTeam }: MainMenuProps) {
+export function MainMenu({
+  activeTeam,
+  onStartBattle,
+  onOpenActiveTeam,
+  onManageTeams,
+}: MainMenuProps) {
   return (
     <div className={styles.menu}>
       <div className={styles.hero}>
@@ -31,11 +46,45 @@ export function MainMenu({ onStartBattle, onManageTeam }: MainMenuProps) {
       </div>
 
       <div className={styles.actions}>
+        {activeTeam ? (
+          <button
+            type="button"
+            className={styles.activeTeam}
+            onClick={onOpenActiveTeam}
+            aria-label={`Aktives Team „${activeTeam.name}" bearbeiten`}
+          >
+            <span className={styles.activeTeamHead}>
+              <span className={styles.activeTeamLabel}>Aktives Team</span>
+              <span className={styles.activeTeamName}>{activeTeam.name}</span>
+            </span>
+            <span className={styles.activeTeamSlots}>
+              {Array.from({ length: MAX_MEMBERS }).map((_, i) => {
+                const member = activeTeam.members[i];
+                const mon = member ? getPokemon(member.pokemonId) : undefined;
+                return (
+                  <span key={i} className={styles.slot}>
+                    {mon ? (
+                      <PokemonSprite src={mon.sprite} alt={mon.nameDe} size={36} />
+                    ) : (
+                      <span className={styles.slotEmpty} aria-hidden="true" />
+                    )}
+                  </span>
+                );
+              })}
+            </span>
+          </button>
+        ) : (
+          <button
+            type="button"
+            className={styles.noTeam}
+            onClick={onManageTeams}
+          >
+            Noch kein aktives Team — Team anlegen
+          </button>
+        )}
+
         <Button variant="primary" onClick={onStartBattle}>
           Kampf starten
-        </Button>
-        <Button variant="secondary" onClick={onManageTeam}>
-          Team verwalten
         </Button>
       </div>
     </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../components/Button";
 import { PokemonGrid } from "../components/PokemonGrid";
 import { PokemonSprite } from "../components/PokemonSprite";
+import { ScreenHeader } from "../components/ScreenHeader";
 import { SearchBar } from "../components/SearchBar";
 import { ALL_POKEMON, autoMovesetFor, getPokemon } from "../lib/data";
 import { filterPokemon } from "../lib/search";
@@ -14,6 +15,7 @@ interface TeamEditorProps {
   onChange: (team: Team) => void;
   onOpenMember: (pokemonId: string) => void;
   onDone: () => void;
+  onBack: () => void;
 }
 
 /** S7 — Team zusammenstellen: 6 Slots, Grid mit Suche, Auto-Moveset bei Auswahl. */
@@ -22,10 +24,15 @@ export function TeamEditor({
   onChange,
   onOpenMember,
   onDone,
+  onBack,
 }: TeamEditorProps) {
   const [query, setQuery] = useState("");
   const memberIds = new Set(team.members.map((m) => m.pokemonId));
-  const filtered = filterPokemon(ALL_POKEMON, query);
+  // Bereits im Team befindliche Pokémon verschwinden aus dem Grid (statt
+  // ausgegraut). Sie tauchen wieder auf, sobald sie aus dem Team entfernt werden.
+  const filtered = filterPokemon(ALL_POKEMON, query).filter(
+    (p) => !memberIds.has(p.id),
+  );
   const full = team.members.length >= MAX_MEMBERS;
 
   const handleAdd = (id: string) => {
@@ -34,12 +41,11 @@ export function TeamEditor({
 
   return (
     <div className={styles.screen}>
-      <header className={styles.head}>
-        <h2 className={styles.title}>{team.name}</h2>
-        <span className={styles.count}>
-          {team.members.length}/{MAX_MEMBERS}
-        </span>
-      </header>
+      <ScreenHeader
+        title={team.name}
+        onBack={onBack}
+        trailing={`${team.members.length}/${MAX_MEMBERS}`}
+      />
 
       <div className={styles.slots}>
         {Array.from({ length: MAX_MEMBERS }).map((_, i) => {
@@ -87,7 +93,6 @@ export function TeamEditor({
           <PokemonGrid
             pokemon={filtered}
             onSelect={handleAdd}
-            disabledIds={memberIds}
             emptyHint="Kein Pokémon gefunden."
           />
         )}

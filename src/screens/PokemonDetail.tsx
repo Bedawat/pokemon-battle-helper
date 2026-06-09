@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MoveRow } from "../components/MoveRow";
 import { PokemonSprite } from "../components/PokemonSprite";
+import { ScreenHeader } from "../components/ScreenHeader";
 import { SearchBar } from "../components/SearchBar";
 import { TypeBadge } from "../components/TypeBadge";
 import { getPokemon } from "../lib/data";
@@ -33,9 +34,7 @@ export function PokemonDetail({
   if (!member || !mon) {
     return (
       <div className={styles.screen}>
-        <button type="button" className={styles.back} onClick={onBack}>
-          ‹ Zurück
-        </button>
+        <ScreenHeader onBack={onBack} />
         <p className={styles.missing}>Pokémon nicht im Team.</p>
       </div>
     );
@@ -63,9 +62,7 @@ export function PokemonDetail({
 
   return (
     <div className={styles.screen}>
-      <button type="button" className={styles.back} onClick={onBack}>
-        ‹ Zurück
-      </button>
+      <ScreenHeader onBack={onBack} />
 
       <header className={styles.head}>
         <PokemonSprite src={mon.sprite} alt={mon.nameDe} size={96} />

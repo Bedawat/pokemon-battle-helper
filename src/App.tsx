@@ -45,12 +45,17 @@ export default function App() {
   );
 
   const handleTabChange = (tab: NavTab) => {
-    if (tab === "kampf") {
+    if (tab === "home") {
       setScreen("main-menu");
     } else {
       setEditingTeamId(null);
       setScreen("team-list");
     }
+  };
+
+  const openTeamList = () => {
+    setEditingTeamId(null);
+    setScreen("team-list");
   };
 
   // ---------- Team-Aktionen ----------
@@ -91,6 +96,7 @@ export default function App() {
       onCreate={handleCreateTeam}
       onSetActive={(id) => setTeamsState(setActiveTeam(teamsState, id))}
       onDelete={handleDeleteTeam}
+      onBack={() => setScreen("main-menu")}
     />
   );
 
@@ -102,6 +108,7 @@ export default function App() {
         onChange={handleChangeTeam}
         onOpenMember={openMember}
         onDone={() => setScreen("team-list")}
+        onBack={() => setScreen("team-list")}
       />
     );
   };
@@ -111,14 +118,15 @@ export default function App() {
       case "main-menu":
         return (
           <MainMenu
+            activeTeam={activeTeam}
             onStartBattle={() => {
               setOpponentIds([]);
               setScreen("opponent-input");
             }}
-            onManageTeam={() => {
-              setEditingTeamId(null);
-              setScreen("team-list");
+            onOpenActiveTeam={() => {
+              if (activeTeam) openTeam(activeTeam.id);
             }}
+            onManageTeams={openTeamList}
           />
         );
       case "opponent-input":
@@ -131,6 +139,7 @@ export default function App() {
               setLeadIds([]);
               setScreen("synergy");
             }}
+            onBack={() => setScreen("main-menu")}
           />
         );
       case "synergy":

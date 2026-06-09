@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../components/Button";
 import { PokemonGrid } from "../components/PokemonGrid";
 import { PokemonSprite } from "../components/PokemonSprite";
+import { ScreenHeader } from "../components/ScreenHeader";
 import { SearchBar } from "../components/SearchBar";
 import { ALL_POKEMON, getPokemon } from "../lib/data";
 import {
@@ -18,6 +19,7 @@ interface OpponentInputProps {
   opponent: OpponentTeam;
   onChange: (opponent: OpponentTeam) => void;
   onAnalyze: () => void;
+  onBack: () => void;
 }
 
 /**
@@ -29,6 +31,7 @@ export function OpponentInput({
   opponent,
   onChange,
   onAnalyze,
+  onBack,
 }: OpponentInputProps) {
   const [query, setQuery] = useState("");
   const chosen = new Set(opponent);
@@ -37,12 +40,11 @@ export function OpponentInput({
 
   return (
     <div className={styles.screen}>
-      <header className={styles.head}>
-        <h2 className={styles.title}>Gegner-Team</h2>
-        <span className={styles.count}>
-          {opponent.length}/{MAX_OPPONENTS}
-        </span>
-      </header>
+      <ScreenHeader
+        title="Gegner-Team"
+        onBack={onBack}
+        trailing={`${opponent.length}/${MAX_OPPONENTS}`}
+      />
 
       <div className={styles.slots}>
         {Array.from({ length: MAX_OPPONENTS }).map((_, i) => {

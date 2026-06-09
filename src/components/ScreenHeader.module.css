@@ -1,0 +1,52 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.back {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  color: var(--accent-primary);
+  font-size: var(--body-default-size);
+  font-weight: 600;
+  cursor: pointer;
+  /* Touch-Target ≥ 44px (Fitts' Law, Phase 7) */
+  min-height: 44px;
+  padding: var(--space-xs) var(--space-xs) var(--space-xs) 0;
+}
+
+.back:active {
+  color: var(--accent-primary-hover);
+}
+
+.backIcon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--heading-section-size);
+  font-weight: var(--heading-section-weight);
+  line-height: var(--heading-section-lh);
+  letter-spacing: var(--heading-section-ls);
+  color: var(--text-primary);
+}
+
+.trailing {
+  color: var(--text-secondary);
+  font-size: var(--body-large-size);
+  font-weight: 600;
+  flex-shrink: 0;
+}

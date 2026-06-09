@@ -1,5 +1,6 @@
 import { Button } from "../components/Button";
 import { PokemonSprite } from "../components/PokemonSprite";
+import { ScreenHeader } from "../components/ScreenHeader";
 import { getPokemon } from "../lib/data";
 import { MAX_MEMBERS, MAX_TEAMS } from "../lib/team";
 import type { Team, TeamId } from "../types/team";
@@ -12,6 +13,7 @@ interface TeamListProps {
   onCreate: () => void;
   onSetActive: (id: TeamId) => void;
   onDelete: (id: TeamId) => void;
+  onBack: () => void;
 }
 
 /** S6 — Übersicht der bis zu drei Teams. Aktives Team markierbar. */
@@ -22,15 +24,14 @@ export function TeamList({
   onCreate,
   onSetActive,
   onDelete,
+  onBack,
 }: TeamListProps) {
   return (
     <div className={styles.screen}>
-      <header className={styles.head}>
-        <h2 className={styles.title}>Teams</h2>
-        <p className={styles.subtitle}>
-          Das aktive Team wird im Kampf zur Analyse genutzt.
-        </p>
-      </header>
+      <ScreenHeader title="Teams" onBack={onBack} />
+      <p className={styles.subtitle}>
+        Das aktive Team wird im Kampf zur Analyse genutzt.
+      </p>
 
       {teams.length === 0 && (
         <p className={styles.emptyState}>
@@ -53,7 +54,6 @@ export function TeamList({
                 >
                   <div className={styles.cardHead}>
                     <span className={styles.teamName}>{team.name}</span>
-                    {isActive && <span className={styles.activePill}>Aktiv</span>}
                   </div>
                   <div className={styles.slots}>
                     {Array.from({ length: MAX_MEMBERS }).map((_, i) => {
@@ -73,7 +73,11 @@ export function TeamList({
                 </button>
 
                 <div className={styles.actions}>
-                  {!isActive && (
+                  {isActive ? (
+                    <span className={styles.activeStatus}>
+                      <span aria-hidden="true">✓</span> Aktiv
+                    </span>
+                  ) : (
                     <button
                       type="button"
                       className={styles.action}
