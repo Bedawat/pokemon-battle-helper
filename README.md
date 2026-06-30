@@ -8,8 +8,7 @@ Figma-Prototyps für den Usability-Test.
 > **Fan-Projekt, nicht offiziell.** Nicht mit Nintendo, Game Freak oder The Pokémon
 > Company verbunden oder von ihnen unterstützt. „Pokémon" und alle Namen/Sprites
 > sind Eigentum ihrer jeweiligen Rechteinhaber. Daten stammen aus öffentlichen
-> Quellen (PokéAPI, Pikalytics) und werden zur Laufzeit geladen, nicht ins Repo
-> kopiert. Rein nicht-kommerzielles Lern-/Portfolio-Projekt.
+> Quellen (PokéAPI, Pikalytics). Rein nicht-kommerzielles Lern-/Portfolio-Projekt.
 
 ---
 
