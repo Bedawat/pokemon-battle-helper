@@ -103,9 +103,9 @@ pokemon-battle-helper/
 └── src/
     ├── App.tsx                 ← Screen-Routing + App-Shell
     ├── components/             ← NavBar, Button, PokemonGrid, TypeBadge, …
-    ├── screens/                ← S1–S8 (MainMenu, OpponentInput, Synergy,
+    ├── screens/                ← MainMenu, OpponentInput, Synergy,
     │                              OpponentLeads, LiveBattle, TeamList,
-    │                              TeamEditor, PokemonDetail)
+    │                              TeamEditor, PokemonDetail
     ├── lib/                    ← reine Logik + Tests (matchup, synergy, mega,
     │                              battle, team, opponent, search, dataset)
     ├── types/                  ← Screen-, Pokémon- und Team-Typen
