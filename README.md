@@ -81,14 +81,33 @@ npm run test:run
 
 ## Daten
 
-`npm run data` (bzw. `node scripts/build-data.mjs`) baut den Datensatz nach `data/`:
+Der Roster ist **nicht mehr hardcodiert**, sondern kommt aus dem vollständigen
+Pokémon-Champions-Dex (alle verfügbaren Spezies + Mega-Formen, aus Bulbapedia).
+Zwei Schritte:
 
-- `pokemon.json` — id, DE/EN-Name, Typen, Sprite (aktuelle Champions-Meta)
-- `usage.json` — Usage % + Top-Moves pro Pokémon (Pikalytics)
-- `type-chart.json` — 18×18 Typ-Effektivität (PokéAPI)
+1. **`node scripts/parse-champions-dex.mjs`** — parst `scripts/champions-source.wiki`
+   (Bulbapedia-Wikitext) zu `scripts/champions-dex.json`. Typen sind hier
+   **autoritativ**. Nur nötig, wenn sich der Dex ändert (neues Spiel-Update →
+   `champions-source.wiki` aktualisieren, siehe unten).
+2. **`npm run data`** (`node scripts/build-data.mjs`) baut den Datensatz nach `data/`:
+   - `pokemon.json` — id, DE/EN-Name, Typen (aus Dex), Sprite, Mega-Formen
+   - `usage.json` — **Winrate + Monthly Rank + Top-Moves** (Pikalytics, nur die ~25
+     Meta-Mons des aktuellen Rankings; Rest ohne Meta-Daten). Hinweis: Pikalytics
+     liefert fürs Champions-Turnierformat **keine Usage %** mehr — `usagePercent`
+     ist daher meist `null`; das Grid sortiert nach `rank`.
+   - `type-chart.json` — 18×18 Typ-Effektivität (PokéAPI)
+
+**Aktuelles Format:** `gen9championsvgc2026regmb` (Regulation M-B). Bei einem neuen
+Regulation-Wechsel nur `FORMAT` in `build-data.mjs` anpassen.
+
+**Dex aktualisieren (neue Pokémon im Spiel):** die aktuelle Bulbapedia-Liste
+(*List of Pokémon in Pokémon Champions*) in `scripts/champions-source.wiki`
+eintragen (`{{gdex/Champs|...}}`-Zeilen, Sektionen `=== MAIN/MEGA/ROTOM ===`),
+dann `parse-champions-dex.mjs` + `npm run data`. Der Daten-Build **warnt** zudem,
+wenn ein Mon im Pikalytics-Ranking auftaucht, das nicht im Dex steht.
 
 Braucht Internet (läuft auf deinem Mac, nicht im Browser). Sprites werden remote
-geladen. Zum Aktualisieren der Usage-Daten einfach erneut ausführen.
+geladen. Der volle Lauf dauert einige Minuten (~230 Spezies + Movepools).
 
 ---
 

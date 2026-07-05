@@ -1,0 +1,306 @@
+=== MAIN ===
+{{gdex/Champs|0003|Venusaur|2|Grass|Poison|Yes|1.0.2}}
+{{gdex/Champs|0006|Charizard|2|Fire|Flying|Yes|1.0.2}}
+{{gdex/Champs|0009|Blastoise|1|Water|Yes|1.0.2}}
+{{gdex/Champs|0015|Beedrill|2|Bug|Poison|Yes|1.0.2}}
+{{gdex/Champs|0018|Pidgeot|2|Normal|Flying|Yes|1.0.2}}
+{{gdex/Champs|0024|Arbok|1|Poison|Yes|1.0.2}}
+{{gdex/Champs|0025|Pikachu|1|Electric|Yes|1.0.2}}
+{{gdex/Champs|0026|Raichu|1|Electric|Yes|1.0.2}}
+{{gdex/Champs|0026|Raichu|2|Electric|Psychic|ig=-Alola|form=Alolan Form|Yes|1.0.2}}
+{{gdex/Champs|0036|Clefable|1|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0038|Ninetales|1|Fire|Yes|1.0.2}}
+{{gdex/Champs|0038|Ninetales|2|Ice|Fairy|ig=-Alola|form=Alolan Form|Yes|1.0.2}}
+{{gdex/Champs|0045|Vileplume|2|Grass|Poison|Yes|1.1.0}}
+{{gdex/Champs|0059|Arcanine|1|Fire|Yes|1.0.2}}
+{{gdex/Champs|0059|Arcanine|2|Fire|Rock|ig=-Hisui|form=Hisuian Form|Yes|1.0.2}}
+{{gdex/Champs|0065|Alakazam|1|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0068|Machamp|1|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0071|Victreebel|2|Grass|Poison|Yes|1.0.2}}
+{{gdex/Champs|0080|Slowbro|2|Water|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0080|Slowbro|2|Poison|Psychic|ig=-Galar|form=Galarian Form|Yes|1.0.2}}
+{{gdex/Champs|0094|Gengar|2|Ghost|Poison|Yes|1.0.2}}
+{{gdex/Champs|0115|Kangaskhan|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0121|Starmie|2|Water|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0127|Pinsir|1|Bug|Yes|1.0.2}}
+{{gdex/Champs|0128|Tauros|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0128|Tauros|1|Fighting|ig=-Paldea Combat|form=Paldean Form (Combat Breed)|Yes|1.0.2}}
+{{gdex/Champs|0128|Tauros|2|Fighting|Fire|ig=-Paldea Blaze|form=Paldean Form (Blaze Breed)|Yes|1.0.2}}
+{{gdex/Champs|0128|Tauros|2|Fighting|Water|ig=-Paldea Aqua|form=Paldean Form (Aqua Breed)|Yes|1.0.2}}
+{{gdex/Champs|0130|Gyarados|2|Water|Flying|Yes|1.0.2}}
+{{gdex/Champs|0132|Ditto|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0134|Vaporeon|1|Water|Yes|1.0.2}}
+{{gdex/Champs|0135|Jolteon|1|Electric|Yes|1.0.2}}
+{{gdex/Champs|0136|Flareon|1|Fire|Yes|1.0.2}}
+{{gdex/Champs|0142|Aerodactyl|2|Rock|Flying|Yes|1.0.2}}
+{{gdex/Champs|0143|Snorlax|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0149|Dragonite|2|Dragon|Flying|Yes|1.0.2}}
+{{gdex/Champs|0154|Meganium|1|Grass|Yes|1.0.2}}
+{{gdex/Champs|0157|Typhlosion|1|Fire|Yes|1.0.2}}
+{{gdex/Champs|0157|Typhlosion|2|Fire|Ghost|ig=-Hisui|form=Hisuian Form|Yes|1.0.2}}
+{{gdex/Champs|0160|Feraligatr|1|Water|Yes|1.0.2}}
+{{gdex/Champs|0168|Ariados|2|Bug|Poison|Yes|1.0.2}}
+{{gdex/Champs|0181|Ampharos|1|Electric|Yes|1.0.2}}
+{{gdex/Champs|0184|Azumarill|2|Water|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0186|Politoed|1|Water|Yes|1.0.2}}
+{{gdex/Champs|0196|Espeon|1|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0197|Umbreon|1|Dark|Yes|1.0.2}}
+{{gdex/Champs|0199|Slowking|2|Water|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0199|Slowking|2|Poison|Psychic|ig=-Galar|form=Galarian Form|Yes|1.0.2}}
+{{gdex/Champs|0205|Forretress|2|Bug|Steel|Yes|1.0.2}}
+{{gdex/Champs|0208|Steelix|2|Steel|Ground|Yes|1.0.2}}
+{{gdex/Champs|0211|Qwilfish|2|Water|Poison|Yes|1.1.0}}
+{{gdex/Champs|0212|Scizor|2|Bug|Steel|Yes|1.0.2}}
+{{gdex/Champs|0214|Heracross|2|Bug|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0227|Skarmory|2|Steel|Flying|Yes|1.0.2}}
+{{gdex/Champs|0229|Houndoom|2|Dark|Fire|Yes|1.0.2}}
+{{gdex/Champs|0248|Tyranitar|2|Rock|Dark|Yes|1.0.2}}
+{{gdex/Champs|0254|Sceptile|1|Grass|Yes|1.1.0}}
+{{gdex/Champs|0257|Blaziken|2|Fire|Fighting|Yes|1.1.0}}
+{{gdex/Champs|0260|Swampert|2|Water|Ground|Yes|1.1.0}}
+{{gdex/Champs|0279|Pelipper|2|Water|Flying|Yes|1.0.2}}
+{{gdex/Champs|0282|Gardevoir|2|Psychic|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0302|Sableye|2|Dark|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0303|Mawile|2|Steel|Fairy|Yes|1.1.0}}
+{{gdex/Champs|0306|Aggron|2|Steel|Rock|Yes|1.0.2}}
+{{gdex/Champs|0308|Medicham|2|Fighting|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0310|Manectric|1|Electric|Yes|1.0.2}}
+{{gdex/Champs|0319|Sharpedo|2|Water|Dark|Yes|1.0.2}}
+{{gdex/Champs|0323|Camerupt|2|Fire|Ground|Yes|1.0.2}}
+{{gdex/Champs|0324|Torkoal|1|Fire|Yes|1.0.2}}
+{{gdex/Champs|0334|Altaria|2|Dragon|Flying|Yes|1.0.2}}
+{{gdex/Champs|0350|Milotic|1|Water|Yes|1.0.2}}
+{{gdex/Champs|0351|Castform|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0354|Banette|1|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0358|Chimecho|1|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0359|Absol|1|Dark|Yes|1.0.2}}
+{{gdex/Champs|0362|Glalie|1|Ice|Yes|1.0.2}}
+{{gdex/Champs|0376|Metagross|2|Steel|Psychic|Yes|1.1.0}}
+{{gdex/Champs|0389|Torterra|2|Grass|Ground|Yes|1.0.2}}
+{{gdex/Champs|0392|Infernape|2|Fire|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0395|Empoleon|2|Water|Steel|Yes|1.0.2}}
+{{gdex/Champs|0398|Staraptor|2|Normal|Flying|Yes|1.1.0}}
+{{gdex/Champs|0405|Luxray|1|Electric|Yes|1.0.2}}
+{{gdex/Champs|0407|Roserade|2|Grass|Poison|Yes|1.0.2}}
+{{gdex/Champs|0409|Rampardos|1|Rock|Yes|1.0.2}}
+{{gdex/Champs|0411|Bastiodon|2|Rock|Steel|Yes|1.0.2}}
+{{gdex/Champs|0428|Lopunny|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0442|Spiritomb|2|Ghost|Dark|Yes|1.0.2}}
+{{gdex/Champs|0445|Garchomp|2|Dragon|Ground|Yes|1.0.2}}
+{{gdex/Champs|0448|Lucario|2|Fighting|Steel|Yes|1.0.2}}
+{{gdex/Champs|0450|Hippowdon|1|Ground|Yes|1.0.2}}
+{{gdex/Champs|0454|Toxicroak|2|Poison|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0460|Abomasnow|2|Grass|Ice|Yes|1.0.2}}
+{{gdex/Champs|0461|Weavile|2|Dark|Ice|Yes|1.0.2}}
+{{gdex/Champs|0464|Rhyperior|2|Ground|Rock|Yes|1.0.2}}
+{{gdex/Champs|0470|Leafeon|1|Grass|Yes|1.0.2}}
+{{gdex/Champs|0471|Glaceon|1|Ice|Yes|1.0.2}}
+{{gdex/Champs|0472|Gliscor|2|Ground|Flying|Yes|1.0.2}}
+{{gdex/Champs|0473|Mamoswine|2|Ice|Ground|Yes|1.0.2}}
+{{gdex/Champs|0475|Gallade|2|Psychic|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0478|Froslass|2|Ice|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0479|Rotom|2|Electric|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0497|Serperior|1|Grass|Yes|1.0.2}}
+{{gdex/Champs|0500|Emboar|2|Fire|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0503|Samurott|1|Water|Yes|1.0.2}}
+{{gdex/Champs|0503|Samurott|2|Water|Dark|ig=-Hisui|form=Hisuian Form|Yes|1.0.2}}
+{{gdex/Champs|0505|Watchog|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0510|Liepard|1|Dark|Yes|1.0.2}}
+{{gdex/Champs|0512|Simisage|1|Grass|Yes|1.0.2}}
+{{gdex/Champs|0514|Simisear|1|Fire|Yes|1.0.2}}
+{{gdex/Champs|0516|Simipour|1|Water|Yes|1.0.2}}
+{{gdex/Champs|0518|Musharna|1|Psychic|Yes|1.1.0}}
+{{gdex/Champs|0530|Excadrill|2|Ground|Steel|Yes|1.0.2}}
+{{gdex/Champs|0531|Audino|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0534|Conkeldurr|1|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0545|Scolipede|2|Bug|Poison|Yes|1.1.0}}
+{{gdex/Champs|0547|Whimsicott|2|Grass|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0553|Krookodile|2|Ground|Dark|Yes|1.0.2}}
+{{gdex/Champs|0560|Scrafty|2|Dark|Fighting|Yes|1.1.0}}
+{{gdex/Champs|0563|Cofagrigus|1|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0569|Garbodor|1|Poison|Yes|1.0.2}}
+{{gdex/Champs|0571|Zoroark|1|Dark|Yes|1.0.2}}
+{{gdex/Champs|0571|Zoroark|2|Normal|Ghost|ig=-Hisui|form=Hisuian Form|Yes|1.0.2}}
+{{gdex/Champs|0579|Reuniclus|1|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0584|Vanilluxe|1|Ice|Yes|1.0.2}}
+{{gdex/Champs|0587|Emolga|2|Electric|Flying|Yes|1.0.2}}
+{{gdex/Champs|0604|Eelektross|1|Electric|Yes|1.1.0}}
+{{gdex/Champs|0609|Chandelure|2|Ghost|Fire|Yes|1.0.2}}
+{{gdex/Champs|0614|Beartic|1|Ice|Yes|1.0.2}}
+{{gdex/Champs|0618|Stunfisk|2|Ground|Electric|Yes|1.0.2}}
+{{gdex/Champs|0618|Stunfisk|2|Ground|Steel|ig=-Galar|form=Galarian Form|Yes|1.0.2}}
+{{gdex/Champs|0623|Golurk|2|Ground|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0635|Hydreigon|2|Dark|Dragon|Yes|1.0.2}}
+{{gdex/Champs|0637|Volcarona|2|Bug|Fire|Yes|1.0.2}}
+{{gdex/Champs|0652|Chesnaught|2|Grass|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0655|Delphox|2|Fire|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0658|Greninja|2|Water|Dark|Yes|1.0.2}}
+{{gdex/Champs|0660|Diggersby|2|Normal|Ground|Yes|1.0.2}}
+{{gdex/Champs|0663|Talonflame|2|Fire|Flying|Yes|1.0.2}}
+{{gdex/Champs|0666|Vivillon|2|Bug|Flying|ig=-High Plains|Yes|1.0.2}}
+{{gdex/Champs|0668|Pyroar|2|Fire|Normal|Yes|1.1.0}}
+{{gdex/Champs|0670|Floette|1|Fairy|ig=-Eternal|form=Eternal Flower|Transfer only|1.0.2}}
+{{gdex/Champs|0671|Florges|1|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0675|Pangoro|2|Fighting|Dark|Yes|1.0.2}}
+{{gdex/Champs|0676|Furfrou|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0678|Meowstic|1|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0681|Aegislash|2|Steel|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0683|Aromatisse|1|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0685|Slurpuff|1|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0687|Malamar|2|Dark|Psychic|Yes|1.1.0}}
+{{gdex/Champs|0689|Barbaracle|2|Rock|Water|Yes|1.1.0}}
+{{gdex/Champs|0691|Dragalge|2|Poison|Dragon|Yes|1.1.0}}
+{{gdex/Champs|0693|Clawitzer|1|Water|Yes|1.0.2}}
+{{gdex/Champs|0695|Heliolisk|2|Electric|Normal|Yes|1.0.2}}
+{{gdex/Champs|0697|Tyrantrum|2|Rock|Dragon|Yes|1.0.2}}
+{{gdex/Champs|0699|Aurorus|2|Rock|Ice|Yes|1.0.2}}
+{{gdex/Champs|0700|Sylveon|1|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0701|Hawlucha|2|Fighting|Flying|Yes|1.0.2}}
+{{gdex/Champs|0702|Dedenne|2|Electric|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0706|Goodra|1|Dragon|Yes|1.0.2}}
+{{gdex/Champs|0706|Goodra|2|Steel|Dragon|ig=-Hisui|form=Hisuian Form|Yes|1.0.2}}
+{{gdex/Champs|0707|Klefki|2|Steel|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0709|Trevenant|2|Ghost|Grass|Yes|1.0.2}}
+{{gdex/Champs|0711|Gourgeist|2|Ghost|Grass|Yes|1.0.2}}
+{{gdex/Champs|0713|Avalugg|1|Ice|Yes|1.0.2}}
+{{gdex/Champs|0713|Avalugg|2|Ice|Rock|ig=-Hisui|form=Hisuian Form|Yes|1.0.2}}
+{{gdex/Champs|0715|Noivern|2|Flying|Dragon|Yes|1.0.2}}
+{{gdex/Champs|0724|Decidueye|2|Grass|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0724|Decidueye|2|Grass|Fighting|ig=-Hisui|form=Hisuian Form|Yes|1.0.2}}
+{{gdex/Champs|0727|Incineroar|2|Fire|Dark|Yes|1.0.2}}
+{{gdex/Champs|0730|Primarina|2|Water|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0733|Toucannon|2|Normal|Flying|Yes|1.0.2}}
+{{gdex/Champs|0740|Crabominable|2|Fighting|Ice|Yes|1.0.2}}
+{{gdex/Champs|0745|Lycanroc|1|Rock|Yes|1.0.2}}
+{{gdex/Champs|0748|Toxapex|2|Poison|Water|Yes|1.0.2}}
+{{gdex/Champs|0750|Mudsdale|1|Ground|Yes|1.0.2}}
+{{gdex/Champs|0752|Araquanid|2|Water|Bug|Yes|1.0.2}}
+{{gdex/Champs|0758|Salazzle|2|Poison|Fire|Yes|1.0.2}}
+{{gdex/Champs|0763|Tsareena|1|Grass|Yes|1.0.2}}
+{{gdex/Champs|0765|Oranguru|2|Normal|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0766|Passimian|1|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0778|Mimikyu|2|Ghost|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0780|Drampa|2|Normal|Dragon|Yes|1.0.2}}
+{{gdex/Champs|0784|Kommo-o|2|Dragon|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0823|Corviknight|2|Flying|Steel|Yes|1.0.2}}
+{{gdex/Champs|0841|Flapple|2|Grass|Dragon|Yes|1.0.2}}
+{{gdex/Champs|0842|Appletun|2|Grass|Dragon|Yes|1.0.2}}
+{{gdex/Champs|0844|Sandaconda|1|Ground|Yes|1.0.2}}
+{{gdex/Champs|0855|Polteageist|1|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0858|Hatterene|2|Psychic|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0861|Grimmsnarl|2|Dark|Fairy|Yes|1.1.0}}
+{{gdex/Champs|0866|Mr. Rime|2|Ice|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0867|Runerigus|2|Ground|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0869|Alcremie|1|Fairy|Yes|1.0.2}}
+{{gdex/Champs|0870|Falinks|1|Fighting|Yes|1.1.0}}
+{{gdex/Champs|0877|Morpeko|2|Electric|Dark|Yes|1.0.2}}
+{{gdex/Champs|0887|Dragapult|2|Dragon|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0899|Wyrdeer|2|Normal|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0900|Kleavor|2|Bug|Rock|Yes|1.0.2}}
+{{gdex/Champs|0902|Basculegion|2|Water|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0903|Sneasler|2|Fighting|Poison|Yes|1.0.2}}
+{{gdex/Champs|0904|Overqwil|2|Dark|Poison|Yes|1.1.0}}
+{{gdex/Champs|0908|Meowscarada|2|Grass|Dark|Yes|1.0.2}}
+{{gdex/Champs|0911|Skeledirge|2|Fire|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0914|Quaquaval|2|Water|Fighting|Yes|1.0.2}}
+{{gdex/Champs|0925|Maushold|1|Normal|Yes|1.0.2}}
+{{gdex/Champs|0934|Garganacl|1|Rock|Yes|1.0.2}}
+{{gdex/Champs|0936|Armarouge|2|Fire|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0937|Ceruledge|2|Fire|Ghost|Yes|1.0.2}}
+{{gdex/Champs|0939|Bellibolt|1|Electric|Yes|1.0.2}}
+{{gdex/Champs|0952|Scovillain|2|Grass|Fire|Yes|1.0.2}}
+{{gdex/Champs|0956|Espathra|1|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0959|Tinkaton|2|Fairy|Steel|Yes|1.0.2}}
+{{gdex/Champs|0964|Palafin|1|Water|Yes|1.0.2}}
+{{gdex/Champs|0968|Orthworm|1|Steel|Yes|1.0.2}}
+{{gdex/Champs|0970|Glimmora|2|Rock|Poison|Yes|1.0.2}}
+{{gdex/Champs|0972|Houndstone|1|Ghost|Yes|1.1.0}}
+{{gdex/Champs|0979|Annihilape|2|Fighting|Ghost|Yes|1.1.0}}
+{{gdex/Champs|0981|Farigiraf|2|Normal|Psychic|Yes|1.0.2}}
+{{gdex/Champs|0983|Kingambit|2|Dark|Steel|Yes|1.0.2}}
+{{gdex/Champs|1000|Gholdengo|2|Steel|Ghost|Yes|1.1.0}}
+{{gdex/Champs|1013|Sinistcha|2|Grass|Ghost|Yes|1.0.2}}
+{{gdex/Champs|1018|Archaludon|2|Steel|Dragon|Yes|1.0.2}}
+{{gdex/Champs|1019|Hydrapple|2|Grass|Dragon|Yes|1.0.2}}
+=== MEGA ===
+{{gdex/Champs|0003|Venusaur|2|Grass|Poison|ig=-Mega|form=Mega Venusaur|Yes|1.0.2}}
+{{gdex/Champs|0006|Charizard|2|Fire|Dragon|ig=-Mega X|form=Mega Charizard X|Yes|1.0.2}}
+{{gdex/Champs|0006|Charizard|2|Fire|Flying|ig=-Mega Y|form=Mega Charizard Y|Yes|1.0.2}}
+{{gdex/Champs|0009|Blastoise|1|Water|ig=-Mega|form=Mega Blastoise|Yes|1.0.2}}
+{{gdex/Champs|0015|Beedrill|2|Bug|Poison|ig=-Mega|form=Mega Beedrill|Yes|1.0.2}}
+{{gdex/Champs|0018|Pidgeot|2|Normal|Flying|ig=-Mega|form=Mega Pidgeot|Yes|1.0.2}}
+{{gdex/Champs|0026|Raichu|1|Electric|ig=-Mega X|form=Mega Raichu X|Yes|1.1.0}}
+{{gdex/Champs|0026|Raichu|1|Electric|ig=-Mega Y|form=Mega Raichu Y|Yes|1.1.0}}
+{{gdex/Champs|0036|Clefable|2|Fairy|Flying|ig=-Mega|form=Mega Clefable|Yes|1.0.2}}
+{{gdex/Champs|0065|Alakazam|1|Psychic|ig=-Mega|form=Mega Alakazam|Yes|1.0.2}}
+{{gdex/Champs|0071|Victreebel|2|Grass|Poison|ig=-Mega|form=Mega Victreebel|Yes|1.0.2}}
+{{gdex/Champs|0080|Slowbro|2|Water|Psychic|ig=-Mega|form=Mega Slowbro|Yes|1.0.2}}
+{{gdex/Champs|0094|Gengar|2|Ghost|Poison|ig=-Mega|form=Mega Gengar|Yes|1.0.2}}
+{{gdex/Champs|0115|Kangaskhan|1|Normal|ig=-Mega|form=Mega Kangaskhan|Yes|1.0.2}}
+{{gdex/Champs|0121|Starmie|2|Water|Psychic|ig=-Mega|form=Mega Starmie|Yes|1.0.2}}
+{{gdex/Champs|0127|Pinsir|2|Bug|Flying|ig=-Mega|form=Mega Pinsir|Yes|1.0.2}}
+{{gdex/Champs|0130|Gyarados|2|Water|Dark|ig=-Mega|form=Mega Gyarados|Yes|1.0.2}}
+{{gdex/Champs|0142|Aerodactyl|2|Rock|Flying|ig=-Mega|form=Mega Aerodactyl|Yes|1.0.2}}
+{{gdex/Champs|0149|Dragonite|2|Dragon|Flying|ig=-Mega|form=Mega Dragonite|Yes|1.0.2}}
+{{gdex/Champs|0154|Meganium|2|Grass|Fairy|ig=-Mega|form=Mega Meganium|Yes|1.0.2}}
+{{gdex/Champs|0160|Feraligatr|2|Water|Dragon|ig=-Mega|form=Mega Feraligatr|Yes|1.0.2}}
+{{gdex/Champs|0181|Ampharos|2|Electric|Dragon|ig=-Mega|form=Mega Ampharos|Yes|1.0.2}}
+{{gdex/Champs|0208|Steelix|2|Steel|Ground|ig=-Mega|form=Mega Steelix|Yes|1.0.2}}
+{{gdex/Champs|0212|Scizor|2|Bug|Steel|ig=-Mega|form=Mega Scizor|Yes|1.0.2}}
+{{gdex/Champs|0214|Heracross|2|Bug|Fighting|ig=-Mega|form=Mega Heracross|Yes|1.0.2}}
+{{gdex/Champs|0227|Skarmory|2|Steel|Flying|ig=-Mega|form=Mega Skarmory|Yes|1.0.2}}
+{{gdex/Champs|0229|Houndoom|2|Dark|Fire|ig=-Mega|form=Mega Houndoom|Yes|1.0.2}}
+{{gdex/Champs|0248|Tyranitar|2|Rock|Dark|ig=-Mega|form=Mega Tyranitar|Yes|1.0.2}}
+{{gdex/Champs|0254|Sceptile|2|Grass|Dragon|ig=-Mega|form=Mega Sceptile|Yes|1.1.0}}
+{{gdex/Champs|0257|Blaziken|2|Fire|Fighting|ig=-Mega|form=Mega Blaziken|Yes|1.1.0}}
+{{gdex/Champs|0260|Swampert|2|Water|Ground|ig=-Mega|form=Mega Swampert|Yes|1.1.0}}
+{{gdex/Champs|0282|Gardevoir|2|Psychic|Fairy|ig=-Mega|form=Mega Gardevoir|Yes|1.0.2}}
+{{gdex/Champs|0302|Sableye|2|Dark|Ghost|ig=-Mega|form=Mega Sableye|Yes|1.0.2}}
+{{gdex/Champs|0303|Mawile|2|Steel|Fairy|ig=-Mega|form=Mega Mawile|Yes|1.1.0}}
+{{gdex/Champs|0306|Aggron|1|Steel|ig=-Mega|form=Mega Aggron|Yes|1.0.2}}
+{{gdex/Champs|0308|Medicham|2|Fighting|Psychic|ig=-Mega|form=Mega Medicham|Yes|1.0.2}}
+{{gdex/Champs|0310|Manectric|1|Electric|ig=-Mega|form=Mega Manectric|Yes|1.0.2}}
+{{gdex/Champs|0319|Sharpedo|2|Water|Dark|ig=-Mega|form=Mega Sharpedo|Yes|1.0.2}}
+{{gdex/Champs|0323|Camerupt|2|Fire|Ground|ig=-Mega|form=Mega Camerupt|Yes|1.0.2}}
+{{gdex/Champs|0334|Altaria|2|Dragon|Fairy|ig=-Mega|form=Mega Altaria|Yes|1.0.2}}
+{{gdex/Champs|0354|Banette|1|Ghost|ig=-Mega|form=Mega Banette|Yes|1.0.2}}
+{{gdex/Champs|0358|Chimecho|2|Psychic|Steel|ig=-Mega|form=Mega Chimecho|Yes|1.0.2}}
+{{gdex/Champs|0359|Absol|1|Dark|ig=-Mega|form=Mega Absol|Yes|1.0.2}}
+{{gdex/Champs|0362|Glalie|1|Ice|ig=-Mega|form=Mega Glalie|Yes|1.0.2}}
+{{gdex/Champs|0376|Metagross|2|Steel|Psychic|ig=-Mega|form=Mega Metagross|Yes|1.1.0}}
+{{gdex/Champs|0398|Staraptor|2|Fighting|Flying|ig=-Mega|form=Mega Staraptor|Yes|1.1.0}}
+{{gdex/Champs|0428|Lopunny|2|Normal|Fighting|ig=-Mega|form=Mega Lopunny|Yes|1.0.2}}
+{{gdex/Champs|0445|Garchomp|2|Dragon|Ground|ig=-Mega|form=Mega Garchomp|Yes|1.0.2}}
+{{gdex/Champs|0448|Lucario|2|Fighting|Steel|ig=-Mega|form=Mega Lucario|Yes|1.0.2}}
+{{gdex/Champs|0460|Abomasnow|2|Grass|Ice|ig=-Mega|form=Mega Abomasnow|Yes|1.0.2}}
+{{gdex/Champs|0475|Gallade|2|Psychic|Fighting|ig=-Mega|form=Mega Gallade|Yes|1.0.2}}
+{{gdex/Champs|0478|Froslass|2|Ice|Ghost|ig=-Mega|form=Mega Froslass|Yes|1.0.2}}
+{{gdex/Champs|0500|Emboar|2|Fire|Fighting|ig=-Mega|form=Mega Emboar|Yes|1.0.2}}
+{{gdex/Champs|0530|Excadrill|2|Ground|Steel|ig=-Mega|form=Mega Excadrill|Yes|1.0.2}}
+{{gdex/Champs|0531|Audino|2|Normal|Fairy|ig=-Mega|form=Mega Audino|Yes|1.0.2}}
+{{gdex/Champs|0545|Scolipede|2|Bug|Poison|ig=-Mega|form=Mega Scolipede|Yes|1.1.0}}
+{{gdex/Champs|0560|Scrafty|2|Dark|Fighting|ig=-Mega|form=Mega Scrafty|Yes|1.1.0}}
+{{gdex/Champs|0604|Eelektross|1|Electric|ig=-Mega|form=Mega Eelektross|Yes|1.1.0}}
+{{gdex/Champs|0609|Chandelure|2|Ghost|Fire|ig=-Mega|form=Mega Chandelure|Yes|1.0.2}}
+{{gdex/Champs|0623|Golurk|2|Ground|Ghost|ig=-Mega|form=Mega Golurk|Yes|1.0.2}}
+{{gdex/Champs|0652|Chesnaught|2|Grass|Fighting|ig=-Mega|form=Mega Chesnaught|Yes|1.0.2}}
+{{gdex/Champs|0655|Delphox|2|Fire|Psychic|ig=-Mega|form=Mega Delphox|Yes|1.0.2}}
+{{gdex/Champs|0658|Greninja|2|Water|Dark|ig=-Mega|form=Mega Greninja|Yes|1.0.2}}
+{{gdex/Champs|0668|Pyroar|2|Fire|Normal|ig=-Mega|form=Mega Pyroar|Yes|1.1.0}}
+{{gdex/Champs|0670|Floette|1|Fairy|ig=-Mega|form=Mega Floette|Event only|1.0.2}}
+{{gdex/Champs|0678|Meowstic|1|Psychic|ig=-Mega|form=Mega Meowstic|Yes|1.0.2}}
+{{gdex/Champs|0687|Malamar|2|Dark|Psychic|ig=-Mega|form=Mega Malamar|Yes|1.1.0}}
+{{gdex/Champs|0689|Barbaracle|2|Rock|Fighting|ig=-Mega|form=Mega Barbaracle|Yes|1.1.0}}
+{{gdex/Champs|0691|Dragalge|2|Poison|Dragon|ig=-Mega|form=Mega Dragalge|Yes|1.1.0}}
+{{gdex/Champs|0701|Hawlucha|2|Fighting|Flying|ig=-Mega|form=Mega Hawlucha|Yes|1.0.2}}
+{{gdex/Champs|0740|Crabominable|2|Fighting|Ice|ig=-Mega|form=Mega Crabominable|Yes|1.0.2}}
+{{gdex/Champs|0780|Drampa|2|Normal|Dragon|ig=-Mega|form=Mega Drampa|Yes|1.0.2}}
+{{gdex/Champs|0870|Falinks|1|Fighting|ig=-Mega|form=Mega Falinks|Yes|1.1.0}}
+{{gdex/Champs|0952|Scovillain|2|Grass|Fire|ig=-Mega|form=Mega Scovillain|Yes|1.0.2}}
+{{gdex/Champs|0970|Glimmora|2|Rock|Poison|ig=-Mega|form=Mega Glimmora|Yes|1.0.2}}
+=== ROTOM ===
+{{gdex/Champs|0479|Rotom|2|Electric|Fire|ig=-Heat|form=Heat Rotom|Yes|1.0.2}}
+{{gdex/Champs|0479|Rotom|2|Electric|Water|ig=-Wash|form=Wash Rotom|Yes|1.0.2}}
+{{gdex/Champs|0479|Rotom|2|Electric|Ice|ig=-Frost|form=Frost Rotom|Yes|1.0.2}}
+{{gdex/Champs|0479|Rotom|2|Electric|Flying|ig=-Fan|form=Fan Rotom|Yes|1.0.2}}
+{{gdex/Champs|0479|Rotom|2|Electric|Grass|ig=-Mow|form=Mow Rotom|Yes|1.0.2}}

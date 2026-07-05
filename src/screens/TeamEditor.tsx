@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Button } from "../components/Button";
+import { MetaToggle } from "../components/MetaToggle";
 import { PokemonGrid } from "../components/PokemonGrid";
 import { PokemonSprite } from "../components/PokemonSprite";
 import { ScreenHeader } from "../components/ScreenHeader";
 import { SearchBar } from "../components/SearchBar";
 import { ALL_POKEMON, autoMovesetFor, getPokemon } from "../lib/data";
-import { filterPokemon } from "../lib/search";
+import { applyMetaFilter, filterPokemon } from "../lib/search";
 import { MAX_MEMBERS, addMember, removeMember } from "../lib/team";
 import type { Team } from "../types/team";
 import styles from "./TeamEditor.module.css";
@@ -27,12 +28,14 @@ export function TeamEditor({
   onBack,
 }: TeamEditorProps) {
   const [query, setQuery] = useState("");
+  const [metaOnly, setMetaOnly] = useState(true);
   const memberIds = new Set(team.members.map((m) => m.pokemonId));
   // Bereits im Team befindliche Pokémon verschwinden aus dem Grid (statt
   // ausgegraut). Sie tauchen wieder auf, sobald sie aus dem Team entfernt werden.
-  const filtered = filterPokemon(ALL_POKEMON, query).filter(
-    (p) => !memberIds.has(p.id),
-  );
+  const filtered = filterPokemon(
+    applyMetaFilter(ALL_POKEMON, metaOnly, query),
+    query,
+  ).filter((p) => !memberIds.has(p.id));
   const full = team.members.length >= MAX_MEMBERS;
 
   const handleAdd = (id: string) => {
@@ -51,10 +54,28 @@ export function TeamEditor({
         {Array.from({ length: MAX_MEMBERS }).map((_, i) => {
           const member = team.members[i];
           const mon = member ? getPokemon(member.pokemonId) : undefined;
-          if (!member || !mon) {
+          if (!member) {
             return (
               <div key={i} className={styles.slotEmpty}>
                 <span>Leer</span>
+              </div>
+            );
+          }
+          if (!mon) {
+            // Verwaistes Mitglied (unbekannte id nach Daten-Rebuild): immer entfernbar.
+            return (
+              <div key={i} className={styles.slot}>
+                <div className={styles.slotMain}>
+                  <span className={styles.slotName}>Unbekannt</span>
+                </div>
+                <button
+                  type="button"
+                  className={styles.remove}
+                  onClick={() => onChange(removeMember(team, member.pokemonId))}
+                  aria-label="Unbekanntes Pokémon entfernen"
+                >
+                  ×
+                </button>
               </div>
             );
           }
@@ -90,11 +111,20 @@ export function TeamEditor({
             Team ist voll. Entferne ein Pokémon, um zu tauschen.
           </p>
         ) : (
-          <PokemonGrid
-            pokemon={filtered}
-            onSelect={handleAdd}
-            emptyHint="Kein Pokémon gefunden."
-          />
+          <>
+            {!query.trim() && (
+              <MetaToggle
+                metaOnly={metaOnly}
+                onChange={setMetaOnly}
+                hint={metaOnly ? `Top ${filtered.length} im Meta` : `Alle ${filtered.length}`}
+              />
+            )}
+            <PokemonGrid
+              pokemon={filtered}
+              onSelect={handleAdd}
+              emptyHint="Kein Pokémon gefunden."
+            />
+          </>
         )}
       </section>
 

@@ -4,12 +4,15 @@
  */
 import { useEffect, useState } from "react";
 import type { TeamsState } from "../types/team";
-import { createDemoTeam } from "./data";
+import { createDemoTeam, sanitizeTeams } from "./data";
 import { loadState, saveState, seedDemoIfEmpty } from "./team";
 
 export function useTeams() {
   const [state, setState] = useState<TeamsState>(() =>
-    seedDemoIfEmpty(loadState(window.localStorage), createDemoTeam()),
+    seedDemoIfEmpty(
+      sanitizeTeams(loadState(window.localStorage)),
+      createDemoTeam(),
+    ),
   );
 
   useEffect(() => {

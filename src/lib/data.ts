@@ -12,7 +12,7 @@ import type {
   TypeChart,
   UsageData,
 } from "../types/pokemon";
-import type { Team } from "../types/team";
+import type { Team, TeamsState } from "../types/team";
 import {
   autoMoveset,
   indexById,
@@ -40,6 +40,22 @@ export function getPokemon(id: string): PokemonView | undefined {
   return POKEMON_BY_ID.get(id);
 }
 
+/**
+ * Entfernt Team-Mitglieder, deren pokemonId im aktuellen Datensatz nicht (mehr)
+ * existiert — z. B. nach einem id-Wechsel durch einen Daten-Rebuild
+ * ("basculegion" → "basculegion-male"). Solche Waisen würden sonst als nicht
+ * löschbarer „Leer"-Slot hängen bleiben. Non-destruktiv für gültige Mitglieder.
+ */
+export function sanitizeTeams(state: TeamsState): TeamsState {
+  return {
+    ...state,
+    teams: state.teams.map((t) => ({
+      ...t,
+      members: t.members.filter((m) => POKEMON_BY_ID.has(m.pokemonId)),
+    })),
+  };
+}
+
 /** Auto-Moveset (Top-4 von Pikalytics) für ein Pokémon. */
 export function autoMovesetFor(id: string): MovepoolMove[] {
   const view = POKEMON_BY_ID.get(id);
@@ -51,7 +67,7 @@ export function autoMovesetFor(id: string): MovepoolMove[] {
  * Champions-Team aus den Top-Usage-Pokémon.
  */
 export const DEMO_TEAM_IDS = [
-  "basculegion",
+  "basculegion-male",
   "kingambit",
   "garchomp",
   "charizard", // Spezies-id (Phase 9): Grund-Form, mega-fähig zu Mega X/Y im Live-Kampf

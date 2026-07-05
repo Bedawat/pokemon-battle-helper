@@ -37,3 +37,19 @@ export function filterPokemon<T extends Named>(list: T[], query: string): T[] {
   if (!normalize(query)) return list;
   return list.filter((p) => matchesQuery(p, query));
 }
+
+/**
+ * Meta-Filter fürs Grid: Bei `metaOnly` und leerer Suche bleiben nur Mons mit
+ * Ranking-Daten (rank != null) übrig — der volle Dex wird ausgeblendet. Sobald
+ * gesucht wird, greift der Filter NICHT (man soll jeden Mon per Name finden).
+ */
+export function applyMetaFilter<
+  T extends { rank?: number | null; winrate?: number | null },
+>(list: T[], metaOnly: boolean, query: string): T[] {
+  if (metaOnly && !normalize(query)) {
+    // „Meta" = im Pikalytics-Ranking vertreten. rank primär, winrate als
+    // Fallback (falls der Datensatz noch keine Rank-Werte hat).
+    return list.filter((p) => p.rank != null || p.winrate != null);
+  }
+  return list;
+}

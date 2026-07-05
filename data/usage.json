@@ -1,285 +1,105 @@
 {
   "meta": {
     "source": "pikalytics",
-    "format": "gen9championsvgc2026regma",
-    "date": "2026-06-07T21:22:04.419Z"
+    "format": "gen9championsvgc2026regmb",
+    "date": "2026-07-05T10:28:38.553Z"
   },
   "usage": [
     {
-      "id": "basculegion",
-      "nameEn": "Basculegion",
-      "usagePercent": 52,
-      "topMoves": [
-        {
-          "name": "Letzte Ehre",
-          "type": "ghost",
-          "usagePercent": 99.701,
-          "category": "physical"
-        },
-        {
-          "name": "Wasserdüse",
-          "type": "water",
-          "usagePercent": 96.52,
-          "category": "physical"
-        },
-        {
-          "name": "Wellentackle",
-          "type": "water",
-          "usagePercent": 67.641,
-          "category": "physical"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 61.307,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "kingambit",
-      "nameEn": "Kingambit",
-      "usagePercent": 41,
-      "topMoves": [
-        {
-          "name": "Tiefschlag",
-          "type": "dark",
-          "usagePercent": 99.417,
-          "category": "physical"
-        },
-        {
-          "name": "Kniefallspalter",
-          "type": "dark",
-          "usagePercent": 95.769,
-          "category": "physical"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 73.373,
-          "category": "status"
-        },
-        {
-          "name": "Fußkick",
-          "type": "fighting",
-          "usagePercent": 60.078,
-          "category": "physical"
-        }
-      ]
-    },
-    {
       "id": "garchomp",
       "nameEn": "Garchomp",
-      "usagePercent": 41,
+      "usagePercent": null,
+      "winrate": 51.371,
+      "rank": 1,
       "topMoves": [
-        {
-          "name": "Erdbeben",
-          "type": "ground",
-          "usagePercent": 90.794,
-          "category": "physical"
-        },
         {
           "name": "Drachenklaue",
           "type": "dragon",
-          "usagePercent": 76.368,
+          "usagePercent": 89.4,
           "category": "physical"
         },
         {
           "name": "Steinhagel",
           "type": "rock",
-          "usagePercent": 67.762,
+          "usagePercent": 82,
+          "category": "physical"
+        },
+        {
+          "name": "Erdbeben",
+          "type": "ground",
+          "usagePercent": 80.7,
           "category": "physical"
         },
         {
           "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 61.94,
+          "usagePercent": 70.2,
           "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "charizard",
-      "nameEn": "Charizard",
-      "usagePercent": 32,
-      "topMoves": [
-        {
-          "name": "Hitzewelle",
-          "type": "fire",
-          "usagePercent": 99.77,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 99.725,
-          "category": "status"
-        },
-        {
-          "name": "Solarstrahl",
-          "type": "grass",
-          "usagePercent": 87.034,
-          "category": "special"
-        },
-        {
-          "name": "Meteorologe",
-          "type": "normal",
-          "usagePercent": 84.143,
-          "category": "special"
-        }
-      ]
-    },
-    {
-      "id": "sneasler",
-      "nameEn": "Sneasler",
-      "usagePercent": 29,
-      "topMoves": [
-        {
-          "name": "Nahkampf",
-          "type": "fighting",
-          "usagePercent": 99.58,
-          "category": "physical"
-        },
-        {
-          "name": "Unheilsklauen",
-          "type": "poison",
-          "usagePercent": 93.113,
-          "category": "physical"
-        },
-        {
-          "name": "Mogelhieb",
-          "type": "normal",
-          "usagePercent": 88.626,
-          "category": "physical"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 66.634,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "incineroar",
-      "nameEn": "Incineroar",
-      "usagePercent": 26,
-      "topMoves": [
-        {
-          "name": "Mogelhieb",
-          "type": "normal",
-          "usagePercent": 99.755,
-          "category": "physical"
-        },
-        {
-          "name": "Abgangstirade",
-          "type": "dark",
-          "usagePercent": 96.629,
-          "category": "status"
-        },
-        {
-          "name": "Flammenblitz",
-          "type": "fire",
-          "usagePercent": 86.542,
-          "category": "physical"
-        },
-        {
-          "name": "Neck Strike",
-          "type": "dark",
-          "usagePercent": 49.265,
-          "category": "physical"
-        }
-      ]
-    },
-    {
-      "id": "floette",
-      "nameEn": "Floette",
-      "usagePercent": 24,
-      "topMoves": [
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 99.186,
-          "category": "status"
-        },
-        {
-          "name": "Zauberschein",
-          "type": "fairy",
-          "usagePercent": 98.487,
-          "category": "special"
-        },
-        {
-          "name": "Mondgewalt",
-          "type": "fairy",
-          "usagePercent": 79.559,
-          "category": "special"
-        },
-        {
-          "name": "Lux Calamitatis",
-          "type": "fairy",
-          "usagePercent": 52.285,
-          "category": "special"
         }
       ]
     },
     {
       "id": "sinistcha",
       "nameEn": "Sinistcha",
-      "usagePercent": 20,
+      "usagePercent": null,
+      "winrate": 50.005,
+      "rank": 2,
       "topMoves": [
-        {
-          "name": "Quirlschuss",
-          "type": "grass",
-          "usagePercent": 96.393,
-          "category": "special"
-        },
         {
           "name": "Wutpulver",
           "type": "bug",
-          "usagePercent": 95.797,
+          "usagePercent": 99.2,
+          "category": "status"
+        },
+        {
+          "name": "Quirlschuss",
+          "type": "grass",
+          "usagePercent": 98.8,
+          "category": "special"
+        },
+        {
+          "name": "Lebenstropfen",
+          "type": "water",
+          "usagePercent": 58.7,
           "category": "status"
         },
         {
           "name": "Bizarroraum",
           "type": "psychic",
-          "usagePercent": 70.555,
-          "category": "status"
-        },
-        {
-          "name": "Lebenstropfen",
-          "type": "water",
-          "usagePercent": 57.503,
+          "usagePercent": 58.6,
           "category": "status"
         }
       ]
     },
     {
-      "id": "sylveon",
-      "nameEn": "Sylveon",
-      "usagePercent": 18,
+      "id": "basculegion-male",
+      "nameEn": "Basculegion",
+      "usagePercent": null,
+      "winrate": 53.62,
+      "rank": 3,
       "topMoves": [
         {
-          "name": "Schallwelle",
-          "type": "normal",
-          "usagePercent": 99.896,
-          "category": "special"
-        },
-        {
-          "name": "Ruckzuckhieb",
-          "type": "normal",
-          "usagePercent": 79.028,
+          "name": "Letzte Ehre",
+          "type": "ghost",
+          "usagePercent": 100,
           "category": "physical"
         },
         {
-          "name": "Scanner",
-          "type": "fighting",
-          "usagePercent": 49.837,
-          "category": "status"
+          "name": "Wasserdüse",
+          "type": "water",
+          "usagePercent": 94.9,
+          "category": "physical"
+        },
+        {
+          "name": "Wellentackle",
+          "type": "water",
+          "usagePercent": 82.3,
+          "category": "physical"
         },
         {
           "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 48.824,
+          "usagePercent": 53.8,
           "category": "status"
         }
       ]
@@ -287,30 +107,263 @@
     {
       "id": "whimsicott",
       "nameEn": "Whimsicott",
-      "usagePercent": 18,
+      "usagePercent": null,
+      "winrate": 51.812,
+      "rank": 4,
       "topMoves": [
         {
           "name": "Rückenwind",
           "type": "flying",
-          "usagePercent": 99.449,
+          "usagePercent": 98.5,
           "category": "status"
         },
         {
           "name": "Mondgewalt",
           "type": "fairy",
-          "usagePercent": 94.946,
+          "usagePercent": 92,
           "category": "special"
         },
         {
           "name": "Zugabe",
           "type": "normal",
-          "usagePercent": 91.276,
+          "usagePercent": 74.1,
           "category": "status"
         },
         {
           "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 75.599,
+          "usagePercent": 56.5,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "kingambit",
+      "nameEn": "Kingambit",
+      "usagePercent": null,
+      "winrate": 55.343,
+      "rank": 5,
+      "topMoves": [
+        {
+          "name": "Tiefschlag",
+          "type": "dark",
+          "usagePercent": 99.5,
+          "category": "physical"
+        },
+        {
+          "name": "Kniefallspalter",
+          "type": "dark",
+          "usagePercent": 97.9,
+          "category": "physical"
+        },
+        {
+          "name": "Eisenschädel",
+          "type": "steel",
+          "usagePercent": 73.5,
+          "category": "physical"
+        },
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 68.6,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "staraptor",
+      "nameEn": "Staraptor",
+      "usagePercent": null,
+      "winrate": 44.696,
+      "rank": 6,
+      "topMoves": [
+        {
+          "name": "Nahkampf",
+          "type": "fighting",
+          "usagePercent": 98.2,
+          "category": "physical"
+        },
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 90.2,
+          "category": "status"
+        },
+        {
+          "name": "Sturzflug",
+          "type": "flying",
+          "usagePercent": 81.2,
+          "category": "physical"
+        },
+        {
+          "name": "Ruheort",
+          "type": "flying",
+          "usagePercent": 71.5,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "incineroar",
+      "nameEn": "Incineroar",
+      "usagePercent": null,
+      "winrate": 51.83,
+      "rank": 7,
+      "topMoves": [
+        {
+          "name": "Mogelhieb",
+          "type": "normal",
+          "usagePercent": 99.9,
+          "category": "physical"
+        },
+        {
+          "name": "Abgangstirade",
+          "type": "dark",
+          "usagePercent": 96.8,
+          "category": "status"
+        },
+        {
+          "name": "Flammenblitz",
+          "type": "fire",
+          "usagePercent": 92.6,
+          "category": "physical"
+        },
+        {
+          "name": "Neck Strike",
+          "type": "dark",
+          "usagePercent": 53.7,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "charizard",
+      "nameEn": "Charizard",
+      "usagePercent": null,
+      "winrate": 53.448,
+      "rank": 8,
+      "topMoves": [
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 98.4,
+          "category": "status"
+        },
+        {
+          "name": "Hitzewelle",
+          "type": "fire",
+          "usagePercent": 95.4,
+          "category": "special"
+        },
+        {
+          "name": "Solarstrahl",
+          "type": "grass",
+          "usagePercent": 92.2,
+          "category": "special"
+        },
+        {
+          "name": "Meteorologe",
+          "type": "normal",
+          "usagePercent": 83.9,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "raichu",
+      "nameEn": "Raichu",
+      "usagePercent": null,
+      "winrate": 44.412,
+      "rank": 9,
+      "topMoves": [
+        {
+          "name": "Mogelhieb",
+          "type": "normal",
+          "usagePercent": 71.6,
+          "category": "physical"
+        },
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 66.4,
+          "category": "status"
+        },
+        {
+          "name": "Blitzkanone",
+          "type": "electric",
+          "usagePercent": 60.4,
+          "category": "special"
+        },
+        {
+          "name": "Fokusstoß",
+          "type": "fighting",
+          "usagePercent": 56.3,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "pelipper",
+      "nameEn": "Pelipper",
+      "usagePercent": null,
+      "winrate": 50.027,
+      "rank": 10,
+      "topMoves": [
+        {
+          "name": "Orkan",
+          "type": "flying",
+          "usagePercent": 98.9,
+          "category": "special"
+        },
+        {
+          "name": "Meteorologe",
+          "type": "normal",
+          "usagePercent": 87.7,
+          "category": "special"
+        },
+        {
+          "name": "Rückenwind",
+          "type": "flying",
+          "usagePercent": 86.5,
+          "category": "status"
+        },
+        {
+          "name": "Rundumschutz",
+          "type": "rock",
+          "usagePercent": 51.2,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "sneasler",
+      "nameEn": "Sneasler",
+      "usagePercent": null,
+      "winrate": 52.221,
+      "rank": 11,
+      "topMoves": [
+        {
+          "name": "Nahkampf",
+          "type": "fighting",
+          "usagePercent": 99.3,
+          "category": "physical"
+        },
+        {
+          "name": "Mogelhieb",
+          "type": "normal",
+          "usagePercent": 94.4,
+          "category": "physical"
+        },
+        {
+          "name": "Unheilsklauen",
+          "type": "poison",
+          "usagePercent": 93.6,
+          "category": "physical"
+        },
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 59.3,
           "category": "status"
         }
       ]
@@ -318,92 +371,263 @@
     {
       "id": "archaludon",
       "nameEn": "Archaludon",
-      "usagePercent": 17,
+      "usagePercent": null,
+      "winrate": 51.078,
+      "rank": 12,
       "topMoves": [
+        {
+          "name": "Stromstrahl",
+          "type": "electric",
+          "usagePercent": 96.7,
+          "category": "special"
+        },
         {
           "name": "Lichtkanone",
           "type": "steel",
-          "usagePercent": 92.756,
+          "usagePercent": 95.2,
           "category": "special"
         },
         {
           "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 87.967,
+          "usagePercent": 94.3,
           "category": "status"
-        },
-        {
-          "name": "Stromstrahl",
-          "type": "electric",
-          "usagePercent": 87.884,
-          "category": "special"
         },
         {
           "name": "Drachenpuls",
           "type": "dragon",
-          "usagePercent": 59.96,
+          "usagePercent": 73.5,
           "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "grimmsnarl",
+      "nameEn": "Grimmsnarl",
+      "usagePercent": null,
+      "winrate": 47.529,
+      "rank": 13,
+      "topMoves": [
+        {
+          "name": "Lichtschild",
+          "type": "psychic",
+          "usagePercent": 87,
+          "category": "status"
+        },
+        {
+          "name": "Abgangstirade",
+          "type": "dark",
+          "usagePercent": 82.8,
+          "category": "status"
+        },
+        {
+          "name": "Reflektor",
+          "type": "psychic",
+          "usagePercent": 81.8,
+          "category": "status"
+        },
+        {
+          "name": "Seelenbruch",
+          "type": "fairy",
+          "usagePercent": 61.9,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "sylveon",
+      "nameEn": "Sylveon",
+      "usagePercent": null,
+      "winrate": 50.697,
+      "rank": 14,
+      "topMoves": [
+        {
+          "name": "Schallwelle",
+          "type": "normal",
+          "usagePercent": 99.9,
+          "category": "special"
+        },
+        {
+          "name": "Ruckzuckhieb",
+          "type": "normal",
+          "usagePercent": 81.6,
+          "category": "physical"
+        },
+        {
+          "name": "Hyperstrahl",
+          "type": "normal",
+          "usagePercent": 71.2,
+          "category": "special"
+        },
+        {
+          "name": "Scanner",
+          "type": "fighting",
+          "usagePercent": 61.1,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "swampert",
+      "nameEn": "Swampert",
+      "usagePercent": null,
+      "winrate": 50.593,
+      "rank": 15,
+      "topMoves": [
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 94.2,
+          "category": "status"
+        },
+        {
+          "name": "Wellentackle",
+          "type": "water",
+          "usagePercent": 88.2,
+          "category": "physical"
+        },
+        {
+          "name": "Erdbeben",
+          "type": "ground",
+          "usagePercent": 66.2,
+          "category": "physical"
+        },
+        {
+          "name": "Eishieb",
+          "type": "ice",
+          "usagePercent": 57,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "metagross",
+      "nameEn": "Metagross",
+      "usagePercent": null,
+      "winrate": 48.549,
+      "rank": 16,
+      "topMoves": [
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 89.8,
+          "category": "status"
+        },
+        {
+          "name": "Psychobeißer",
+          "type": "psychic",
+          "usagePercent": 86.7,
+          "category": "physical"
+        },
+        {
+          "name": "Eisenschädel",
+          "type": "steel",
+          "usagePercent": 58.7,
+          "category": "physical"
+        },
+        {
+          "name": "Patronenhieb",
+          "type": "steel",
+          "usagePercent": 38.5,
+          "category": "physical"
         }
       ]
     },
     {
       "id": "farigiraf",
       "nameEn": "Farigiraf",
-      "usagePercent": 16,
+      "usagePercent": null,
+      "winrate": 50.175,
+      "rank": 17,
       "topMoves": [
         {
           "name": "Bizarroraum",
           "type": "psychic",
-          "usagePercent": 95.483,
+          "usagePercent": 95.7,
           "category": "status"
         },
         {
           "name": "Psychokinese",
           "type": "psychic",
-          "usagePercent": 61.932,
+          "usagePercent": 60.7,
           "category": "special"
         },
         {
           "name": "Rechte Hand",
           "type": "normal",
-          "usagePercent": 60.015,
+          "usagePercent": 48.9,
           "category": "status"
         },
         {
           "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 42.993,
+          "usagePercent": 39.1,
           "category": "status"
         }
       ]
     },
     {
-      "id": "pelipper",
-      "nameEn": "Pelipper",
-      "usagePercent": 12,
+      "id": "floette-eternal",
+      "nameEn": "Floette",
+      "usagePercent": null,
+      "winrate": 55.708,
+      "rank": 18,
       "topMoves": [
         {
-          "name": "Orkan",
-          "type": "flying",
-          "usagePercent": 98.494,
-          "category": "special"
-        },
-        {
-          "name": "Meteorologe",
+          "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 90.864,
-          "category": "special"
-        },
-        {
-          "name": "Rückenwind",
-          "type": "flying",
-          "usagePercent": 83.31,
+          "usagePercent": 99.8,
           "category": "status"
         },
         {
-          "name": "Rundumschutz",
-          "type": "rock",
-          "usagePercent": 57.775,
+          "name": "Zauberschein",
+          "type": "fairy",
+          "usagePercent": 97.1,
+          "category": "special"
+        },
+        {
+          "name": "Mondgewalt",
+          "type": "fairy",
+          "usagePercent": 79,
+          "category": "special"
+        },
+        {
+          "name": "Lux Calamitatis",
+          "type": "fairy",
+          "usagePercent": 58,
+          "category": "special"
+        }
+      ]
+    },
+    {
+      "id": "gholdengo",
+      "nameEn": "Gholdengo",
+      "usagePercent": null,
+      "winrate": 48.397,
+      "rank": 19,
+      "topMoves": [
+        {
+          "name": "Make It Rain",
+          "type": "steel",
+          "usagePercent": 99,
+          "category": "special"
+        },
+        {
+          "name": "Spukball",
+          "type": "ghost",
+          "usagePercent": 99,
+          "category": "special"
+        },
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 70.9,
+          "category": "status"
+        },
+        {
+          "name": "Ränkeschmied",
+          "type": "dark",
+          "usagePercent": 58.5,
           "category": "status"
         }
       ]
@@ -411,30 +635,98 @@
     {
       "id": "aerodactyl",
       "nameEn": "Aerodactyl",
-      "usagePercent": 12,
+      "usagePercent": null,
+      "winrate": 50.042,
+      "rank": 20,
       "topMoves": [
         {
           "name": "Steinhagel",
           "type": "rock",
-          "usagePercent": 98.498,
-          "category": "physical"
-        },
-        {
-          "name": "Doppelflügel",
-          "type": "flying",
-          "usagePercent": 90.763,
+          "usagePercent": 99.9,
           "category": "physical"
         },
         {
           "name": "Rückenwind",
           "type": "flying",
-          "usagePercent": 88.481,
+          "usagePercent": 92.7,
+          "category": "status"
+        },
+        {
+          "name": "Doppelflügel",
+          "type": "flying",
+          "usagePercent": 86.9,
+          "category": "physical"
+        },
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 56.8,
+          "category": "status"
+        }
+      ]
+    },
+    {
+      "id": "maushold-family-of-four",
+      "nameEn": "Maushold",
+      "usagePercent": null,
+      "winrate": 50.124,
+      "rank": 21,
+      "topMoves": [
+        {
+          "name": "Spotlight",
+          "type": "normal",
+          "usagePercent": 95.4,
           "category": "status"
         },
         {
           "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 79.381,
+          "usagePercent": 89.4,
+          "category": "status"
+        },
+        {
+          "name": "Superzahn",
+          "type": "normal",
+          "usagePercent": 40.2,
+          "category": "physical"
+        },
+        {
+          "name": "Mäuseplage",
+          "type": "normal",
+          "usagePercent": 31.5,
+          "category": "physical"
+        }
+      ]
+    },
+    {
+      "id": "annihilape",
+      "nameEn": "Annihilape",
+      "usagePercent": null,
+      "winrate": 43.934,
+      "rank": 22,
+      "topMoves": [
+        {
+          "name": "Rage Fist",
+          "type": "ghost",
+          "usagePercent": 93.2,
+          "category": "physical"
+        },
+        {
+          "name": "Schutzschild",
+          "type": "normal",
+          "usagePercent": 78.5,
+          "category": "status"
+        },
+        {
+          "name": "Ableithieb",
+          "type": "fighting",
+          "usagePercent": 77.7,
+          "category": "physical"
+        },
+        {
+          "name": "Protzer",
+          "type": "fighting",
+          "usagePercent": 69.6,
           "category": "status"
         }
       ]
@@ -442,839 +734,1725 @@
     {
       "id": "sableye",
       "nameEn": "Sableye",
-      "usagePercent": 9,
+      "usagePercent": null,
+      "winrate": 45.699,
+      "rank": 23,
       "topMoves": [
-        {
-          "name": "Lichtschild",
-          "type": "psychic",
-          "usagePercent": 74.917,
-          "category": "status"
-        },
         {
           "name": "Regentanz",
           "type": "water",
-          "usagePercent": 65.225,
+          "usagePercent": 78.8,
+          "category": "status"
+        },
+        {
+          "name": "Lichtschild",
+          "type": "psychic",
+          "usagePercent": 67,
           "category": "status"
         },
         {
           "name": "Zugabe",
           "type": "normal",
-          "usagePercent": 58.169,
+          "usagePercent": 56.2,
           "category": "status"
         },
         {
           "name": "Reflektor",
           "type": "psychic",
-          "usagePercent": 56.626,
+          "usagePercent": 52.4,
           "category": "status"
         }
       ]
     },
     {
-      "id": "maushold",
-      "nameEn": "Maushold",
-      "usagePercent": 8,
+      "id": "mawile",
+      "nameEn": "Mawile",
+      "usagePercent": null,
+      "winrate": 47.78,
+      "rank": 24,
       "topMoves": [
         {
-          "name": "Spotlight",
-          "type": "normal",
-          "usagePercent": 99.313,
-          "category": "status"
+          "name": "Knuddler",
+          "type": "fairy",
+          "usagePercent": 97.2,
+          "category": "physical"
+        },
+        {
+          "name": "Tiefschlag",
+          "type": "dark",
+          "usagePercent": 92.9,
+          "category": "physical"
         },
         {
           "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 93.791,
+          "usagePercent": 89,
           "category": "status"
-        },
-        {
-          "name": "Superzahn",
-          "type": "normal",
-          "usagePercent": 82.212,
-          "category": "physical"
-        },
-        {
-          "name": "Offenlegung",
-          "type": "normal",
-          "usagePercent": 41.853,
-          "category": "physical"
-        }
-      ]
-    },
-    {
-      "id": "dragonite",
-      "nameEn": "Dragonite",
-      "usagePercent": 8,
-      "topMoves": [
-        {
-          "name": "Rückenwind",
-          "type": "flying",
-          "usagePercent": 66.617,
-          "category": "status"
-        },
-        {
-          "name": "Drachenpuls",
-          "type": "dragon",
-          "usagePercent": 59.355,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 56.202,
-          "category": "status"
-        },
-        {
-          "name": "Orkan",
-          "type": "flying",
-          "usagePercent": 49.255,
-          "category": "special"
-        }
-      ]
-    },
-    {
-      "id": "aegislash",
-      "nameEn": "Aegislash",
-      "usagePercent": 7,
-      "topMoves": [
-        {
-          "name": "Schattenstoß",
-          "type": "ghost",
-          "usagePercent": 89.758,
-          "category": "physical"
-        },
-        {
-          "name": "Poltergeist",
-          "type": "ghost",
-          "usagePercent": 88.688,
-          "category": "physical"
         },
         {
           "name": "Eisenschädel",
           "type": "steel",
-          "usagePercent": 35.842,
-          "category": "physical"
-        },
-        {
-          "name": "Nahkampf",
-          "type": "fighting",
-          "usagePercent": 34.207,
+          "usagePercent": 80.8,
           "category": "physical"
         }
       ]
     },
     {
-      "id": "rotom-wash",
-      "nameEn": "Rotom-Wash",
-      "usagePercent": 7,
+      "id": "ninetales-alola",
+      "nameEn": "Ninetales",
+      "usagePercent": null,
+      "winrate": 49.482,
+      "rank": 25,
       "topMoves": [
         {
-          "name": "Hydropumpe",
-          "type": "water",
-          "usagePercent": 86.732,
-          "category": "special"
-        },
-        {
-          "name": "Irrlicht",
-          "type": "fire",
-          "usagePercent": 68.625,
-          "category": "status"
-        },
-        {
-          "name": "Donnerblitz",
-          "type": "electric",
-          "usagePercent": 67.048,
+          "name": "Blizzard",
+          "type": "ice",
+          "usagePercent": 95.2,
           "category": "special"
         },
         {
           "name": "Schutzschild",
           "type": "normal",
-          "usagePercent": 51.792,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "glimmora",
-      "nameEn": "Glimmora",
-      "usagePercent": 7,
-      "topMoves": [
-        {
-          "name": "Matschbombe",
-          "type": "poison",
-          "usagePercent": 96.927,
-          "category": "special"
-        },
-        {
-          "name": "Juwelenkraft",
-          "type": "rock",
-          "usagePercent": 95.28,
-          "category": "special"
-        },
-        {
-          "name": "Erdkräfte",
-          "type": "ground",
-          "usagePercent": 95.113,
-          "category": "special"
-        },
-        {
-          "name": "Schutzstacheln",
-          "type": "grass",
-          "usagePercent": 93.31,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "blastoise",
-      "nameEn": "Blastoise",
-      "usagePercent": 7,
-      "topMoves": [
-        {
-          "name": "Fontränen",
-          "type": "water",
-          "usagePercent": 90.032,
-          "category": "special"
-        },
-        {
-          "name": "Finsteraura",
-          "type": "dark",
-          "usagePercent": 86.973,
-          "category": "special"
-        },
-        {
-          "name": "Mogelhieb",
-          "type": "normal",
-          "usagePercent": 63.275,
-          "category": "physical"
-        },
-        {
-          "name": "Aurasphäre",
-          "type": "fighting",
-          "usagePercent": 48.819,
-          "category": "special"
-        }
-      ]
-    },
-    {
-      "id": "talonflame",
-      "nameEn": "Talonflame",
-      "usagePercent": 6,
-      "topMoves": [
-        {
-          "name": "Rückenwind",
-          "type": "flying",
-          "usagePercent": 97.118,
+          "usagePercent": 67.4,
           "category": "status"
         },
         {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 77.79,
+          "name": "Gefriertrockner",
+          "type": "ice",
+          "usagePercent": 63.3,
+          "category": "special"
+        },
+        {
+          "name": "Auroraschleier",
+          "type": "ice",
+          "usagePercent": 63.1,
           "category": "status"
-        },
-        {
-          "name": "Flammenblitz",
-          "type": "fire",
-          "usagePercent": 54.564,
-          "category": "physical"
-        },
-        {
-          "name": "Sturzflug",
-          "type": "flying",
-          "usagePercent": 45.409,
-          "category": "physical"
         }
       ]
     },
     {
       "id": "venusaur",
       "nameEn": "Venusaur",
-      "usagePercent": 6,
-      "topMoves": [
-        {
-          "name": "Matschbombe",
-          "type": "poison",
-          "usagePercent": 94.787,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 93.844,
-          "category": "status"
-        },
-        {
-          "name": "Erdkräfte",
-          "type": "ground",
-          "usagePercent": 91.493,
-          "category": "special"
-        },
-        {
-          "name": "Gigasauger",
-          "type": "grass",
-          "usagePercent": 81.82,
-          "category": "special"
-        }
-      ]
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "blastoise",
+      "nameEn": "Blastoise",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "beedrill",
+      "nameEn": "Beedrill",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "pidgeot",
+      "nameEn": "Pidgeot",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "arbok",
+      "nameEn": "Arbok",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "pikachu",
+      "nameEn": "Pikachu",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "raichu-alola",
+      "nameEn": "Raichu",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "clefable",
+      "nameEn": "Clefable",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "ninetales",
+      "nameEn": "Ninetales",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "vileplume",
+      "nameEn": "Vileplume",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "arcanine",
+      "nameEn": "Arcanine",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "arcanine-hisui",
+      "nameEn": "Arcanine",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "alakazam",
+      "nameEn": "Alakazam",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "machamp",
+      "nameEn": "Machamp",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "victreebel",
+      "nameEn": "Victreebel",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "slowbro",
+      "nameEn": "Slowbro",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "slowbro-galar",
+      "nameEn": "Slowbro",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
       "id": "gengar",
       "nameEn": "Gengar",
-      "usagePercent": 6,
-      "topMoves": [
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 99.089,
-          "category": "status"
-        },
-        {
-          "name": "Spukball",
-          "type": "ghost",
-          "usagePercent": 96.81,
-          "category": "special"
-        },
-        {
-          "name": "Abgesang",
-          "type": "normal",
-          "usagePercent": 65.543,
-          "category": "status"
-        },
-        {
-          "name": "Aussetzer",
-          "type": "normal",
-          "usagePercent": 55.315,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "froslass",
-      "nameEn": "Froslass",
-      "usagePercent": 6,
-      "topMoves": [
-        {
-          "name": "Blizzard",
-          "type": "ice",
-          "usagePercent": 99.904,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 98.41,
-          "category": "status"
-        },
-        {
-          "name": "Spukball",
-          "type": "ghost",
-          "usagePercent": 91.528,
-          "category": "special"
-        },
-        {
-          "name": "Auroraschleier",
-          "type": "ice",
-          "usagePercent": 75.666,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "kommo-o",
-      "nameEn": "Kommo-o",
-      "usagePercent": 5,
-      "topMoves": [
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 98.466,
-          "category": "status"
-        },
-        {
-          "name": "Schuppenrasseln",
-          "type": "dragon",
-          "usagePercent": 97.28,
-          "category": "special"
-        },
-        {
-          "name": "Aurasphäre",
-          "type": "fighting",
-          "usagePercent": 85.303,
-          "category": "special"
-        },
-        {
-          "name": "Seelentanz",
-          "type": "dragon",
-          "usagePercent": 84.316,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "vivillon",
-      "nameEn": "Vivillon",
-      "usagePercent": 5,
-      "topMoves": [
-        {
-          "name": "Schlafpuder",
-          "type": "grass",
-          "usagePercent": 95.447,
-          "category": "status"
-        },
-        {
-          "name": "Orkan",
-          "type": "flying",
-          "usagePercent": 85.554,
-          "category": "special"
-        },
-        {
-          "name": "Wutpulver",
-          "type": "bug",
-          "usagePercent": 67.437,
-          "category": "status"
-        },
-        {
-          "name": "Rückenwind",
-          "type": "flying",
-          "usagePercent": 50.354,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "tyranitar",
-      "nameEn": "Tyranitar",
-      "usagePercent": 5,
-      "topMoves": [
-        {
-          "name": "Steinhagel",
-          "type": "rock",
-          "usagePercent": 98.768,
-          "category": "physical"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 98.544,
-          "category": "status"
-        },
-        {
-          "name": "Abschlag",
-          "type": "dark",
-          "usagePercent": 82.663,
-          "category": "physical"
-        },
-        {
-          "name": "Fußkick",
-          "type": "fighting",
-          "usagePercent": 59.085,
-          "category": "physical"
-        }
-      ]
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
       "id": "kangaskhan",
       "nameEn": "Kangaskhan",
-      "usagePercent": 5,
-      "topMoves": [
-        {
-          "name": "Risikotackle",
-          "type": "normal",
-          "usagePercent": 96.59,
-          "category": "physical"
-        },
-        {
-          "name": "Mogelhieb",
-          "type": "normal",
-          "usagePercent": 95.872,
-          "category": "physical"
-        },
-        {
-          "name": "Eishieb",
-          "type": "ice",
-          "usagePercent": 55.225,
-          "category": "physical"
-        },
-        {
-          "name": "Fußkick",
-          "type": "fighting",
-          "usagePercent": 51.543,
-          "category": "physical"
-        }
-      ]
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
-      "id": "corviknight",
-      "nameEn": "Corviknight",
-      "usagePercent": 4,
-      "topMoves": [
-        {
-          "name": "Sturzflug",
-          "type": "flying",
-          "usagePercent": 91.019,
-          "category": "physical"
-        },
-        {
-          "name": "Rückenwind",
-          "type": "flying",
-          "usagePercent": 75.618,
-          "category": "status"
-        },
-        {
-          "name": "Ruheort",
-          "type": "flying",
-          "usagePercent": 57.243,
-          "category": "status"
-        },
-        {
-          "name": "Protzer",
-          "type": "fighting",
-          "usagePercent": 53.843,
-          "category": "status"
-        }
-      ]
+      "id": "starmie",
+      "nameEn": "Starmie",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "pinsir",
+      "nameEn": "Pinsir",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "tauros",
+      "nameEn": "Tauros",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "tauros-paldea-combat",
+      "nameEn": "Tauros",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "tauros-paldea-blaze",
+      "nameEn": "Tauros",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "tauros-paldea-aqua",
+      "nameEn": "Tauros",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "gyarados",
+      "nameEn": "Gyarados",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "ditto",
+      "nameEn": "Ditto",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "vaporeon",
+      "nameEn": "Vaporeon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "jolteon",
+      "nameEn": "Jolteon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "flareon",
+      "nameEn": "Flareon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "snorlax",
+      "nameEn": "Snorlax",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "dragonite",
+      "nameEn": "Dragonite",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "meganium",
+      "nameEn": "Meganium",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "typhlosion",
+      "nameEn": "Typhlosion",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "typhlosion-hisui",
+      "nameEn": "Typhlosion",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "feraligatr",
+      "nameEn": "Feraligatr",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "ariados",
+      "nameEn": "Ariados",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "ampharos",
+      "nameEn": "Ampharos",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "azumarill",
+      "nameEn": "Azumarill",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
       "id": "politoed",
       "nameEn": "Politoed",
-      "usagePercent": 4,
-      "topMoves": [
-        {
-          "name": "Meteorologe",
-          "type": "normal",
-          "usagePercent": 84.38,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 81.878,
-          "category": "status"
-        },
-        {
-          "name": "Abgesang",
-          "type": "normal",
-          "usagePercent": 62.087,
-          "category": "status"
-        },
-        {
-          "name": "Zugabe",
-          "type": "normal",
-          "usagePercent": 57.88,
-          "category": "status"
-        }
-      ]
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
-      "id": "scizor",
-      "nameEn": "Scizor",
-      "usagePercent": 4,
-      "topMoves": [
-        {
-          "name": "Patronenhieb",
-          "type": "steel",
-          "usagePercent": 99.962,
-          "category": "physical"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 95.424,
-          "category": "status"
-        },
-        {
-          "name": "Käferbiss",
-          "type": "bug",
-          "usagePercent": 79.312,
-          "category": "physical"
-        },
-        {
-          "name": "Schwerttanz",
-          "type": "normal",
-          "usagePercent": 79.171,
-          "category": "status"
-        }
-      ]
+      "id": "espeon",
+      "nameEn": "Espeon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
-      "id": "gardevoir",
-      "nameEn": "Gardevoir",
-      "usagePercent": 4,
-      "topMoves": [
-        {
-          "name": "Schallwelle",
-          "type": "normal",
-          "usagePercent": 99.586,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 98.109,
-          "category": "status"
-        },
-        {
-          "name": "Bizarroraum",
-          "type": "psychic",
-          "usagePercent": 65.057,
-          "category": "status"
-        },
-        {
-          "name": "Psychoschock",
-          "type": "psychic",
-          "usagePercent": 47.261,
-          "category": "special"
-        }
-      ]
+      "id": "umbreon",
+      "nameEn": "Umbreon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
-      "id": "hydreigon",
-      "nameEn": "Hydreigon",
-      "usagePercent": 3,
-      "topMoves": [
-        {
-          "name": "Finsteraura",
-          "type": "dark",
-          "usagePercent": 92.107,
-          "category": "special"
-        },
-        {
-          "name": "Draco Meteor",
-          "type": "dragon",
-          "usagePercent": 91.585,
-          "category": "special"
-        },
-        {
-          "name": "Standpauke",
-          "type": "dark",
-          "usagePercent": 64.92,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 46.696,
-          "category": "status"
-        }
-      ]
+      "id": "slowking",
+      "nameEn": "Slowking",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
-      "id": "camerupt",
-      "nameEn": "Camerupt",
-      "usagePercent": 2,
-      "topMoves": [
-        {
-          "name": "Erdkräfte",
-          "type": "ground",
-          "usagePercent": 99.351,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 94.968,
-          "category": "status"
-        },
-        {
-          "name": "Hitzewelle",
-          "type": "fire",
-          "usagePercent": 88.293,
-          "category": "special"
-        },
-        {
-          "name": "Antik-Kraft",
-          "type": "rock",
-          "usagePercent": 68.556,
-          "category": "special"
-        }
-      ]
+      "id": "slowking-galar",
+      "nameEn": "Slowking",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
-      "id": "skarmory",
-      "nameEn": "Skarmory",
-      "usagePercent": 2,
-      "topMoves": [
-        {
-          "name": "Eisenschädel",
-          "type": "steel",
-          "usagePercent": 98.365,
-          "category": "physical"
-        },
-        {
-          "name": "Sturzflug",
-          "type": "flying",
-          "usagePercent": 94.606,
-          "category": "physical"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 73.787,
-          "category": "status"
-        },
-        {
-          "name": "Rückenwind",
-          "type": "flying",
-          "usagePercent": 52.511,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "arcanine-hisui",
-      "nameEn": "Arcanine-Hisui",
-      "usagePercent": 1,
-      "topMoves": [
-        {
-          "name": "Flammenblitz",
-          "type": "fire",
-          "usagePercent": 97.043,
-          "category": "physical"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 73.832,
-          "category": "status"
-        },
-        {
-          "name": "Steinhagel",
-          "type": "rock",
-          "usagePercent": 70.574,
-          "category": "physical"
-        },
-        {
-          "name": "Turbotempo",
-          "type": "normal",
-          "usagePercent": 64.046,
-          "category": "physical"
-        }
-      ]
-    },
-    {
-      "id": "oranguru",
-      "nameEn": "Oranguru",
-      "usagePercent": 1,
-      "topMoves": [
-        {
-          "name": "Kommando",
-          "type": "psychic",
-          "usagePercent": 97.894,
-          "category": "status"
-        },
-        {
-          "name": "Bizarroraum",
-          "type": "psychic",
-          "usagePercent": 97.295,
-          "category": "status"
-        },
-        {
-          "name": "Psychokinese",
-          "type": "psychic",
-          "usagePercent": 63.891,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 45.14,
-          "category": "status"
-        }
-      ]
-    },
-    {
-      "id": "araquanid",
-      "nameEn": "Araquanid",
-      "usagePercent": 1,
-      "topMoves": [
-        {
-          "name": "Aquadurchstoß",
-          "type": "water",
-          "usagePercent": 70.307,
-          "category": "physical"
-        },
-        {
-          "name": "Rundumschutz",
-          "type": "rock",
-          "usagePercent": 69.558,
-          "category": "status"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 53.72,
-          "category": "status"
-        },
-        {
-          "name": "Blutsauger",
-          "type": "bug",
-          "usagePercent": 48.543,
-          "category": "physical"
-        }
-      ]
-    },
-    {
-      "id": "abomasnow",
-      "nameEn": "Abomasnow",
-      "usagePercent": 0,
-      "topMoves": [
-        {
-          "name": "Blizzard",
-          "type": "ice",
-          "usagePercent": 98.009,
-          "category": "special"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 77.447,
-          "category": "status"
-        },
-        {
-          "name": "Energieball",
-          "type": "grass",
-          "usagePercent": 53.641,
-          "category": "special"
-        },
-        {
-          "name": "Erdkräfte",
-          "type": "ground",
-          "usagePercent": 47.775,
-          "category": "special"
-        }
-      ]
+      "id": "forretress",
+      "nameEn": "Forretress",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     },
     {
       "id": "steelix",
       "nameEn": "Steelix",
-      "usagePercent": 0,
-      "topMoves": [
-        {
-          "name": "Rammboss",
-          "type": "steel",
-          "usagePercent": 93.274,
-          "category": "physical"
-        },
-        {
-          "name": "Schutzschild",
-          "type": "normal",
-          "usagePercent": 85.248,
-          "category": "status"
-        },
-        {
-          "name": "Pferdestärke",
-          "type": "ground",
-          "usagePercent": 83.774,
-          "category": "physical"
-        },
-        {
-          "name": "Rundumschutz",
-          "type": "rock",
-          "usagePercent": 76.885,
-          "category": "status"
-        }
-      ]
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "qwilfish",
+      "nameEn": "Qwilfish",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "scizor",
+      "nameEn": "Scizor",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "heracross",
+      "nameEn": "Heracross",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "skarmory",
+      "nameEn": "Skarmory",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "houndoom",
+      "nameEn": "Houndoom",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "tyranitar",
+      "nameEn": "Tyranitar",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "sceptile",
+      "nameEn": "Sceptile",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "blaziken",
+      "nameEn": "Blaziken",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "gardevoir",
+      "nameEn": "Gardevoir",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "aggron",
+      "nameEn": "Aggron",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "medicham",
+      "nameEn": "Medicham",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "manectric",
+      "nameEn": "Manectric",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "sharpedo",
+      "nameEn": "Sharpedo",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "camerupt",
+      "nameEn": "Camerupt",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "torkoal",
+      "nameEn": "Torkoal",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "altaria",
+      "nameEn": "Altaria",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "milotic",
+      "nameEn": "Milotic",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "castform",
+      "nameEn": "Castform",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "banette",
+      "nameEn": "Banette",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "chimecho",
+      "nameEn": "Chimecho",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "absol",
+      "nameEn": "Absol",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "glalie",
+      "nameEn": "Glalie",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "torterra",
+      "nameEn": "Torterra",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "infernape",
+      "nameEn": "Infernape",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "empoleon",
+      "nameEn": "Empoleon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "luxray",
+      "nameEn": "Luxray",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "roserade",
+      "nameEn": "Roserade",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "rampardos",
+      "nameEn": "Rampardos",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "bastiodon",
+      "nameEn": "Bastiodon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "lopunny",
+      "nameEn": "Lopunny",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "spiritomb",
+      "nameEn": "Spiritomb",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "lucario",
+      "nameEn": "Lucario",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "hippowdon",
+      "nameEn": "Hippowdon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "toxicroak",
+      "nameEn": "Toxicroak",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "abomasnow",
+      "nameEn": "Abomasnow",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "weavile",
+      "nameEn": "Weavile",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "rhyperior",
+      "nameEn": "Rhyperior",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "leafeon",
+      "nameEn": "Leafeon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "glaceon",
+      "nameEn": "Glaceon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "gliscor",
+      "nameEn": "Gliscor",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "mamoswine",
+      "nameEn": "Mamoswine",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "gallade",
+      "nameEn": "Gallade",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "froslass",
+      "nameEn": "Froslass",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "rotom",
+      "nameEn": "Rotom",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "rotom-heat",
+      "nameEn": "Rotom",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "rotom-wash",
+      "nameEn": "Rotom",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "rotom-frost",
+      "nameEn": "Rotom",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "rotom-fan",
+      "nameEn": "Rotom",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "rotom-mow",
+      "nameEn": "Rotom",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "serperior",
+      "nameEn": "Serperior",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "emboar",
+      "nameEn": "Emboar",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "samurott",
+      "nameEn": "Samurott",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "samurott-hisui",
+      "nameEn": "Samurott",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "watchog",
+      "nameEn": "Watchog",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "liepard",
+      "nameEn": "Liepard",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "simisage",
+      "nameEn": "Simisage",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "simisear",
+      "nameEn": "Simisear",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "simipour",
+      "nameEn": "Simipour",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "musharna",
+      "nameEn": "Musharna",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "excadrill",
+      "nameEn": "Excadrill",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "audino",
+      "nameEn": "Audino",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "conkeldurr",
+      "nameEn": "Conkeldurr",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "scolipede",
+      "nameEn": "Scolipede",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "krookodile",
+      "nameEn": "Krookodile",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "scrafty",
+      "nameEn": "Scrafty",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "cofagrigus",
+      "nameEn": "Cofagrigus",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "garbodor",
+      "nameEn": "Garbodor",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "zoroark",
+      "nameEn": "Zoroark",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "zoroark-hisui",
+      "nameEn": "Zoroark",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "reuniclus",
+      "nameEn": "Reuniclus",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "vanilluxe",
+      "nameEn": "Vanilluxe",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "emolga",
+      "nameEn": "Emolga",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "eelektross",
+      "nameEn": "Eelektross",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "chandelure",
+      "nameEn": "Chandelure",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "beartic",
+      "nameEn": "Beartic",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "stunfisk",
+      "nameEn": "Stunfisk",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "stunfisk-galar",
+      "nameEn": "Stunfisk",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "golurk",
+      "nameEn": "Golurk",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "hydreigon",
+      "nameEn": "Hydreigon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "volcarona",
+      "nameEn": "Volcarona",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "chesnaught",
+      "nameEn": "Chesnaught",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "delphox",
+      "nameEn": "Delphox",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "greninja",
+      "nameEn": "Greninja",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "diggersby",
+      "nameEn": "Diggersby",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "talonflame",
+      "nameEn": "Talonflame",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "vivillon-high-plains",
+      "nameEn": "Vivillon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "pyroar",
+      "nameEn": "Pyroar",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "florges",
+      "nameEn": "Florges",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "pangoro",
+      "nameEn": "Pangoro",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "furfrou",
+      "nameEn": "Furfrou",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "meowstic-male",
+      "nameEn": "Meowstic",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "aegislash-shield",
+      "nameEn": "Aegislash",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "aromatisse",
+      "nameEn": "Aromatisse",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "slurpuff",
+      "nameEn": "Slurpuff",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "malamar",
+      "nameEn": "Malamar",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "barbaracle",
+      "nameEn": "Barbaracle",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "dragalge",
+      "nameEn": "Dragalge",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "clawitzer",
+      "nameEn": "Clawitzer",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "heliolisk",
+      "nameEn": "Heliolisk",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "tyrantrum",
+      "nameEn": "Tyrantrum",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "aurorus",
+      "nameEn": "Aurorus",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "hawlucha",
+      "nameEn": "Hawlucha",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "dedenne",
+      "nameEn": "Dedenne",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "goodra",
+      "nameEn": "Goodra",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "goodra-hisui",
+      "nameEn": "Goodra",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "klefki",
+      "nameEn": "Klefki",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "trevenant",
+      "nameEn": "Trevenant",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "gourgeist-average",
+      "nameEn": "Gourgeist",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "avalugg",
+      "nameEn": "Avalugg",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "avalugg-hisui",
+      "nameEn": "Avalugg",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "noivern",
+      "nameEn": "Noivern",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "decidueye",
+      "nameEn": "Decidueye",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "decidueye-hisui",
+      "nameEn": "Decidueye",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "primarina",
+      "nameEn": "Primarina",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "toucannon",
+      "nameEn": "Toucannon",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "crabominable",
+      "nameEn": "Crabominable",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "lycanroc-midday",
+      "nameEn": "Lycanroc",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "toxapex",
+      "nameEn": "Toxapex",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "mudsdale",
+      "nameEn": "Mudsdale",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "araquanid",
+      "nameEn": "Araquanid",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "salazzle",
+      "nameEn": "Salazzle",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "tsareena",
+      "nameEn": "Tsareena",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "oranguru",
+      "nameEn": "Oranguru",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "passimian",
+      "nameEn": "Passimian",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "mimikyu-disguised",
+      "nameEn": "Mimikyu",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "drampa",
+      "nameEn": "Drampa",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "kommo-o",
+      "nameEn": "Kommo-o",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "corviknight",
+      "nameEn": "Corviknight",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "flapple",
+      "nameEn": "Flapple",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "appletun",
+      "nameEn": "Appletun",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "sandaconda",
+      "nameEn": "Sandaconda",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "polteageist",
+      "nameEn": "Polteageist",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "hatterene",
+      "nameEn": "Hatterene",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "mr-rime",
+      "nameEn": "Mr. Rime",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "runerigus",
+      "nameEn": "Runerigus",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "alcremie",
+      "nameEn": "Alcremie",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "falinks",
+      "nameEn": "Falinks",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "morpeko-full-belly",
+      "nameEn": "Morpeko",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "dragapult",
+      "nameEn": "Dragapult",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "wyrdeer",
+      "nameEn": "Wyrdeer",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "kleavor",
+      "nameEn": "Kleavor",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "overqwil",
+      "nameEn": "Overqwil",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "meowscarada",
+      "nameEn": "Meowscarada",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "skeledirge",
+      "nameEn": "Skeledirge",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "quaquaval",
+      "nameEn": "Quaquaval",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "garganacl",
+      "nameEn": "Garganacl",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "armarouge",
+      "nameEn": "Armarouge",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "ceruledge",
+      "nameEn": "Ceruledge",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "bellibolt",
+      "nameEn": "Bellibolt",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "scovillain",
+      "nameEn": "Scovillain",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "espathra",
+      "nameEn": "Espathra",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "tinkaton",
+      "nameEn": "Tinkaton",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "palafin-zero",
+      "nameEn": "Palafin",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "orthworm",
+      "nameEn": "Orthworm",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "glimmora",
+      "nameEn": "Glimmora",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "houndstone",
+      "nameEn": "Houndstone",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
+    },
+    {
+      "id": "hydrapple",
+      "nameEn": "Hydrapple",
+      "usagePercent": null,
+      "winrate": null,
+      "rank": null,
+      "topMoves": []
     }
   ]
 }

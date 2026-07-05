@@ -99,8 +99,15 @@ export interface UsageEntry {
   /** Join-Key zu Pokemon.id. */
   id: string;
   nameEn: string;
-  /** Globale Usage im Meta (Pikalytics). */
-  usagePercent: number;
+  /**
+   * Globale Usage im Meta (Pikalytics). Für das Champions-Turnierformat (regmb)
+   * liefert Pikalytics keine Usage mehr → i. d. R. null; stattdessen winrate/rank.
+   */
+  usagePercent: number | null;
+  /** Winrate % (Pikalytics, regmb). null, wenn nicht im Meta-Ranking. */
+  winrate?: number | null;
+  /** Monthly Rank im Meta (1 = am stärksten vertreten). null außerhalb des Rankings. */
+  rank?: number | null;
   /** Top-Attacken nach Verbreitung, absteigend (i. d. R. 4). */
   topMoves: Move[];
 }

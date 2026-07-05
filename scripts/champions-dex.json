@@ -1,0 +1,3929 @@
+{
+  "meta": {
+    "source": "bulbapedia (List of Pokémon in Pokémon Champions)",
+    "generated": "2026-07-05T09:56:43.194Z",
+    "speciesEntries": 228,
+    "megaForms": 75
+  },
+  "pokemon": [
+    {
+      "id": "venusaur",
+      "dex": "0003",
+      "nameEn": "Venusaur",
+      "apiSlug": "venusaur",
+      "form": null,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "venusaur-mega",
+          "label": "Mega",
+          "apiSlug": "venusaur-mega",
+          "types": [
+            "grass",
+            "poison"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "charizard",
+      "dex": "0006",
+      "nameEn": "Charizard",
+      "apiSlug": "charizard",
+      "form": null,
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "charizard-mega-x",
+          "label": "Mega X",
+          "apiSlug": "charizard-mega-x",
+          "types": [
+            "fire",
+            "dragon"
+          ],
+          "version": "1.0.2"
+        },
+        {
+          "id": "charizard-mega-y",
+          "label": "Mega Y",
+          "apiSlug": "charizard-mega-y",
+          "types": [
+            "fire",
+            "flying"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "blastoise",
+      "dex": "0009",
+      "nameEn": "Blastoise",
+      "apiSlug": "blastoise",
+      "form": null,
+      "types": [
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "blastoise-mega",
+          "label": "Mega",
+          "apiSlug": "blastoise-mega",
+          "types": [
+            "water"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "beedrill",
+      "dex": "0015",
+      "nameEn": "Beedrill",
+      "apiSlug": "beedrill",
+      "form": null,
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "beedrill-mega",
+          "label": "Mega",
+          "apiSlug": "beedrill-mega",
+          "types": [
+            "bug",
+            "poison"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "pidgeot",
+      "dex": "0018",
+      "nameEn": "Pidgeot",
+      "apiSlug": "pidgeot",
+      "form": null,
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "pidgeot-mega",
+          "label": "Mega",
+          "apiSlug": "pidgeot-mega",
+          "types": [
+            "normal",
+            "flying"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "arbok",
+      "dex": "0024",
+      "nameEn": "Arbok",
+      "apiSlug": "arbok",
+      "form": null,
+      "types": [
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "pikachu",
+      "dex": "0025",
+      "nameEn": "Pikachu",
+      "apiSlug": "pikachu",
+      "form": null,
+      "types": [
+        "electric"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "raichu",
+      "dex": "0026",
+      "nameEn": "Raichu",
+      "apiSlug": "raichu",
+      "form": null,
+      "types": [
+        "electric"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "raichu-mega-x",
+          "label": "Mega X",
+          "apiSlug": "raichu-mega-x",
+          "types": [
+            "electric"
+          ],
+          "version": "1.1.0"
+        },
+        {
+          "id": "raichu-mega-y",
+          "label": "Mega Y",
+          "apiSlug": "raichu-mega-y",
+          "types": [
+            "electric"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "raichu-alola",
+      "dex": "0026",
+      "nameEn": "Raichu",
+      "apiSlug": "raichu-alola",
+      "form": "Alolan Form",
+      "types": [
+        "electric",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "clefable",
+      "dex": "0036",
+      "nameEn": "Clefable",
+      "apiSlug": "clefable",
+      "form": null,
+      "types": [
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "clefable-mega",
+          "label": "Mega",
+          "apiSlug": "clefable-mega",
+          "types": [
+            "fairy",
+            "flying"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "ninetales",
+      "dex": "0038",
+      "nameEn": "Ninetales",
+      "apiSlug": "ninetales",
+      "form": null,
+      "types": [
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "ninetales-alola",
+      "dex": "0038",
+      "nameEn": "Ninetales",
+      "apiSlug": "ninetales-alola",
+      "form": "Alolan Form",
+      "types": [
+        "ice",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "vileplume",
+      "dex": "0045",
+      "nameEn": "Vileplume",
+      "apiSlug": "vileplume",
+      "form": null,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": []
+    },
+    {
+      "id": "arcanine",
+      "dex": "0059",
+      "nameEn": "Arcanine",
+      "apiSlug": "arcanine",
+      "form": null,
+      "types": [
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "arcanine-hisui",
+      "dex": "0059",
+      "nameEn": "Arcanine",
+      "apiSlug": "arcanine-hisui",
+      "form": "Hisuian Form",
+      "types": [
+        "fire",
+        "rock"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "alakazam",
+      "dex": "0065",
+      "nameEn": "Alakazam",
+      "apiSlug": "alakazam",
+      "form": null,
+      "types": [
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "alakazam-mega",
+          "label": "Mega",
+          "apiSlug": "alakazam-mega",
+          "types": [
+            "psychic"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "machamp",
+      "dex": "0068",
+      "nameEn": "Machamp",
+      "apiSlug": "machamp",
+      "form": null,
+      "types": [
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "victreebel",
+      "dex": "0071",
+      "nameEn": "Victreebel",
+      "apiSlug": "victreebel",
+      "form": null,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "victreebel-mega",
+          "label": "Mega",
+          "apiSlug": "victreebel-mega",
+          "types": [
+            "grass",
+            "poison"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "slowbro",
+      "dex": "0080",
+      "nameEn": "Slowbro",
+      "apiSlug": "slowbro",
+      "form": null,
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "slowbro-mega",
+          "label": "Mega",
+          "apiSlug": "slowbro-mega",
+          "types": [
+            "water",
+            "psychic"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "slowbro-galar",
+      "dex": "0080",
+      "nameEn": "Slowbro",
+      "apiSlug": "slowbro-galar",
+      "form": "Galarian Form",
+      "types": [
+        "poison",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "gengar",
+      "dex": "0094",
+      "nameEn": "Gengar",
+      "apiSlug": "gengar",
+      "form": null,
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "gengar-mega",
+          "label": "Mega",
+          "apiSlug": "gengar-mega",
+          "types": [
+            "ghost",
+            "poison"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "kangaskhan",
+      "dex": "0115",
+      "nameEn": "Kangaskhan",
+      "apiSlug": "kangaskhan",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "kangaskhan-mega",
+          "label": "Mega",
+          "apiSlug": "kangaskhan-mega",
+          "types": [
+            "normal"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "starmie",
+      "dex": "0121",
+      "nameEn": "Starmie",
+      "apiSlug": "starmie",
+      "form": null,
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "starmie-mega",
+          "label": "Mega",
+          "apiSlug": "starmie-mega",
+          "types": [
+            "water",
+            "psychic"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "pinsir",
+      "dex": "0127",
+      "nameEn": "Pinsir",
+      "apiSlug": "pinsir",
+      "form": null,
+      "types": [
+        "bug"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "pinsir-mega",
+          "label": "Mega",
+          "apiSlug": "pinsir-mega",
+          "types": [
+            "bug",
+            "flying"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "tauros",
+      "dex": "0128",
+      "nameEn": "Tauros",
+      "apiSlug": "tauros",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "tauros-paldea-combat",
+      "dex": "0128",
+      "nameEn": "Tauros",
+      "apiSlug": "tauros-paldea-combat-breed",
+      "form": "Paldean Form (Combat Breed)",
+      "types": [
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "tauros-paldea-blaze",
+      "dex": "0128",
+      "nameEn": "Tauros",
+      "apiSlug": "tauros-paldea-blaze-breed",
+      "form": "Paldean Form (Blaze Breed)",
+      "types": [
+        "fighting",
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "tauros-paldea-aqua",
+      "dex": "0128",
+      "nameEn": "Tauros",
+      "apiSlug": "tauros-paldea-aqua-breed",
+      "form": "Paldean Form (Aqua Breed)",
+      "types": [
+        "fighting",
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "gyarados",
+      "dex": "0130",
+      "nameEn": "Gyarados",
+      "apiSlug": "gyarados",
+      "form": null,
+      "types": [
+        "water",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "gyarados-mega",
+          "label": "Mega",
+          "apiSlug": "gyarados-mega",
+          "types": [
+            "water",
+            "dark"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "ditto",
+      "dex": "0132",
+      "nameEn": "Ditto",
+      "apiSlug": "ditto",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "vaporeon",
+      "dex": "0134",
+      "nameEn": "Vaporeon",
+      "apiSlug": "vaporeon",
+      "form": null,
+      "types": [
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "jolteon",
+      "dex": "0135",
+      "nameEn": "Jolteon",
+      "apiSlug": "jolteon",
+      "form": null,
+      "types": [
+        "electric"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "flareon",
+      "dex": "0136",
+      "nameEn": "Flareon",
+      "apiSlug": "flareon",
+      "form": null,
+      "types": [
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "aerodactyl",
+      "dex": "0142",
+      "nameEn": "Aerodactyl",
+      "apiSlug": "aerodactyl",
+      "form": null,
+      "types": [
+        "rock",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "aerodactyl-mega",
+          "label": "Mega",
+          "apiSlug": "aerodactyl-mega",
+          "types": [
+            "rock",
+            "flying"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "snorlax",
+      "dex": "0143",
+      "nameEn": "Snorlax",
+      "apiSlug": "snorlax",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "dragonite",
+      "dex": "0149",
+      "nameEn": "Dragonite",
+      "apiSlug": "dragonite",
+      "form": null,
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "dragonite-mega",
+          "label": "Mega",
+          "apiSlug": "dragonite-mega",
+          "types": [
+            "dragon",
+            "flying"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "meganium",
+      "dex": "0154",
+      "nameEn": "Meganium",
+      "apiSlug": "meganium",
+      "form": null,
+      "types": [
+        "grass"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "meganium-mega",
+          "label": "Mega",
+          "apiSlug": "meganium-mega",
+          "types": [
+            "grass",
+            "fairy"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "typhlosion",
+      "dex": "0157",
+      "nameEn": "Typhlosion",
+      "apiSlug": "typhlosion",
+      "form": null,
+      "types": [
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "typhlosion-hisui",
+      "dex": "0157",
+      "nameEn": "Typhlosion",
+      "apiSlug": "typhlosion-hisui",
+      "form": "Hisuian Form",
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "feraligatr",
+      "dex": "0160",
+      "nameEn": "Feraligatr",
+      "apiSlug": "feraligatr",
+      "form": null,
+      "types": [
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "feraligatr-mega",
+          "label": "Mega",
+          "apiSlug": "feraligatr-mega",
+          "types": [
+            "water",
+            "dragon"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "ariados",
+      "dex": "0168",
+      "nameEn": "Ariados",
+      "apiSlug": "ariados",
+      "form": null,
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "ampharos",
+      "dex": "0181",
+      "nameEn": "Ampharos",
+      "apiSlug": "ampharos",
+      "form": null,
+      "types": [
+        "electric"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "ampharos-mega",
+          "label": "Mega",
+          "apiSlug": "ampharos-mega",
+          "types": [
+            "electric",
+            "dragon"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "azumarill",
+      "dex": "0184",
+      "nameEn": "Azumarill",
+      "apiSlug": "azumarill",
+      "form": null,
+      "types": [
+        "water",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "politoed",
+      "dex": "0186",
+      "nameEn": "Politoed",
+      "apiSlug": "politoed",
+      "form": null,
+      "types": [
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "espeon",
+      "dex": "0196",
+      "nameEn": "Espeon",
+      "apiSlug": "espeon",
+      "form": null,
+      "types": [
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "umbreon",
+      "dex": "0197",
+      "nameEn": "Umbreon",
+      "apiSlug": "umbreon",
+      "form": null,
+      "types": [
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "slowking",
+      "dex": "0199",
+      "nameEn": "Slowking",
+      "apiSlug": "slowking",
+      "form": null,
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "slowking-galar",
+      "dex": "0199",
+      "nameEn": "Slowking",
+      "apiSlug": "slowking-galar",
+      "form": "Galarian Form",
+      "types": [
+        "poison",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "forretress",
+      "dex": "0205",
+      "nameEn": "Forretress",
+      "apiSlug": "forretress",
+      "form": null,
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "steelix",
+      "dex": "0208",
+      "nameEn": "Steelix",
+      "apiSlug": "steelix",
+      "form": null,
+      "types": [
+        "steel",
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "steelix-mega",
+          "label": "Mega",
+          "apiSlug": "steelix-mega",
+          "types": [
+            "steel",
+            "ground"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "qwilfish",
+      "dex": "0211",
+      "nameEn": "Qwilfish",
+      "apiSlug": "qwilfish",
+      "form": null,
+      "types": [
+        "water",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": []
+    },
+    {
+      "id": "scizor",
+      "dex": "0212",
+      "nameEn": "Scizor",
+      "apiSlug": "scizor",
+      "form": null,
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "scizor-mega",
+          "label": "Mega",
+          "apiSlug": "scizor-mega",
+          "types": [
+            "bug",
+            "steel"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "heracross",
+      "dex": "0214",
+      "nameEn": "Heracross",
+      "apiSlug": "heracross",
+      "form": null,
+      "types": [
+        "bug",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "heracross-mega",
+          "label": "Mega",
+          "apiSlug": "heracross-mega",
+          "types": [
+            "bug",
+            "fighting"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "skarmory",
+      "dex": "0227",
+      "nameEn": "Skarmory",
+      "apiSlug": "skarmory",
+      "form": null,
+      "types": [
+        "steel",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "skarmory-mega",
+          "label": "Mega",
+          "apiSlug": "skarmory-mega",
+          "types": [
+            "steel",
+            "flying"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "houndoom",
+      "dex": "0229",
+      "nameEn": "Houndoom",
+      "apiSlug": "houndoom",
+      "form": null,
+      "types": [
+        "dark",
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "houndoom-mega",
+          "label": "Mega",
+          "apiSlug": "houndoom-mega",
+          "types": [
+            "dark",
+            "fire"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "tyranitar",
+      "dex": "0248",
+      "nameEn": "Tyranitar",
+      "apiSlug": "tyranitar",
+      "form": null,
+      "types": [
+        "rock",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "tyranitar-mega",
+          "label": "Mega",
+          "apiSlug": "tyranitar-mega",
+          "types": [
+            "rock",
+            "dark"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "sceptile",
+      "dex": "0254",
+      "nameEn": "Sceptile",
+      "apiSlug": "sceptile",
+      "form": null,
+      "types": [
+        "grass"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "sceptile-mega",
+          "label": "Mega",
+          "apiSlug": "sceptile-mega",
+          "types": [
+            "grass",
+            "dragon"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "blaziken",
+      "dex": "0257",
+      "nameEn": "Blaziken",
+      "apiSlug": "blaziken",
+      "form": null,
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "blaziken-mega",
+          "label": "Mega",
+          "apiSlug": "blaziken-mega",
+          "types": [
+            "fire",
+            "fighting"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "swampert",
+      "dex": "0260",
+      "nameEn": "Swampert",
+      "apiSlug": "swampert",
+      "form": null,
+      "types": [
+        "water",
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "swampert-mega",
+          "label": "Mega",
+          "apiSlug": "swampert-mega",
+          "types": [
+            "water",
+            "ground"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "pelipper",
+      "dex": "0279",
+      "nameEn": "Pelipper",
+      "apiSlug": "pelipper",
+      "form": null,
+      "types": [
+        "water",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "gardevoir",
+      "dex": "0282",
+      "nameEn": "Gardevoir",
+      "apiSlug": "gardevoir",
+      "form": null,
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "gardevoir-mega",
+          "label": "Mega",
+          "apiSlug": "gardevoir-mega",
+          "types": [
+            "psychic",
+            "fairy"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "sableye",
+      "dex": "0302",
+      "nameEn": "Sableye",
+      "apiSlug": "sableye",
+      "form": null,
+      "types": [
+        "dark",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "sableye-mega",
+          "label": "Mega",
+          "apiSlug": "sableye-mega",
+          "types": [
+            "dark",
+            "ghost"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "mawile",
+      "dex": "0303",
+      "nameEn": "Mawile",
+      "apiSlug": "mawile",
+      "form": null,
+      "types": [
+        "steel",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "mawile-mega",
+          "label": "Mega",
+          "apiSlug": "mawile-mega",
+          "types": [
+            "steel",
+            "fairy"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "aggron",
+      "dex": "0306",
+      "nameEn": "Aggron",
+      "apiSlug": "aggron",
+      "form": null,
+      "types": [
+        "steel",
+        "rock"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "aggron-mega",
+          "label": "Mega",
+          "apiSlug": "aggron-mega",
+          "types": [
+            "steel"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "medicham",
+      "dex": "0308",
+      "nameEn": "Medicham",
+      "apiSlug": "medicham",
+      "form": null,
+      "types": [
+        "fighting",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "medicham-mega",
+          "label": "Mega",
+          "apiSlug": "medicham-mega",
+          "types": [
+            "fighting",
+            "psychic"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "manectric",
+      "dex": "0310",
+      "nameEn": "Manectric",
+      "apiSlug": "manectric",
+      "form": null,
+      "types": [
+        "electric"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "manectric-mega",
+          "label": "Mega",
+          "apiSlug": "manectric-mega",
+          "types": [
+            "electric"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "sharpedo",
+      "dex": "0319",
+      "nameEn": "Sharpedo",
+      "apiSlug": "sharpedo",
+      "form": null,
+      "types": [
+        "water",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "sharpedo-mega",
+          "label": "Mega",
+          "apiSlug": "sharpedo-mega",
+          "types": [
+            "water",
+            "dark"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "camerupt",
+      "dex": "0323",
+      "nameEn": "Camerupt",
+      "apiSlug": "camerupt",
+      "form": null,
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "camerupt-mega",
+          "label": "Mega",
+          "apiSlug": "camerupt-mega",
+          "types": [
+            "fire",
+            "ground"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "torkoal",
+      "dex": "0324",
+      "nameEn": "Torkoal",
+      "apiSlug": "torkoal",
+      "form": null,
+      "types": [
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "altaria",
+      "dex": "0334",
+      "nameEn": "Altaria",
+      "apiSlug": "altaria",
+      "form": null,
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "altaria-mega",
+          "label": "Mega",
+          "apiSlug": "altaria-mega",
+          "types": [
+            "dragon",
+            "fairy"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "milotic",
+      "dex": "0350",
+      "nameEn": "Milotic",
+      "apiSlug": "milotic",
+      "form": null,
+      "types": [
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "castform",
+      "dex": "0351",
+      "nameEn": "Castform",
+      "apiSlug": "castform",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "banette",
+      "dex": "0354",
+      "nameEn": "Banette",
+      "apiSlug": "banette",
+      "form": null,
+      "types": [
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "banette-mega",
+          "label": "Mega",
+          "apiSlug": "banette-mega",
+          "types": [
+            "ghost"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "chimecho",
+      "dex": "0358",
+      "nameEn": "Chimecho",
+      "apiSlug": "chimecho",
+      "form": null,
+      "types": [
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "chimecho-mega",
+          "label": "Mega",
+          "apiSlug": "chimecho-mega",
+          "types": [
+            "psychic",
+            "steel"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "absol",
+      "dex": "0359",
+      "nameEn": "Absol",
+      "apiSlug": "absol",
+      "form": null,
+      "types": [
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "absol-mega",
+          "label": "Mega",
+          "apiSlug": "absol-mega",
+          "types": [
+            "dark"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "glalie",
+      "dex": "0362",
+      "nameEn": "Glalie",
+      "apiSlug": "glalie",
+      "form": null,
+      "types": [
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "glalie-mega",
+          "label": "Mega",
+          "apiSlug": "glalie-mega",
+          "types": [
+            "ice"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "metagross",
+      "dex": "0376",
+      "nameEn": "Metagross",
+      "apiSlug": "metagross",
+      "form": null,
+      "types": [
+        "steel",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "metagross-mega",
+          "label": "Mega",
+          "apiSlug": "metagross-mega",
+          "types": [
+            "steel",
+            "psychic"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "torterra",
+      "dex": "0389",
+      "nameEn": "Torterra",
+      "apiSlug": "torterra",
+      "form": null,
+      "types": [
+        "grass",
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "infernape",
+      "dex": "0392",
+      "nameEn": "Infernape",
+      "apiSlug": "infernape",
+      "form": null,
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "empoleon",
+      "dex": "0395",
+      "nameEn": "Empoleon",
+      "apiSlug": "empoleon",
+      "form": null,
+      "types": [
+        "water",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "staraptor",
+      "dex": "0398",
+      "nameEn": "Staraptor",
+      "apiSlug": "staraptor",
+      "form": null,
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "staraptor-mega",
+          "label": "Mega",
+          "apiSlug": "staraptor-mega",
+          "types": [
+            "fighting",
+            "flying"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "luxray",
+      "dex": "0405",
+      "nameEn": "Luxray",
+      "apiSlug": "luxray",
+      "form": null,
+      "types": [
+        "electric"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "roserade",
+      "dex": "0407",
+      "nameEn": "Roserade",
+      "apiSlug": "roserade",
+      "form": null,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "rampardos",
+      "dex": "0409",
+      "nameEn": "Rampardos",
+      "apiSlug": "rampardos",
+      "form": null,
+      "types": [
+        "rock"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "bastiodon",
+      "dex": "0411",
+      "nameEn": "Bastiodon",
+      "apiSlug": "bastiodon",
+      "form": null,
+      "types": [
+        "rock",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "lopunny",
+      "dex": "0428",
+      "nameEn": "Lopunny",
+      "apiSlug": "lopunny",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "lopunny-mega",
+          "label": "Mega",
+          "apiSlug": "lopunny-mega",
+          "types": [
+            "normal",
+            "fighting"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "spiritomb",
+      "dex": "0442",
+      "nameEn": "Spiritomb",
+      "apiSlug": "spiritomb",
+      "form": null,
+      "types": [
+        "ghost",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "garchomp",
+      "dex": "0445",
+      "nameEn": "Garchomp",
+      "apiSlug": "garchomp",
+      "form": null,
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "garchomp-mega",
+          "label": "Mega",
+          "apiSlug": "garchomp-mega",
+          "types": [
+            "dragon",
+            "ground"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "lucario",
+      "dex": "0448",
+      "nameEn": "Lucario",
+      "apiSlug": "lucario",
+      "form": null,
+      "types": [
+        "fighting",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "lucario-mega",
+          "label": "Mega",
+          "apiSlug": "lucario-mega",
+          "types": [
+            "fighting",
+            "steel"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "hippowdon",
+      "dex": "0450",
+      "nameEn": "Hippowdon",
+      "apiSlug": "hippowdon",
+      "form": null,
+      "types": [
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "toxicroak",
+      "dex": "0454",
+      "nameEn": "Toxicroak",
+      "apiSlug": "toxicroak",
+      "form": null,
+      "types": [
+        "poison",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "abomasnow",
+      "dex": "0460",
+      "nameEn": "Abomasnow",
+      "apiSlug": "abomasnow",
+      "form": null,
+      "types": [
+        "grass",
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "abomasnow-mega",
+          "label": "Mega",
+          "apiSlug": "abomasnow-mega",
+          "types": [
+            "grass",
+            "ice"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "weavile",
+      "dex": "0461",
+      "nameEn": "Weavile",
+      "apiSlug": "weavile",
+      "form": null,
+      "types": [
+        "dark",
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "rhyperior",
+      "dex": "0464",
+      "nameEn": "Rhyperior",
+      "apiSlug": "rhyperior",
+      "form": null,
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "leafeon",
+      "dex": "0470",
+      "nameEn": "Leafeon",
+      "apiSlug": "leafeon",
+      "form": null,
+      "types": [
+        "grass"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "glaceon",
+      "dex": "0471",
+      "nameEn": "Glaceon",
+      "apiSlug": "glaceon",
+      "form": null,
+      "types": [
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "gliscor",
+      "dex": "0472",
+      "nameEn": "Gliscor",
+      "apiSlug": "gliscor",
+      "form": null,
+      "types": [
+        "ground",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "mamoswine",
+      "dex": "0473",
+      "nameEn": "Mamoswine",
+      "apiSlug": "mamoswine",
+      "form": null,
+      "types": [
+        "ice",
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "gallade",
+      "dex": "0475",
+      "nameEn": "Gallade",
+      "apiSlug": "gallade",
+      "form": null,
+      "types": [
+        "psychic",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "gallade-mega",
+          "label": "Mega",
+          "apiSlug": "gallade-mega",
+          "types": [
+            "psychic",
+            "fighting"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "froslass",
+      "dex": "0478",
+      "nameEn": "Froslass",
+      "apiSlug": "froslass",
+      "form": null,
+      "types": [
+        "ice",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "froslass-mega",
+          "label": "Mega",
+          "apiSlug": "froslass-mega",
+          "types": [
+            "ice",
+            "ghost"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "rotom",
+      "dex": "0479",
+      "nameEn": "Rotom",
+      "apiSlug": "rotom",
+      "form": null,
+      "types": [
+        "electric",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "rotom-heat",
+      "dex": "0479",
+      "nameEn": "Rotom",
+      "apiSlug": "rotom-heat",
+      "form": "Heat Rotom",
+      "types": [
+        "electric",
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "rotom-wash",
+      "dex": "0479",
+      "nameEn": "Rotom",
+      "apiSlug": "rotom-wash",
+      "form": "Wash Rotom",
+      "types": [
+        "electric",
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "rotom-frost",
+      "dex": "0479",
+      "nameEn": "Rotom",
+      "apiSlug": "rotom-frost",
+      "form": "Frost Rotom",
+      "types": [
+        "electric",
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "rotom-fan",
+      "dex": "0479",
+      "nameEn": "Rotom",
+      "apiSlug": "rotom-fan",
+      "form": "Fan Rotom",
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "rotom-mow",
+      "dex": "0479",
+      "nameEn": "Rotom",
+      "apiSlug": "rotom-mow",
+      "form": "Mow Rotom",
+      "types": [
+        "electric",
+        "grass"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "serperior",
+      "dex": "0497",
+      "nameEn": "Serperior",
+      "apiSlug": "serperior",
+      "form": null,
+      "types": [
+        "grass"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "emboar",
+      "dex": "0500",
+      "nameEn": "Emboar",
+      "apiSlug": "emboar",
+      "form": null,
+      "types": [
+        "fire",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "emboar-mega",
+          "label": "Mega",
+          "apiSlug": "emboar-mega",
+          "types": [
+            "fire",
+            "fighting"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "samurott",
+      "dex": "0503",
+      "nameEn": "Samurott",
+      "apiSlug": "samurott",
+      "form": null,
+      "types": [
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "samurott-hisui",
+      "dex": "0503",
+      "nameEn": "Samurott",
+      "apiSlug": "samurott-hisui",
+      "form": "Hisuian Form",
+      "types": [
+        "water",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "watchog",
+      "dex": "0505",
+      "nameEn": "Watchog",
+      "apiSlug": "watchog",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "liepard",
+      "dex": "0510",
+      "nameEn": "Liepard",
+      "apiSlug": "liepard",
+      "form": null,
+      "types": [
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "simisage",
+      "dex": "0512",
+      "nameEn": "Simisage",
+      "apiSlug": "simisage",
+      "form": null,
+      "types": [
+        "grass"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "simisear",
+      "dex": "0514",
+      "nameEn": "Simisear",
+      "apiSlug": "simisear",
+      "form": null,
+      "types": [
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "simipour",
+      "dex": "0516",
+      "nameEn": "Simipour",
+      "apiSlug": "simipour",
+      "form": null,
+      "types": [
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "musharna",
+      "dex": "0518",
+      "nameEn": "Musharna",
+      "apiSlug": "musharna",
+      "form": null,
+      "types": [
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": []
+    },
+    {
+      "id": "excadrill",
+      "dex": "0530",
+      "nameEn": "Excadrill",
+      "apiSlug": "excadrill",
+      "form": null,
+      "types": [
+        "ground",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "excadrill-mega",
+          "label": "Mega",
+          "apiSlug": "excadrill-mega",
+          "types": [
+            "ground",
+            "steel"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "audino",
+      "dex": "0531",
+      "nameEn": "Audino",
+      "apiSlug": "audino",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "audino-mega",
+          "label": "Mega",
+          "apiSlug": "audino-mega",
+          "types": [
+            "normal",
+            "fairy"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "conkeldurr",
+      "dex": "0534",
+      "nameEn": "Conkeldurr",
+      "apiSlug": "conkeldurr",
+      "form": null,
+      "types": [
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "scolipede",
+      "dex": "0545",
+      "nameEn": "Scolipede",
+      "apiSlug": "scolipede",
+      "form": null,
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "scolipede-mega",
+          "label": "Mega",
+          "apiSlug": "scolipede-mega",
+          "types": [
+            "bug",
+            "poison"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "whimsicott",
+      "dex": "0547",
+      "nameEn": "Whimsicott",
+      "apiSlug": "whimsicott",
+      "form": null,
+      "types": [
+        "grass",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "krookodile",
+      "dex": "0553",
+      "nameEn": "Krookodile",
+      "apiSlug": "krookodile",
+      "form": null,
+      "types": [
+        "ground",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "scrafty",
+      "dex": "0560",
+      "nameEn": "Scrafty",
+      "apiSlug": "scrafty",
+      "form": null,
+      "types": [
+        "dark",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "scrafty-mega",
+          "label": "Mega",
+          "apiSlug": "scrafty-mega",
+          "types": [
+            "dark",
+            "fighting"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "cofagrigus",
+      "dex": "0563",
+      "nameEn": "Cofagrigus",
+      "apiSlug": "cofagrigus",
+      "form": null,
+      "types": [
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "garbodor",
+      "dex": "0569",
+      "nameEn": "Garbodor",
+      "apiSlug": "garbodor",
+      "form": null,
+      "types": [
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "zoroark",
+      "dex": "0571",
+      "nameEn": "Zoroark",
+      "apiSlug": "zoroark",
+      "form": null,
+      "types": [
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "zoroark-hisui",
+      "dex": "0571",
+      "nameEn": "Zoroark",
+      "apiSlug": "zoroark-hisui",
+      "form": "Hisuian Form",
+      "types": [
+        "normal",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "reuniclus",
+      "dex": "0579",
+      "nameEn": "Reuniclus",
+      "apiSlug": "reuniclus",
+      "form": null,
+      "types": [
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "vanilluxe",
+      "dex": "0584",
+      "nameEn": "Vanilluxe",
+      "apiSlug": "vanilluxe",
+      "form": null,
+      "types": [
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "emolga",
+      "dex": "0587",
+      "nameEn": "Emolga",
+      "apiSlug": "emolga",
+      "form": null,
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "eelektross",
+      "dex": "0604",
+      "nameEn": "Eelektross",
+      "apiSlug": "eelektross",
+      "form": null,
+      "types": [
+        "electric"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "eelektross-mega",
+          "label": "Mega",
+          "apiSlug": "eelektross-mega",
+          "types": [
+            "electric"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "chandelure",
+      "dex": "0609",
+      "nameEn": "Chandelure",
+      "apiSlug": "chandelure",
+      "form": null,
+      "types": [
+        "ghost",
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "chandelure-mega",
+          "label": "Mega",
+          "apiSlug": "chandelure-mega",
+          "types": [
+            "ghost",
+            "fire"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "beartic",
+      "dex": "0614",
+      "nameEn": "Beartic",
+      "apiSlug": "beartic",
+      "form": null,
+      "types": [
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "stunfisk",
+      "dex": "0618",
+      "nameEn": "Stunfisk",
+      "apiSlug": "stunfisk",
+      "form": null,
+      "types": [
+        "ground",
+        "electric"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "stunfisk-galar",
+      "dex": "0618",
+      "nameEn": "Stunfisk",
+      "apiSlug": "stunfisk-galar",
+      "form": "Galarian Form",
+      "types": [
+        "ground",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "golurk",
+      "dex": "0623",
+      "nameEn": "Golurk",
+      "apiSlug": "golurk",
+      "form": null,
+      "types": [
+        "ground",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "golurk-mega",
+          "label": "Mega",
+          "apiSlug": "golurk-mega",
+          "types": [
+            "ground",
+            "ghost"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "hydreigon",
+      "dex": "0635",
+      "nameEn": "Hydreigon",
+      "apiSlug": "hydreigon",
+      "form": null,
+      "types": [
+        "dark",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "volcarona",
+      "dex": "0637",
+      "nameEn": "Volcarona",
+      "apiSlug": "volcarona",
+      "form": null,
+      "types": [
+        "bug",
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "chesnaught",
+      "dex": "0652",
+      "nameEn": "Chesnaught",
+      "apiSlug": "chesnaught",
+      "form": null,
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "chesnaught-mega",
+          "label": "Mega",
+          "apiSlug": "chesnaught-mega",
+          "types": [
+            "grass",
+            "fighting"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "delphox",
+      "dex": "0655",
+      "nameEn": "Delphox",
+      "apiSlug": "delphox",
+      "form": null,
+      "types": [
+        "fire",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "delphox-mega",
+          "label": "Mega",
+          "apiSlug": "delphox-mega",
+          "types": [
+            "fire",
+            "psychic"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "greninja",
+      "dex": "0658",
+      "nameEn": "Greninja",
+      "apiSlug": "greninja",
+      "form": null,
+      "types": [
+        "water",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "greninja-mega",
+          "label": "Mega",
+          "apiSlug": "greninja-mega",
+          "types": [
+            "water",
+            "dark"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "diggersby",
+      "dex": "0660",
+      "nameEn": "Diggersby",
+      "apiSlug": "diggersby",
+      "form": null,
+      "types": [
+        "normal",
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "talonflame",
+      "dex": "0663",
+      "nameEn": "Talonflame",
+      "apiSlug": "talonflame",
+      "form": null,
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "vivillon-high-plains",
+      "dex": "0666",
+      "nameEn": "Vivillon",
+      "apiSlug": "vivillon",
+      "form": null,
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "pyroar",
+      "dex": "0668",
+      "nameEn": "Pyroar",
+      "apiSlug": "pyroar-male",
+      "form": null,
+      "types": [
+        "fire",
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "pyroar-mega",
+          "label": "Mega",
+          "apiSlug": "pyroar-mega",
+          "types": [
+            "fire",
+            "normal"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "floette-eternal",
+      "dex": "0670",
+      "nameEn": "Floette",
+      "apiSlug": "floette-eternal",
+      "form": "Eternal Flower",
+      "types": [
+        "fairy"
+      ],
+      "availability": "Transfer only",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "floette-mega",
+          "label": "Mega",
+          "apiSlug": "floette-mega",
+          "types": [
+            "fairy"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "florges",
+      "dex": "0671",
+      "nameEn": "Florges",
+      "apiSlug": "florges",
+      "form": null,
+      "types": [
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "pangoro",
+      "dex": "0675",
+      "nameEn": "Pangoro",
+      "apiSlug": "pangoro",
+      "form": null,
+      "types": [
+        "fighting",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "furfrou",
+      "dex": "0676",
+      "nameEn": "Furfrou",
+      "apiSlug": "furfrou",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "meowstic-male",
+      "dex": "0678",
+      "nameEn": "Meowstic",
+      "apiSlug": "meowstic-male",
+      "form": null,
+      "types": [
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "meowstic-mega",
+          "label": "Mega",
+          "apiSlug": "meowstic-mega",
+          "types": [
+            "psychic"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "aegislash-shield",
+      "dex": "0681",
+      "nameEn": "Aegislash",
+      "apiSlug": "aegislash-shield",
+      "form": null,
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "aromatisse",
+      "dex": "0683",
+      "nameEn": "Aromatisse",
+      "apiSlug": "aromatisse",
+      "form": null,
+      "types": [
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "slurpuff",
+      "dex": "0685",
+      "nameEn": "Slurpuff",
+      "apiSlug": "slurpuff",
+      "form": null,
+      "types": [
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "malamar",
+      "dex": "0687",
+      "nameEn": "Malamar",
+      "apiSlug": "malamar",
+      "form": null,
+      "types": [
+        "dark",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "malamar-mega",
+          "label": "Mega",
+          "apiSlug": "malamar-mega",
+          "types": [
+            "dark",
+            "psychic"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "barbaracle",
+      "dex": "0689",
+      "nameEn": "Barbaracle",
+      "apiSlug": "barbaracle",
+      "form": null,
+      "types": [
+        "rock",
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "barbaracle-mega",
+          "label": "Mega",
+          "apiSlug": "barbaracle-mega",
+          "types": [
+            "rock",
+            "fighting"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "dragalge",
+      "dex": "0691",
+      "nameEn": "Dragalge",
+      "apiSlug": "dragalge",
+      "form": null,
+      "types": [
+        "poison",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "dragalge-mega",
+          "label": "Mega",
+          "apiSlug": "dragalge-mega",
+          "types": [
+            "poison",
+            "dragon"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "clawitzer",
+      "dex": "0693",
+      "nameEn": "Clawitzer",
+      "apiSlug": "clawitzer",
+      "form": null,
+      "types": [
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "heliolisk",
+      "dex": "0695",
+      "nameEn": "Heliolisk",
+      "apiSlug": "heliolisk",
+      "form": null,
+      "types": [
+        "electric",
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "tyrantrum",
+      "dex": "0697",
+      "nameEn": "Tyrantrum",
+      "apiSlug": "tyrantrum",
+      "form": null,
+      "types": [
+        "rock",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "aurorus",
+      "dex": "0699",
+      "nameEn": "Aurorus",
+      "apiSlug": "aurorus",
+      "form": null,
+      "types": [
+        "rock",
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "sylveon",
+      "dex": "0700",
+      "nameEn": "Sylveon",
+      "apiSlug": "sylveon",
+      "form": null,
+      "types": [
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "hawlucha",
+      "dex": "0701",
+      "nameEn": "Hawlucha",
+      "apiSlug": "hawlucha",
+      "form": null,
+      "types": [
+        "fighting",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "hawlucha-mega",
+          "label": "Mega",
+          "apiSlug": "hawlucha-mega",
+          "types": [
+            "fighting",
+            "flying"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "dedenne",
+      "dex": "0702",
+      "nameEn": "Dedenne",
+      "apiSlug": "dedenne",
+      "form": null,
+      "types": [
+        "electric",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "goodra",
+      "dex": "0706",
+      "nameEn": "Goodra",
+      "apiSlug": "goodra",
+      "form": null,
+      "types": [
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "goodra-hisui",
+      "dex": "0706",
+      "nameEn": "Goodra",
+      "apiSlug": "goodra-hisui",
+      "form": "Hisuian Form",
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "klefki",
+      "dex": "0707",
+      "nameEn": "Klefki",
+      "apiSlug": "klefki",
+      "form": null,
+      "types": [
+        "steel",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "trevenant",
+      "dex": "0709",
+      "nameEn": "Trevenant",
+      "apiSlug": "trevenant",
+      "form": null,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "gourgeist-average",
+      "dex": "0711",
+      "nameEn": "Gourgeist",
+      "apiSlug": "gourgeist-average",
+      "form": null,
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "avalugg",
+      "dex": "0713",
+      "nameEn": "Avalugg",
+      "apiSlug": "avalugg",
+      "form": null,
+      "types": [
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "avalugg-hisui",
+      "dex": "0713",
+      "nameEn": "Avalugg",
+      "apiSlug": "avalugg-hisui",
+      "form": "Hisuian Form",
+      "types": [
+        "ice",
+        "rock"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "noivern",
+      "dex": "0715",
+      "nameEn": "Noivern",
+      "apiSlug": "noivern",
+      "form": null,
+      "types": [
+        "flying",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "decidueye",
+      "dex": "0724",
+      "nameEn": "Decidueye",
+      "apiSlug": "decidueye",
+      "form": null,
+      "types": [
+        "grass",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "decidueye-hisui",
+      "dex": "0724",
+      "nameEn": "Decidueye",
+      "apiSlug": "decidueye-hisui",
+      "form": "Hisuian Form",
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "incineroar",
+      "dex": "0727",
+      "nameEn": "Incineroar",
+      "apiSlug": "incineroar",
+      "form": null,
+      "types": [
+        "fire",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "primarina",
+      "dex": "0730",
+      "nameEn": "Primarina",
+      "apiSlug": "primarina",
+      "form": null,
+      "types": [
+        "water",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "toucannon",
+      "dex": "0733",
+      "nameEn": "Toucannon",
+      "apiSlug": "toucannon",
+      "form": null,
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "crabominable",
+      "dex": "0740",
+      "nameEn": "Crabominable",
+      "apiSlug": "crabominable",
+      "form": null,
+      "types": [
+        "fighting",
+        "ice"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "crabominable-mega",
+          "label": "Mega",
+          "apiSlug": "crabominable-mega",
+          "types": [
+            "fighting",
+            "ice"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "lycanroc-midday",
+      "dex": "0745",
+      "nameEn": "Lycanroc",
+      "apiSlug": "lycanroc-midday",
+      "form": null,
+      "types": [
+        "rock"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "toxapex",
+      "dex": "0748",
+      "nameEn": "Toxapex",
+      "apiSlug": "toxapex",
+      "form": null,
+      "types": [
+        "poison",
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "mudsdale",
+      "dex": "0750",
+      "nameEn": "Mudsdale",
+      "apiSlug": "mudsdale",
+      "form": null,
+      "types": [
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "araquanid",
+      "dex": "0752",
+      "nameEn": "Araquanid",
+      "apiSlug": "araquanid",
+      "form": null,
+      "types": [
+        "water",
+        "bug"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "salazzle",
+      "dex": "0758",
+      "nameEn": "Salazzle",
+      "apiSlug": "salazzle",
+      "form": null,
+      "types": [
+        "poison",
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "tsareena",
+      "dex": "0763",
+      "nameEn": "Tsareena",
+      "apiSlug": "tsareena",
+      "form": null,
+      "types": [
+        "grass"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "oranguru",
+      "dex": "0765",
+      "nameEn": "Oranguru",
+      "apiSlug": "oranguru",
+      "form": null,
+      "types": [
+        "normal",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "passimian",
+      "dex": "0766",
+      "nameEn": "Passimian",
+      "apiSlug": "passimian",
+      "form": null,
+      "types": [
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "mimikyu-disguised",
+      "dex": "0778",
+      "nameEn": "Mimikyu",
+      "apiSlug": "mimikyu-disguised",
+      "form": null,
+      "types": [
+        "ghost",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "drampa",
+      "dex": "0780",
+      "nameEn": "Drampa",
+      "apiSlug": "drampa",
+      "form": null,
+      "types": [
+        "normal",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "drampa-mega",
+          "label": "Mega",
+          "apiSlug": "drampa-mega",
+          "types": [
+            "normal",
+            "dragon"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "kommo-o",
+      "dex": "0784",
+      "nameEn": "Kommo-o",
+      "apiSlug": "kommo-o",
+      "form": null,
+      "types": [
+        "dragon",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "corviknight",
+      "dex": "0823",
+      "nameEn": "Corviknight",
+      "apiSlug": "corviknight",
+      "form": null,
+      "types": [
+        "flying",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "flapple",
+      "dex": "0841",
+      "nameEn": "Flapple",
+      "apiSlug": "flapple",
+      "form": null,
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "appletun",
+      "dex": "0842",
+      "nameEn": "Appletun",
+      "apiSlug": "appletun",
+      "form": null,
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "sandaconda",
+      "dex": "0844",
+      "nameEn": "Sandaconda",
+      "apiSlug": "sandaconda",
+      "form": null,
+      "types": [
+        "ground"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "polteageist",
+      "dex": "0855",
+      "nameEn": "Polteageist",
+      "apiSlug": "polteageist",
+      "form": null,
+      "types": [
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "hatterene",
+      "dex": "0858",
+      "nameEn": "Hatterene",
+      "apiSlug": "hatterene",
+      "form": null,
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "grimmsnarl",
+      "dex": "0861",
+      "nameEn": "Grimmsnarl",
+      "apiSlug": "grimmsnarl",
+      "form": null,
+      "types": [
+        "dark",
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": []
+    },
+    {
+      "id": "mr-rime",
+      "dex": "0866",
+      "nameEn": "Mr. Rime",
+      "apiSlug": "mr-rime",
+      "form": null,
+      "types": [
+        "ice",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "runerigus",
+      "dex": "0867",
+      "nameEn": "Runerigus",
+      "apiSlug": "runerigus",
+      "form": null,
+      "types": [
+        "ground",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "alcremie",
+      "dex": "0869",
+      "nameEn": "Alcremie",
+      "apiSlug": "alcremie",
+      "form": null,
+      "types": [
+        "fairy"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "falinks",
+      "dex": "0870",
+      "nameEn": "Falinks",
+      "apiSlug": "falinks",
+      "form": null,
+      "types": [
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": [
+        {
+          "id": "falinks-mega",
+          "label": "Mega",
+          "apiSlug": "falinks-mega",
+          "types": [
+            "fighting"
+          ],
+          "version": "1.1.0"
+        }
+      ]
+    },
+    {
+      "id": "morpeko-full-belly",
+      "dex": "0877",
+      "nameEn": "Morpeko",
+      "apiSlug": "morpeko-full-belly",
+      "form": null,
+      "types": [
+        "electric",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "dragapult",
+      "dex": "0887",
+      "nameEn": "Dragapult",
+      "apiSlug": "dragapult",
+      "form": null,
+      "types": [
+        "dragon",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "wyrdeer",
+      "dex": "0899",
+      "nameEn": "Wyrdeer",
+      "apiSlug": "wyrdeer",
+      "form": null,
+      "types": [
+        "normal",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "kleavor",
+      "dex": "0900",
+      "nameEn": "Kleavor",
+      "apiSlug": "kleavor",
+      "form": null,
+      "types": [
+        "bug",
+        "rock"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "basculegion-male",
+      "dex": "0902",
+      "nameEn": "Basculegion",
+      "apiSlug": "basculegion-male",
+      "form": null,
+      "types": [
+        "water",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "sneasler",
+      "dex": "0903",
+      "nameEn": "Sneasler",
+      "apiSlug": "sneasler",
+      "form": null,
+      "types": [
+        "fighting",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "overqwil",
+      "dex": "0904",
+      "nameEn": "Overqwil",
+      "apiSlug": "overqwil",
+      "form": null,
+      "types": [
+        "dark",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": []
+    },
+    {
+      "id": "meowscarada",
+      "dex": "0908",
+      "nameEn": "Meowscarada",
+      "apiSlug": "meowscarada",
+      "form": null,
+      "types": [
+        "grass",
+        "dark"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "skeledirge",
+      "dex": "0911",
+      "nameEn": "Skeledirge",
+      "apiSlug": "skeledirge",
+      "form": null,
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "quaquaval",
+      "dex": "0914",
+      "nameEn": "Quaquaval",
+      "apiSlug": "quaquaval",
+      "form": null,
+      "types": [
+        "water",
+        "fighting"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "maushold-family-of-four",
+      "dex": "0925",
+      "nameEn": "Maushold",
+      "apiSlug": "maushold-family-of-four",
+      "form": null,
+      "types": [
+        "normal"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "garganacl",
+      "dex": "0934",
+      "nameEn": "Garganacl",
+      "apiSlug": "garganacl",
+      "form": null,
+      "types": [
+        "rock"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "armarouge",
+      "dex": "0936",
+      "nameEn": "Armarouge",
+      "apiSlug": "armarouge",
+      "form": null,
+      "types": [
+        "fire",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "ceruledge",
+      "dex": "0937",
+      "nameEn": "Ceruledge",
+      "apiSlug": "ceruledge",
+      "form": null,
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "bellibolt",
+      "dex": "0939",
+      "nameEn": "Bellibolt",
+      "apiSlug": "bellibolt",
+      "form": null,
+      "types": [
+        "electric"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "scovillain",
+      "dex": "0952",
+      "nameEn": "Scovillain",
+      "apiSlug": "scovillain",
+      "form": null,
+      "types": [
+        "grass",
+        "fire"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "scovillain-mega",
+          "label": "Mega",
+          "apiSlug": "scovillain-mega",
+          "types": [
+            "grass",
+            "fire"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "espathra",
+      "dex": "0956",
+      "nameEn": "Espathra",
+      "apiSlug": "espathra",
+      "form": null,
+      "types": [
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "tinkaton",
+      "dex": "0959",
+      "nameEn": "Tinkaton",
+      "apiSlug": "tinkaton",
+      "form": null,
+      "types": [
+        "fairy",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "palafin-zero",
+      "dex": "0964",
+      "nameEn": "Palafin",
+      "apiSlug": "palafin-zero",
+      "form": null,
+      "types": [
+        "water"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "orthworm",
+      "dex": "0968",
+      "nameEn": "Orthworm",
+      "apiSlug": "orthworm",
+      "form": null,
+      "types": [
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "glimmora",
+      "dex": "0970",
+      "nameEn": "Glimmora",
+      "apiSlug": "glimmora",
+      "form": null,
+      "types": [
+        "rock",
+        "poison"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": [
+        {
+          "id": "glimmora-mega",
+          "label": "Mega",
+          "apiSlug": "glimmora-mega",
+          "types": [
+            "rock",
+            "poison"
+          ],
+          "version": "1.0.2"
+        }
+      ]
+    },
+    {
+      "id": "houndstone",
+      "dex": "0972",
+      "nameEn": "Houndstone",
+      "apiSlug": "houndstone",
+      "form": null,
+      "types": [
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": []
+    },
+    {
+      "id": "annihilape",
+      "dex": "0979",
+      "nameEn": "Annihilape",
+      "apiSlug": "annihilape",
+      "form": null,
+      "types": [
+        "fighting",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": []
+    },
+    {
+      "id": "farigiraf",
+      "dex": "0981",
+      "nameEn": "Farigiraf",
+      "apiSlug": "farigiraf",
+      "form": null,
+      "types": [
+        "normal",
+        "psychic"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "kingambit",
+      "dex": "0983",
+      "nameEn": "Kingambit",
+      "apiSlug": "kingambit",
+      "form": null,
+      "types": [
+        "dark",
+        "steel"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "gholdengo",
+      "dex": "1000",
+      "nameEn": "Gholdengo",
+      "apiSlug": "gholdengo",
+      "form": null,
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.1.0",
+      "megas": []
+    },
+    {
+      "id": "sinistcha",
+      "dex": "1013",
+      "nameEn": "Sinistcha",
+      "apiSlug": "sinistcha",
+      "form": null,
+      "types": [
+        "grass",
+        "ghost"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "archaludon",
+      "dex": "1018",
+      "nameEn": "Archaludon",
+      "apiSlug": "archaludon",
+      "form": null,
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    },
+    {
+      "id": "hydrapple",
+      "dex": "1019",
+      "nameEn": "Hydrapple",
+      "apiSlug": "hydrapple",
+      "form": null,
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "availability": "Yes",
+      "version": "1.0.2",
+      "megas": []
+    }
+  ]
+}

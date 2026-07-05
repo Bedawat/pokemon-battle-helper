@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "../components/Button";
+import { MetaToggle } from "../components/MetaToggle";
 import { PokemonGrid } from "../components/PokemonGrid";
 import { PokemonSprite } from "../components/PokemonSprite";
 import { ScreenHeader } from "../components/ScreenHeader";
@@ -8,11 +9,11 @@ import { ALL_POKEMON, getPokemon } from "../lib/data";
 import {
   MAX_OPPONENTS,
   addOpponent,
-  gridSource,
   isOpponentFull,
   removeOpponent,
   type OpponentTeam,
 } from "../lib/opponent";
+import { applyMetaFilter, filterPokemon } from "../lib/search";
 import styles from "./OpponentInput.module.css";
 
 interface OpponentInputProps {
@@ -34,8 +35,9 @@ export function OpponentInput({
   onBack,
 }: OpponentInputProps) {
   const [query, setQuery] = useState("");
+  const [metaOnly, setMetaOnly] = useState(true);
   const chosen = new Set(opponent);
-  const grid = gridSource(ALL_POKEMON, query);
+  const grid = filterPokemon(applyMetaFilter(ALL_POKEMON, metaOnly, query), query);
   const full = isOpponentFull(opponent);
 
   return (
@@ -85,12 +87,21 @@ export function OpponentInput({
             Gegner-Team komplett. Tippe auf einen Slot, um zu korrigieren.
           </p>
         ) : (
-          <PokemonGrid
-            pokemon={grid}
-            onSelect={(id) => onChange(addOpponent(opponent, id))}
-            disabledIds={chosen}
-            emptyHint="Kein Pokémon gefunden."
-          />
+          <>
+            {!query.trim() && (
+              <MetaToggle
+                metaOnly={metaOnly}
+                onChange={setMetaOnly}
+                hint={metaOnly ? `Top ${grid.length} im Meta` : `Alle ${grid.length}`}
+              />
+            )}
+            <PokemonGrid
+              pokemon={grid}
+              onSelect={(id) => onChange(addOpponent(opponent, id))}
+              disabledIds={chosen}
+              emptyHint="Kein Pokémon gefunden."
+            />
+          </>
         )}
       </section>
 

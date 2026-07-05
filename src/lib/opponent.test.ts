@@ -18,6 +18,8 @@ function view(id: string, nameDe: string, nameEn: string): PokemonView {
     sprite: "",
     movepool: [],
     usagePercent: null,
+    winrate: null,
+    rank: null,
     topMoves: [],
   };
 }
